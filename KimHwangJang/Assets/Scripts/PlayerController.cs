@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,6 +21,11 @@ public class PlayerController : MonoBehaviour
     private float RaftSpeed;
     private float Raft_RotateSpeed;
     private Transform Raft_tr;
+
+    [SerializeField]
+    Slider timer;
+
+    bool hasFood;
 
     private bool isGround;
     private void Awake()
@@ -48,7 +55,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(controlling_Obj == this.gameObject){
+        if(controlling_Obj == this.gameObject || controlling_Obj.tag == "Food")
+        {
             move();
         }
         else if(controlling_Obj.tag == "Steering_Wheel"){
@@ -88,10 +96,15 @@ public class PlayerController : MonoBehaviour
         if(Interaction_KeyPressed){
             //조작하고 있는 오브젝트가 플레이어일때, 그리고 상호작용 가능한 오브젝트와 인접할 때
             if(gameController.controlling_Obj == this.gameObject && nearObj != null){
-                //controlling_Obj를 인접 오브젝트로 설정
+                //controlling_Obj에 인접 오브젝트를 넣음
                 gameController.controlling_Obj = nearObj;
                 this.controlling_Obj = nearObj;
                 Debug.Log(gameController.controlling_Obj.name);
+            }
+            //음식 들고 테이블과 상호작용 버튼을 눌렀다면
+            else if (gameController.controlling_Obj.tag == "Food" && nearObj.tag == "Table")
+            {
+                //
             }
             else{
                 //포커스를 플레이어로
@@ -104,38 +117,37 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Paddle"){
-            nearObj = other.gameObject;
-            Debug.Log("노와 상호작용 가능");
+        switch (other.tag)
+        {
+            case "Paddle":
+            case "Steering_Wheel":
+            case "Cannon":
+            case "Food":
+            case "Table":
+                nearObj = other.gameObject;
+                Debug.Log(other.tag.ToString() + " 상호작용 준비");
+                break;
+            default:
+                break;
         }
-        else if(other.tag == "Steering_Wheel"){
-            nearObj = other.gameObject;
-            Debug.Log("조타륜과 상호작용 가능");
-        }  
-        else if(other.tag == "Cannon"){
-            nearObj = other.gameObject;
-            Debug.Log("대포 상호작용 가능");
-        }  
     }
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Paddle"){
-            if(nearObj == other.gameObject){
-                nearObj = null;
-                Debug.Log("노 상호작용 범위 이탈");
-            }
-        }
-        else if(other.tag == "Steering_Wheel"){
-            if(nearObj == other.gameObject){
-                nearObj = null;
-                Debug.Log("조타륜 상호작용 범위 이탈");
-            }
-        }
-        else if(other.tag == "Cannon"){
-            if(nearObj == other.gameObject){
-                nearObj = null;
-                Debug.Log("대포 상호작용 범위 이탈");
-            }
+        switch (other.tag)
+        {
+            case "Paddle":
+            case "Steering_Wheel":
+            case "Cannon":
+            case "Food":
+            case "Table":
+                if (nearObj == other.gameObject)
+                {
+                    nearObj = null;
+                    Debug.Log(other.tag.ToString() + " 상호작용 범위 이탈");
+                };
+                break;
+            default:
+                break;
         }
     }
     

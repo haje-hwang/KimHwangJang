@@ -9,6 +9,8 @@ TagManager:
   - Obstacle
   - Steering_Wheel
   - Cannon
+  - Food
+  - Table
   layers:
   - Default
   - TransparentFX

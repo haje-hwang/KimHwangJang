@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+
+    public GameObject[] foods;
+    public bool[] hasFoods;
+    public GameObject[] jewels;
+
+    public int jewels_Value;
+
     //Singleton 적용
     private static GameController instance;  
     private GameController() { }  
