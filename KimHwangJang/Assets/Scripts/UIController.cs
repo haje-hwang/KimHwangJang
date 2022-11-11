@@ -18,8 +18,10 @@ public class UIController : MonoBehaviour
     private Canvas MainCanvas;
     private Canvas GameCanvas;
     private Slider SailorGage;
+    public float fSliderBarTime;
     private void Awake()
     {
+        fSliderBarTime = 100f;
         try
         {
             GameCanvas = MainCanvas.transform.Find("GameCanvas").GetComponent<Canvas>();
@@ -41,6 +43,19 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (fSliderBarTime > 0.0f)
+        {
+            fSliderBarTime -= Time.deltaTime;
+            SailorGage.value = fSliderBarTime;
+        }
+        else
+        {
+            Debug.Log("Time is Zero.");
+        }
+    }
+    public void Addtime(float val)
+    {
+        fSliderBarTime += val;
+        SailorGage.value = fSliderBarTime;
     }
 }
