@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Paddle
   - Raft
+  - Obstacle
+  - Steering_Wheel
   layers:
   - Default
   - TransparentFX

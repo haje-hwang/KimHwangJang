@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     }  
 
     public GameObject controlling_Obj;
+    public float RaftSpeed;
     
     // Start is called before the first frame update
     void Start()
