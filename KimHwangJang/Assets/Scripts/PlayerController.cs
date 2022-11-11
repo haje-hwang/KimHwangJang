@@ -53,6 +53,10 @@ public class PlayerController : MonoBehaviour
     void Update(){
         GetInput();
         interact();
+        if(controlling_Obj.tag == "Food"){
+            //음식 들기
+            controlling_Obj.transform.position = transform.position + Vector3.up * 6f;
+        }
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -103,10 +107,22 @@ public class PlayerController : MonoBehaviour
                 this.controlling_Obj = nearObj;
                 Debug.Log(gameController.controlling_Obj.name);
             }
-            //음식 들고 테이블과 상호작용 버튼을 눌렀다면
-            else if (gameController.controlling_Obj.tag == "Food" && nearObj.tag == "Table")
-            {
-                //테이블에 음식 놓기
+            //음식 들고 상호작용 버튼을 눌렀다면
+            else if (gameController.controlling_Obj.tag == "Food"){
+                controlling_Obj.transform.position = transform.position + Vector3.up * 6f + transform.forward * 3f;
+                if(nearObj != null){
+                    //상호작용 대상이 테이블이라면 
+                    if(nearObj.tag == "Table")
+                    {
+                        //테이블에 음식 놓기
+                    }
+                }
+                else{ //음식을 그냥 놓는 경우
+                    //포커스를 플레이어로
+                    gameController.controlling_Obj = this.gameObject;
+                    this.controlling_Obj = this.gameObject;
+                    Debug.Log(gameController.controlling_Obj.name);
+                }
             }
             else{
                 //포커스를 플레이어로
@@ -121,7 +137,6 @@ public class PlayerController : MonoBehaviour
     {
         switch (other.tag)
         {
-            case "Paddle":
             case "Steering_Wheel":
             case "Cannon":
             case "Food":
@@ -146,7 +161,6 @@ public class PlayerController : MonoBehaviour
     {
         switch (other.tag)
         {
-            case "Paddle":
             case "Steering_Wheel":
             case "Cannon":
             case "Food":
