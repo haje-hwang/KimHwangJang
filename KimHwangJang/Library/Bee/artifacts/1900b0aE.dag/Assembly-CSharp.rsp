@@ -358,6 +358,7 @@
 "Assets/Scripts/CameraController.cs"
 "Assets/Scripts/CannonController.cs"
 "Assets/Scripts/FoodScript.cs"
+"Assets/Scripts/GageScript.cs"
 "Assets/Scripts/GameController.cs"
 "Assets/Scripts/KitchenScript.cs"
 "Assets/Scripts/Obstacle.cs"
