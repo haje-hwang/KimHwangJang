@@ -8,6 +8,7 @@ TagManager:
   - Raft
   - Obstacle
   - Steering_Wheel
+  - Cannon
   layers:
   - Default
   - TransparentFX

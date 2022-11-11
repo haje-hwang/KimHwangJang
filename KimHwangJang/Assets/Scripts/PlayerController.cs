@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private bool Interaction_KeyPressed;
     private GameObject nearObj;
     private GameObject controlling_Obj;
+    private CannonController cannonController;
     private GameController gameController;
     private float RaftSpeed;
     private float Raft_RotateSpeed;
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour
             throw;
         }
         Raft_tr = GameObject.Find("GameObjects").transform.Find("Raft").GetComponent<Transform>();
+        cannonController = Raft_tr.Find("Cannon").transform.GetComponent<CannonController>();
     }
     void Update(){
         GetInput();
@@ -53,7 +55,18 @@ public class PlayerController : MonoBehaviour
             //뗏목 회전
             Raft_tr.Rotate(0, Horizontal * Time.deltaTime * Raft_RotateSpeed, 0);
         }
-
+        else if(controlling_Obj.tag == "Cannon"){
+            cannonController.Aim();
+            if(Input.GetMouseButtonDown(0)){
+                cannonController.Reload();
+            }
+            if(Input.GetButtonDown("Jump")){
+                cannonController.Shoot();
+            }
+            if(Input.GetMouseButtonDown(1)){
+                cannonController.Cleanup();
+            }
+        }
     }
     void GetInput(){
         Horizontal = Input.GetAxis("Horizontal");
@@ -75,11 +88,13 @@ public class PlayerController : MonoBehaviour
         if(Interaction_KeyPressed){
             //조작하고 있는 오브젝트가 플레이어일때, 그리고 상호작용 가능한 오브젝트와 인접할 때
             if(gameController.controlling_Obj == this.gameObject && nearObj != null){
+                //controlling_Obj를 인접 오브젝트로 설정
                 gameController.controlling_Obj = nearObj;
                 this.controlling_Obj = nearObj;
                 Debug.Log(gameController.controlling_Obj.name);
             }
             else{
+                //포커스를 플레이어로
                 gameController.controlling_Obj = this.gameObject;
                 this.controlling_Obj = this.gameObject;
                 Debug.Log(gameController.controlling_Obj.name);
@@ -96,7 +111,11 @@ public class PlayerController : MonoBehaviour
         else if(other.tag == "Steering_Wheel"){
             nearObj = other.gameObject;
             Debug.Log("조타륜과 상호작용 가능");
-        }   
+        }  
+        else if(other.tag == "Cannon"){
+            nearObj = other.gameObject;
+            Debug.Log("대포 상호작용 가능");
+        }  
     }
     private void OnTriggerExit(Collider other)
     {
@@ -110,6 +129,12 @@ public class PlayerController : MonoBehaviour
             if(nearObj == other.gameObject){
                 nearObj = null;
                 Debug.Log("조타륜 상호작용 범위 이탈");
+            }
+        }
+        else if(other.tag == "Cannon"){
+            if(nearObj == other.gameObject){
+                nearObj = null;
+                Debug.Log("대포 상호작용 범위 이탈");
             }
         }
     }
