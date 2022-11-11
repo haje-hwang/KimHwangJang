@@ -12,7 +12,7 @@ public class RaftController : MonoBehaviour
         try
         {
             gameController = GameObject.Find("GameController").GetComponent<GameController>();
-            gameController.RaftSpeed = this.RaftSpeed;
+            this.RaftSpeed = gameController.RaftSpeed;
         }
         catch (System.Exception)
         {

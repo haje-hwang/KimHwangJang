@@ -11,6 +11,7 @@ TagManager:
   - Cannon
   - Food
   - Table
+  - Water
   layers:
   - Default
   - TransparentFX
