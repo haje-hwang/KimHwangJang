@@ -6,14 +6,12 @@ public class CannonController : MonoBehaviour
 {
     int Dirty;
 
-    bool isReloaded;
+    bool isReload;
     bool isDirty;
 
     float rotateSpeed;
 
     float xAim;
-    [SerializeField]
-    private float shootspeed;
 
     [SerializeField]
     GameObject bullet;
@@ -25,17 +23,16 @@ public class CannonController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        isReloaded = true;
+        isReload = false;
         isDirty = false;
 
         Dirty = 0;    
         rotateSpeed = 35.0f;
-        shootspeed = 20f;
         //bullet = GetComponent<GameObject>();
     }
     public void Reload(){
-        if(!isDirty && !isReloaded){
-            isReloaded = true;
+        if(!isDirty && !isReload){
+            isReload = true;
             Debug.Log("재장전");
         }
     }
@@ -46,16 +43,12 @@ public class CannonController : MonoBehaviour
     }
     
     public void Shoot(){
-        if(isReloaded && !isDirty){
-            GameObject Bullet_instance;
-            Rigidbody Bullet_rb;
-            Bullet_instance = Instantiate(bullet, shootpoint.position, Quaternion.identity);
-            Bullet_rb = Bullet_instance.GetComponent<Rigidbody>();
-            Bullet_rb.AddForce(shootpoint.transform.right * -shootspeed, ForceMode.Impulse);
+        if(isReload && !isDirty){
+            Instantiate(bullet, shootpoint.position, Quaternion.identity);
 
-            isReloaded = false;
+            isReload = false;
             isDirty = true;
-            Dirty = 2;
+            Dirty = 5;
 
             Debug.Log("발사");
         }
