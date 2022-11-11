@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private GameObject controlling_Obj;
     private CannonController cannonController;
     private GameController gameController;
+    private UIController UIController;
     private float RaftSpeed;
     private float Raft_RotateSpeed;
     private Transform Raft_tr;
@@ -39,10 +40,11 @@ public class PlayerController : MonoBehaviour
             gameController = GameObject.Find("GameController").GetComponent<GameController>();
             gameController.controlling_Obj = this.gameObject;
             gameController.RaftSpeed = this.RaftSpeed;
+            UIController = GameObject.Find("UIController").GetComponent<UIController>();
         }
         catch (System.Exception)
         {
-            Debug.Log("Cannot Find gameController");
+            Debug.Log("Cannot Find gameController or UIController");
             throw;
         }
         Raft_tr = GameObject.Find("GameObjects").transform.Find("Raft").GetComponent<Transform>();
@@ -104,7 +106,7 @@ public class PlayerController : MonoBehaviour
             //음식 들고 테이블과 상호작용 버튼을 눌렀다면
             else if (gameController.controlling_Obj.tag == "Food" && nearObj.tag == "Table")
             {
-                //
+                //테이블에 음식 놓기
             }
             else{
                 //포커스를 플레이어로
@@ -123,6 +125,15 @@ public class PlayerController : MonoBehaviour
             case "Steering_Wheel":
             case "Cannon":
             case "Food":
+                //Food 들고 있는 상황에서 오류 생길까봐
+                if(controlling_Obj.tag == "Food") {
+                   break;
+                }
+                else{
+                    nearObj = other.gameObject;
+                    Debug.Log(other.tag.ToString() + " 상호작용 준비");
+                    break;
+                }
             case "Table":
                 nearObj = other.gameObject;
                 Debug.Log(other.tag.ToString() + " 상호작용 준비");

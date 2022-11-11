@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
@@ -13,6 +14,23 @@ public class UIController : MonoBehaviour
         }  
         return instance;  
     }  
+    [SerializeField]
+    private Canvas MainCanvas;
+    private Canvas GameCanvas;
+    private Slider SailorGage;
+    private void Awake()
+    {
+        try
+        {
+            GameCanvas = MainCanvas.transform.Find("GameCanvas").GetComponent<Canvas>();
+            SailorGage = GameCanvas.transform.Find("SailorGage").GetComponent<Slider>();
+        }
+        catch (System.Exception)
+        {
+            
+            throw;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()

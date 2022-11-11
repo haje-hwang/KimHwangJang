@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;   // Silder class »ç¿ëÇÏ±â À§ÇØ Ãß°¡ÇÕ´Ï´Ù.
+using UnityEngine.UI;   // Silder class ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Õ´Ï´ï¿½.
 
 public class GageScript : MonoBehaviour
 {
@@ -17,7 +17,7 @@ public class GageScript : MonoBehaviour
     {
         if (slTimer.value > 0.0f)
         {
-            // ½Ã°£ÀÌ º¯°æÇÑ ¸¸Å­ slider Value º¯°æÀ» ÇÕ´Ï´Ù.
+            // ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å­ slider Value ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
             slTimer.value -= Time.deltaTime;
         }
         else
