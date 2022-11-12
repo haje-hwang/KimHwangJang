@@ -51,7 +51,7 @@ public class CannonController : MonoBehaviour
             Rigidbody Bullet_rb;
             Bullet_instance = Instantiate(bullet, shootpoint.position, Quaternion.identity);
             Bullet_rb = Bullet_instance.GetComponent<Rigidbody>();
-            Bullet_rb.AddForce(shootpoint.transform.right * -shootspeed, ForceMode.Impulse);
+            Bullet_rb.AddForce(shootpoint.transform.forward * shootspeed, ForceMode.Impulse);
 
             isReloaded = false;
             isDirty = true;
