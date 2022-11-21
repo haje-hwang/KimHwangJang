@@ -5,7 +5,6 @@ using UnityEngine;
 public class RaftController : MonoBehaviour
 {
     private GameController gameController;
-    [SerializeField]
     private float RaftSpeed;
     private void Awake()
     {

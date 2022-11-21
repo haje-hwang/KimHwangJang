@@ -9,12 +9,14 @@ public class PlayerController : MonoBehaviour
     private Transform tr;
     private Rigidbody rb;
     public float moveForce;
-    //GetInput()
     private float Horizontal;
     private float Vertical;
     private Vector3 moveVector;
     private bool Interaction_KeyPressed;
+    private GameObject player;
+    private PlayerController playerController;
     private GameObject nearObj;
+    [SerializeField]
     private GameObject controlling_Obj;
     private CannonController cannonController;
     private GameController gameController;
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         tr = this.transform;
+        player = this.gameObject;
         rb = this.transform.GetComponent<Rigidbody>();
         controlling_Obj = this.gameObject;
         Raft_RotateSpeed = 10f;
@@ -44,10 +47,10 @@ public class PlayerController : MonoBehaviour
         }
         catch (System.Exception)
         {
-            Debug.Log("Cannot Find gameController or UIController");
+            Debug.Log("Error in PlayerController.Awake()");
             throw;
         }
-        Raft_tr = GameObject.Find("GameObjects").transform.Find("Raft").GetComponent<Transform>();
+        Raft_tr = GameObject.Find("GameObjects/Raft").GetComponent<Transform>();
         cannonController = Raft_tr.Find("Cannon").transform.GetComponent<CannonController>();
     }
     void Update(){
@@ -61,9 +64,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(controlling_Obj == this.gameObject || controlling_Obj.tag == "Food")
+        if(controlling_Obj == player || controlling_Obj.tag == "Food")
         {
-            move();
+            move(moveVector);
         }
         else if(controlling_Obj.tag == "Steering_Wheel"){
             //뗏목 회전
@@ -82,15 +85,9 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    void GetInput(){
-        Horizontal = Input.GetAxis("Horizontal");
-        Vertical = Input.GetAxis("Vertical");
-        moveVector = new Vector3(Horizontal, 0, Vertical).normalized;
-        Interaction_KeyPressed = Input.GetButtonDown("Interaction");
-    }
-    void move(){
+    public void move(Vector3 moveVector){
         //빠르면 속도 감쇠, 움직임 입력이 없으면 속도 감쇠
-        if(Mathf.Abs(rb.velocity.sqrMagnitude) > 400f || Horizontal + Vertical < 0.01){
+        if(Mathf.Abs(rb.velocity.sqrMagnitude) > 400f || moveVector.sqrMagnitude < 0.01){
             rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z) * 0.9f;
         }
         //addforce 물리로 player 움직이기
@@ -133,6 +130,12 @@ public class PlayerController : MonoBehaviour
             
         }
     }
+     void GetInput(){
+        Horizontal = Input.GetAxis("Horizontal");
+        Vertical = Input.GetAxis("Vertical");
+        moveVector = new Vector3(Horizontal, 0, Vertical).normalized;
+        Interaction_KeyPressed = Input.GetButtonDown("Interaction");
+    }
     private void OnTriggerEnter(Collider other)
     {
         switch (other.tag)
@@ -168,7 +171,7 @@ public class PlayerController : MonoBehaviour
                 if (nearObj == other.gameObject)
                 {
                     nearObj = null;
-                    Debug.Log(other.tag.ToString() + " 상호작용 범위 이탈");
+                    Debug.Log(other.tag.ToString() + " 상호작용 범위 이탈"); 
                 };
                 break;
             default:

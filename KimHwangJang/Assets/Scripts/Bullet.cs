@@ -5,25 +5,42 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     bool isPickup;
+    private Rigidbody rb;
+    private CannonBallObjectPool objectPool;
     // Start is called before the first frame update
     void Start()
     {
-        isPickup = false;
+        try
+        {
+            rb = transform.GetComponent<Rigidbody>();
+            objectPool = GameObject.Find("/GameObjects/CannonBallPool").GetComponent<CannonBallObjectPool>();
+        }
+        catch (System.Exception)
+        {
+            Debug.Log("Error in Bullet.Awake()");
+            throw;
+        }
+        isPickup = false;   
     }
-    void Pickup(){
-        isPickup = true;
+    void SetPickup(bool input){
+        isPickup = input;
     }
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "Obstacle"){
-            Destroy(this.gameObject);
+            resetCannon();
             Destroy(other.gameObject);
         }
     }
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Water"){
-            Destroy(this.gameObject);
+            resetCannon();
+            // Destroy(this.gameObject);
         }
+    }
+    private void resetCannon(){
+        rb.velocity = Vector3.zero;
+        objectPool.ReturnObject(this.gameObject);
     }
 }
 

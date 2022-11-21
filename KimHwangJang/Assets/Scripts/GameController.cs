@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -10,6 +8,8 @@ public class GameController : MonoBehaviour
     public GameObject[] jewels;
 
     public int jewels_Value;
+
+    
 
     //Singleton 적용
     private static GameController instance;  
@@ -23,10 +23,21 @@ public class GameController : MonoBehaviour
 
     public GameObject controlling_Obj;
     public float RaftSpeed;
-    
-    // Start is called before the first frame update
-    void Start()
+    private GameObject player;
+    private PlayerController playerController;
+
+    private void Awake()
     {
+        try
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            playerController = player.GetComponent<PlayerController>();
+        }
+        catch (System.Exception)
+        {
+            Debug.Log("Error in Awake(), GameController.cs");
+            throw;
+        }
         
     }
 
@@ -35,4 +46,9 @@ public class GameController : MonoBehaviour
     {
         
     }
+    private void FixedUpdate()
+    {
+        
+    }
+   
 }

@@ -21,10 +21,22 @@ public class CannonController : MonoBehaviour
     [SerializeField]
     Transform shootpoint;
 
+    private Transform CannonBallPool;
+    private CannonBallObjectPool objectPool;
 
     // Start is called before the first frame update
     void Awake()
     {
+        try
+        {
+            CannonBallPool = GameObject.Find("GameObjects/CannonBallPool").transform;
+            objectPool = CannonBallPool.GetComponent<CannonBallObjectPool>();
+        }
+        catch (System.Exception)
+        {
+            Debug.Log("Error in Awake(), CannonController.cs");
+            throw;
+        }
         isReloaded = true;
         isDirty = false;
 
@@ -48,9 +60,19 @@ public class CannonController : MonoBehaviour
         if(isReloaded && !isDirty){
             GameObject Bullet_instance;
             Rigidbody Bullet_rb;
-            Bullet_instance = Instantiate(bullet, shootpoint.position, Quaternion.identity);
-            Bullet_rb = Bullet_instance.GetComponent<Rigidbody>();
-            Bullet_rb.AddForce(shootpoint.transform.forward * shootspeed, ForceMode.Impulse);
+            try
+            {
+                //object pooling 관리
+                Bullet_instance = objectPool.GetObject();
+                Bullet_instance.transform.position = shootpoint.position;
+                Bullet_rb = Bullet_instance.GetComponent<Rigidbody>();
+                Bullet_rb.AddForce(shootpoint.transform.forward * shootspeed, ForceMode.Impulse);
+            }
+            catch (System.Exception)
+            {
+                Debug.Log("Error in CannonController.Shoot()");
+                throw;
+            }
 
             isReloaded = false;
             isDirty = true;
