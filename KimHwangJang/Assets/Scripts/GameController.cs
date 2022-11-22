@@ -35,7 +35,7 @@ public class GameController : MonoBehaviour
         }
         catch (System.Exception)
         {
-            Debug.Log("Error in Awake(), GameController.cs");
+            Debug.Log("Error in GameController.Awake()");
             throw;
         }
         
