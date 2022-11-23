@@ -8,104 +8,83 @@ public class PlayerController : MonoBehaviour
 {
     private Transform tr;
     private Rigidbody rb;
-    public float moveForce;
-    private float Horizontal;
-    private float Vertical;
-    private Vector3 moveVector;
-    private bool Interaction_KeyPressed;
     private GameObject player;
     private PlayerController playerController;
     private GameObject nearObj;
     [SerializeField]
     private GameObject controlling_Obj;
-    private CannonController cannonController;
     private GameController gameController;
     private UIController UIController;
-    private float RaftSpeed;
-    private float Raft_RotateSpeed;
-    private Transform Raft_tr;
-
     [SerializeField]
     Slider timer;
-
+    public float moveForce;
+    public float Turn_speed;
     bool hasFood;
 
     private bool isGround;
     private void Awake()
     {
         tr = this.transform;
-        player = this.gameObject;
+        player = this.gameObject;   
         rb = this.transform.GetComponent<Rigidbody>();
         controlling_Obj = this.gameObject;
-        Raft_RotateSpeed = 10f;
         try
         {
             gameController = GameObject.Find("GameController").GetComponent<GameController>();
             gameController.controlling_Obj = this.gameObject;
-            gameController.RaftSpeed = this.RaftSpeed;
+            moveForce = gameController.Player_moveForce;
+            Turn_speed = gameController.Player_turnSpeed;
             UIController = GameObject.Find("UIController").GetComponent<UIController>();
         }
         catch (System.Exception)
         {
             Debug.Log("Error in PlayerController.Awake()");
             throw;
-        }
-        Raft_tr = GameObject.Find("GameObjects/Raft").GetComponent<Transform>();
-        cannonController = Raft_tr.Find("Cannon").transform.GetComponent<CannonController>();
+        }   
+        // BoxCollider boxCollider = tr.GetComponent<BoxCollider>();
     }
     void Update(){
-        GetInput();
-        interact();
         if(controlling_Obj.tag == "Food"){
             //음식 들기
             controlling_Obj.transform.position = transform.position + Vector3.up * 6f;
         }
     }
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        if(controlling_Obj == player || controlling_Obj.tag == "Food")
-        {
-            move(moveVector);
-        }
-        else if(controlling_Obj.tag == "Steering_Wheel"){
-            //뗏목 회전
-            Raft_tr.Rotate(0, Horizontal * Time.deltaTime * Raft_RotateSpeed, 0);
-        }
-        else if(controlling_Obj.tag == "Cannon"){
-            cannonController.Aim();
-            if(Input.GetMouseButtonDown(0)){
-                cannonController.Reload();
-            }
-            if(Input.GetButtonDown("Jump")){
-                cannonController.Shoot();
-            }
-            if(Input.GetMouseButtonDown(1)){
-                cannonController.Cleanup();
-            }
-        }
-    }
     public void move(Vector3 moveVector){
-        //빠르면 속도 감쇠, 움직임 입력이 없으면 속도 감쇠
-        if(Mathf.Abs(rb.velocity.sqrMagnitude) > 400f || moveVector.sqrMagnitude < 0.01){
-            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z) * 0.9f;
-        }
-        //addforce 물리로 player 움직이기
-        rb.AddForce(moveVector * moveForce * Time.fixedDeltaTime, ForceMode.VelocityChange);
-        //가는 곳 보기
-        tr.LookAt(tr.position + moveVector);
-    }
-    void interact(){
-        if(Interaction_KeyPressed){
-            //조작하고 있는 오브젝트가 플레이어일때, 그리고 상호작용 가능한 오브젝트와 인접할 때
-            if(gameController.controlling_Obj == this.gameObject && nearObj != null){
-                //controlling_Obj에 인접 오브젝트를 넣음
-                gameController.controlling_Obj = nearObj;
-                this.controlling_Obj = nearObj;
-                Debug.Log(gameController.controlling_Obj.name);
+        try
+        {
+            //빠르면 속도 감쇠, 움직임 입력이 없으면 속도 감쇠
+            if(Mathf.Abs(rb.velocity.sqrMagnitude) > 400f || moveVector.sqrMagnitude < 0.0001f){
+                rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z) * 0.5f;
             }
-            //음식 들고 상호작용 버튼을 눌렀다면
-            else if (gameController.controlling_Obj.tag == "Food"){
+            //addforce 물리로 player 움직이기
+            rb.AddForce(moveVector * moveForce * Time.fixedDeltaTime, ForceMode.VelocityChange);
+            if(moveVector != Vector3.zero){
+                //가는 곳 보기
+                tr.rotation = Quaternion.Slerp(tr.rotation, Quaternion.LookRotation(moveVector), Time.fixedDeltaTime * Turn_speed);
+            }
+            // tr.LookAt(tr.position + moveVector);
+        }
+        catch (System.Exception)
+        {
+            Debug.Log("Error in PlayerController.move()");
+            throw;
+        }
+        
+    }
+    public void interact(){
+        switch (gameController.controlling_Obj.tag)
+        {
+            case "Player":
+             //조작하고 있는 오브젝트가 플레이어일때, 그리고 상호작용 가능한 오브젝트와 인접할 때
+                if( nearObj != null){
+                    //controlling_Obj에 인접 오브젝트를 넣음
+                    gameController.controlling_Obj = nearObj;
+                    this.controlling_Obj = nearObj;
+                    Debug.Log(gameController.controlling_Obj.name);
+                }
+                break;
+            case "Food":
+                //음식 들고 상호작용 버튼을 눌렀다면
                 controlling_Obj.transform.position = transform.position + Vector3.up * 6f + transform.forward * 3f;
                 if(nearObj != null){
                     //상호작용 대상이 테이블이라면 
@@ -114,27 +93,21 @@ public class PlayerController : MonoBehaviour
                         //테이블에 음식 놓기
                     }
                 }
-                else{ //음식을 그냥 놓는 경우
+                else { //음식을 그냥 놓는 경우
                     //포커스를 플레이어로
                     gameController.controlling_Obj = this.gameObject;
                     this.controlling_Obj = this.gameObject;
                     Debug.Log(gameController.controlling_Obj.name);
                 }
-            }
-            else{
+                break;
+            case "Table":
+            default:
                 //포커스를 플레이어로
                 gameController.controlling_Obj = this.gameObject;
                 this.controlling_Obj = this.gameObject;
                 Debug.Log(gameController.controlling_Obj.name);
-            }
-            
+                break;
         }
-    }
-     void GetInput(){
-        Horizontal = Input.GetAxis("Horizontal");
-        Vertical = Input.GetAxis("Vertical");
-        moveVector = new Vector3(Horizontal, 0, Vertical).normalized;
-        Interaction_KeyPressed = Input.GetButtonDown("Interaction");
     }
     private void OnTriggerEnter(Collider other)
     {
