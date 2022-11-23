@@ -53,16 +53,16 @@ public class PlayerController : MonoBehaviour
         try
         {
             //빠르면 속도 감쇠, 움직임 입력이 없으면 속도 감쇠
-            if(Mathf.Abs(rb.velocity.sqrMagnitude) > 400f || moveVector.sqrMagnitude < 0.0001f){
-                rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z) * 0.5f;
+            if(Mathf.Abs(rb.velocity.sqrMagnitude) > 400f || moveVector == Vector3.zero){
+                rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z) * 0.9f;
             }
             //addforce 물리로 player 움직이기
             rb.AddForce(moveVector * moveForce * Time.fixedDeltaTime, ForceMode.VelocityChange);
             if(moveVector != Vector3.zero){
                 //가는 곳 보기
                 tr.rotation = Quaternion.Slerp(tr.rotation, Quaternion.LookRotation(moveVector), Time.fixedDeltaTime * Turn_speed);
+                // tr.LookAt(tr.position + moveVector);
             }
-            // tr.LookAt(tr.position + moveVector);
         }
         catch (System.Exception)
         {

@@ -19,14 +19,16 @@ public class GameController : MonoBehaviour
         return instance;  
     }  
     //Input
-    private float Horizontal;
-    private float Vertical;
-    private bool Interaction_KeyPressed;
+    private float Horizontal, Vertical;
+    private bool Mouse_Left_Down;
+    private bool Mouse_Right_Down;
+    private bool Interaction_Key_Down;
+    private bool Jump_Key_Down;
+    
 
     //move
     private Vector3 moveVector;
-    public float Player_moveForce;
-    public float Player_turnSpeed;
+    public float Player_moveForce, Player_turnSpeed;
 
     //Codes
     private PlayerController playerController;
@@ -38,7 +40,7 @@ public class GameController : MonoBehaviour
     //Raft move
     private Transform Raft_tr;
     public float RaftSpeed;
-    private float Raft_RotateSpeed;
+    public float Raft_RotateSpeed;
 
     private GameObject player;
     private void Awake()
@@ -60,17 +62,28 @@ public class GameController : MonoBehaviour
         
     }
     void GetInput(){
-        Horizontal = Input.GetAxis("Horizontal");
-        Vertical = Input.GetAxis("Vertical");
-        moveVector = new Vector3(Horizontal, 0, Vertical).normalized;
-        Interaction_KeyPressed = Input.GetButtonDown("Interaction");
+        try
+        {
+            Horizontal = Input.GetAxis("Horizontal");
+            Vertical = Input.GetAxis("Vertical");
+            moveVector = new Vector3(Horizontal, 0, Vertical).normalized;
+            Interaction_Key_Down = Input.GetButtonDown("Interaction");
+            Mouse_Left_Down = Input.GetMouseButtonDown(0);
+            Mouse_Right_Down = Input.GetMouseButtonDown(1);
+            Jump_Key_Down = Input.GetButtonDown("Jump");
+        }
+        catch (System.Exception)
+        {
+            Debug.Log("Error in GameController.GetInput()");
+            throw;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         GetInput();
-        if(Interaction_KeyPressed){
+        if(Interaction_Key_Down){
             playerController.interact();
         }
         if(controlling_Obj.tag == "Food"){
@@ -80,25 +93,30 @@ public class GameController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if(controlling_Obj.tag == "Player" || controlling_Obj.tag == "Food")
+        switch (controlling_Obj.tag)
         {
-            playerController.move(moveVector);
-        }
-        else if(controlling_Obj.tag == "Steering_Wheel"){
-            //뗏목 회전
-            Raft_tr.Rotate(0, Horizontal * Time.deltaTime * Raft_RotateSpeed, 0);
-        }
-        else if(controlling_Obj.tag == "Cannon"){
-            cannonController.Aim();
-            if(Input.GetMouseButtonDown(0)){
-                cannonController.Reload();
-            }
-            if(Input.GetButtonDown("Jump")){
-                cannonController.Shoot();
-            }
-            if(Input.GetMouseButtonDown(1)){
-                cannonController.Cleanup();
-            }
+            case "Player":
+            case "Food":
+                playerController.move(moveVector);
+                break;
+            case "Steering_Wheel":
+                //뗏목 회전
+                Raft_tr.Rotate(0, Horizontal * Time.deltaTime * Raft_RotateSpeed, 0);
+                break;
+            case "Cannon":
+                cannonController.Aim();
+                if(Mouse_Left_Down){
+                    cannonController.Reload();
+                }
+                if(Jump_Key_Down){
+                    cannonController.Shoot();
+                }
+                if(Mouse_Right_Down){
+                    cannonController.Cleanup();
+                }
+                break;
+            default:
+                break;
         }
     }
 }

@@ -419,6 +419,7 @@ MonoBehaviour:
   Player_turnSpeed: 5
   controlling_Obj: {fileID: 0}
   RaftSpeed: 0
+  Raft_RotateSpeed: 0
 --- !u!1 &559908917
 GameObject:
   m_ObjectHideFlags: 0
@@ -2794,6 +2795,10 @@ PrefabInstance:
     - target: {fileID: 1100477782726882920, guid: e9257e91441ca174a8cfddcd954f441d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100477782726882921, guid: e9257e91441ca174a8cfddcd954f441d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1100477782726882927, guid: e9257e91441ca174a8cfddcd954f441d, type: 3}
       propertyPath: m_Name
