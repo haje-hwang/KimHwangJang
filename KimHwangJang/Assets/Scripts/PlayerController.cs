@@ -14,9 +14,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject controlling_Obj;
     private GameController gameController;
-    private UIController UIController;
-    [SerializeField]
-    Slider timer;
+    // private UIController UIController;
+    // [SerializeField]
+    // Slider timer;
     public float moveForce;
     public float Turn_speed;
     bool hasFood;
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
             gameController.controlling_Obj = this.gameObject;
             moveForce = gameController.Player_moveForce;
             Turn_speed = gameController.Player_turnSpeed;
-            UIController = GameObject.Find("UIController").GetComponent<UIController>();
+            // UIController = GameObject.Find("UIController").GetComponent<UIController>();
         }
         catch (System.Exception)
         {

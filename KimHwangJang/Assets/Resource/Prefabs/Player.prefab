@@ -110,7 +110,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controlling_Obj: {fileID: 0}
-  timer: {fileID: 0}
   moveForce: 80
   Turn_speed: 0
 --- !u!65 &8622242571847734681

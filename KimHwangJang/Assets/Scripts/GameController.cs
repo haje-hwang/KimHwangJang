@@ -49,16 +49,15 @@ public class GameController : MonoBehaviour
         try
         {
             player = GameObject.FindGameObjectWithTag("Player");
-            playerController = player.GetComponent<PlayerController>();
-
-            Raft_tr = GameObject.FindGameObjectWithTag("Raft").transform;
-            cannonController = Raft_tr.Find("Cannon").transform.GetComponent<CannonController>();
+            playerController = player.GetComponent<PlayerController>(); 
+            cannonController = GameObject.FindGameObjectWithTag("Cannon").GetComponent<CannonController>();
         }
         catch (System.Exception)
         {
-            Debug.Log("Error in GameController.Awake()");
+            Debug.Log("Error while GetComponent in GameController.Awake()");
             throw;
         }
+            // Raft_tr = GameObject.FindGameObjectWithTag("Raft").transform;
         
     }
     void GetInput(){
