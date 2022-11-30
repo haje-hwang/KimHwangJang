@@ -15,7 +15,7 @@ C:/Users/user/Documents/GitHub/KimHwangJang/KimHwangJang
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-65190
+64703
 Successfully changed project path to: C:/Users/user/Documents/GitHub/KimHwangJang/KimHwangJang
 C:/Users/user/Documents/GitHub/KimHwangJang/KimHwangJang
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/user/Documents/GitHub/KimHwangJang/KimHwangJang
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 118.10 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 220.92 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.8f1 (b30333d56e81)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/Resources/UnitySubsystems
@@ -63,89 +63,106 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56508
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56880
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.026850 seconds.
+Registered in 0.030379 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 116.37 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 257.67 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.974 seconds
+- Completed reload, in  1.129 seconds
 Domain Reload Profiling:
-	ReloadAssembly (975ms)
-		BeginReloadAssembly (163ms)
+	ReloadAssembly (1129ms)
+		BeginReloadAssembly (155ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (615ms)
-			LoadAssemblies (155ms)
+		EndReloadAssembly (769ms)
+			LoadAssemblies (148ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (135ms)
+			SetupTypeCache (134ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (33ms)
-			SetupLoadedEditorAssemblies (362ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (511ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (15ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (117ms)
+				RefreshPlugins (258ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (157ms)
-				ProcessInitializeOnLoadMethodAttributes (72ms)
+				ProcessInitializeOnLoadAttributes (163ms)
+				ProcessInitializeOnLoadMethodAttributes (73ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.021638 seconds.
+Registered in 0.019898 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\user\Documents\GitHub\KimHwangJang\KimHwangJang\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\user\Documents\GitHub\KimHwangJang\KimHwangJang\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 5.58 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.565 seconds
+- Completed reload, in  1.152 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1566ms)
-		BeginReloadAssembly (200ms)
+	ReloadAssembly (1153ms)
+		BeginReloadAssembly (203ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (8ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (23ms)
-		EndReloadAssembly (1173ms)
-			LoadAssemblies (192ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (756ms)
+			LoadAssemblies (152ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (341ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (63ms)
-			SetupLoadedEditorAssemblies (543ms)
+			SetupTypeCache (254ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (33ms)
+			SetupLoadedEditorAssemblies (294ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
+				InitializePlatformSupportModulesInManaged (15ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (153ms)
-				ProcessInitializeOnLoadAttributes (308ms)
-				ProcessInitializeOnLoadMethodAttributes (37ms)
-				AfterProcessingInitializeOnLoad (32ms)
+				RefreshPlugins (6ms)
+				BeforeProcessingInitializeOnLoad (96ms)
+				ProcessInitializeOnLoadAttributes (117ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
+				AfterProcessingInitializeOnLoad (30ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (20ms)
+			AwakeInstancesAfterBackupRestoration (17ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
+Failed to load shader (instanceID 8362, GUID dd89cf5b9246416f84610a006f916af7)
+Failed to load shader (instanceID 8364, GUID 41e8bd5085fc54284a34a416c25651b6)
+Failed to load shader (instanceID 8366, GUID 14eb328de4b8eb245bb7cea29e4ac00b)
+Failed to load shader (instanceID 8368, GUID 68e6db2ebdc24f95958faec2be5558d6)
+Failed to load shader (instanceID 8370, GUID bc1ede39bf3643ee8e493720e4259791)
+Failed to load shader (instanceID 8372, GUID fe393ace9b354375a9cb14cdbbc28be4)
+Failed to load shader (instanceID 8374, GUID cf81c85f95fe47e1a27f6ae460cf182c)
+Failed to load shader (instanceID 8376, GUID 9c442dc870b456e48b615cd8add0e9ef)
+Failed to load shader (instanceID 8378, GUID d03b4d0847990dc4f8123c5a3fa65d30)
+Failed to load shader (instanceID 8380, GUID 48bb5f55d8670e349b6e614913f9d910)
+Failed to load shader (instanceID 8382, GUID 85187c2149c549c5b33f0cdb02836b17)
+Failed to load shader (instanceID 8384, GUID 128e987d567d4e2c824d754223b3f3b0)
+Failed to load shader (instanceID 8386, GUID f7ada0af4f174f0694ca6a487b8f543d)
+Failed to load shader (instanceID 8388, GUID a02a7d8c237544f1962732b55a9aebf1)
+Failed to load shader (instanceID 8390, GUID c8d12adcee749c344b8117cf7c7eb912)
+Failed to load shader (instanceID 8392, GUID 1e3b057af24249748ff873be7fafee47)
+Failed to load shader (instanceID 8394, GUID 493b79ea9c9be44ed8b702014d3ac49c)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.78 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 8.03 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3444 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 26 unused Assets / (108.4 KB). Loaded Objects now: 3915.
-Memory consumption went from 130.6 MB to 130.5 MB.
-Total: 4.007700 ms (FindLiveObjects: 0.354900 ms CreateObjectMapping: 0.105600 ms MarkObjects: 3.389500 ms  DeleteObjects: 0.156300 ms)
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (48.8 KB). Loaded Objects now: 491.
+Memory consumption went from 42.7 MB to 42.7 MB.
+Total: 3.559100 ms (FindLiveObjects: 0.057300 ms CreateObjectMapping: 0.005200 ms MarkObjects: 3.403200 ms  DeleteObjects: 0.091900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -159,13 +176,1273 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 10904.256894 seconds.
-  path: Assets/AssetDownloaded/Low Poly Ultimate Pack
-  artifactKey: Guid(254cebd401a5df64da07f96ad5300287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetDownloaded/Low Poly Ultimate Pack using Guid(254cebd401a5df64da07f96ad5300287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '757d6be16e6a56e463e25e85986422cd') in 0.016190 seconds 
+  Time since last request: 555.521784 seconds.
+  path: Assets/ITEMprefabs/선착장.prefab
+  artifactKey: Guid(dcb20184bcb70a74a92ee1f22a3e2fa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ITEMprefabs/선착장.prefab using Guid(dcb20184bcb70a74a92ee1f22a3e2fa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ace9344b9db72748bd65632f00c480e3') in 0.212316 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 15.913568 seconds.
-  path: Assets/AssetDownloaded/애셋 통합본
-  artifactKey: Guid(254cebd401a5df64da07f96ad5300287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetDownloaded/애셋 통합본 using Guid(254cebd401a5df64da07f96ad5300287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe2e95783821a7215d095cb074814655') in 0.009693 seconds 
+  Time since last request: 530.585972 seconds.
+  path: Assets/ITEMprefabs/선착장.prefab
+  artifactKey: Guid(dcb20184bcb70a74a92ee1f22a3e2fa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ITEMprefabs/선착장.prefab using Guid(dcb20184bcb70a74a92ee1f22a3e2fa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5f07e63039f674fc116302478cc39e0') in 0.065305 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 782.735099 seconds.
+  path: Assets/ITEMprefabs/cloud05 (9).prefab
+  artifactKey: Guid(55e9ec98dadce194a9851e3111aee3fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ITEMprefabs/cloud05 (9).prefab using Guid(55e9ec98dadce194a9851e3111aee3fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '740a376c7206e861ca20385d30c63fdc') in 0.346931 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 105.877294 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/India_M/building-street-india.fbx
+  artifactKey: Guid(cb28a5d7d175b6342a8e91d15c34f0d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/India_M/building-street-india.fbx using Guid(cb28a5d7d175b6342a8e91d15c34f0d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2f0caf17a539303b59eb59e4bfb119d') in 0.412923 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/India_M/building-street-india.prefab
+  artifactKey: Guid(c504aa35681966b4583f9df72878529b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/India_M/building-street-india.prefab using Guid(c504aa35681966b4583f9df72878529b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3665cac0a2aa8bf71245874dde80dea3') in 0.060285 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Scifi_T/scifi-tree-mushroom-big.prefab
+  artifactKey: Guid(e522a8c9123910e47a71b1272b6bbc50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Scifi_T/scifi-tree-mushroom-big.prefab using Guid(e522a8c9123910e47a71b1272b6bbc50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1c888910f26668230554463d93ffa95') in 0.032473 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/India_T/building-street2-india.prefab
+  artifactKey: Guid(372c36008bde6564aa5e5aa95a3e06d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/India_T/building-street2-india.prefab using Guid(372c36008bde6564aa5e5aa95a3e06d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b98f725d5cac4400e1ff0d16f52716c5') in 0.032232 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Japan_T/japan-tree-tall.fbx
+  artifactKey: Guid(b309ab2aad42b9f41a063ae4979fc95a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Japan_T/japan-tree-tall.fbx using Guid(b309ab2aad42b9f41a063ae4979fc95a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc5166f8f6ca04bb3a44ab4eef0abbf3') in 0.033019 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Scifi_M/scifi-tree-crown-small.fbx
+  artifactKey: Guid(64e6155868d920f4fa81d07c3d1cb334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Scifi_M/scifi-tree-crown-small.fbx using Guid(64e6155868d920f4fa81d07c3d1cb334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bf70261b5a4dc3ef02099c434b9df71') in 0.028921 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Scifi_M/scifi-tree-crown-medium.prefab
+  artifactKey: Guid(2ec9e557947fbca499386d899141018c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Scifi_M/scifi-tree-crown-medium.prefab using Guid(2ec9e557947fbca499386d899141018c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b7da90f0eb5ca8a1dcf8b38dab2bcff') in 0.041074 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Scifi_M/scifi-tree-mushroom-big.fbx
+  artifactKey: Guid(9f264236362797946add6fea993ef243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Scifi_M/scifi-tree-mushroom-big.fbx using Guid(9f264236362797946add6fea993ef243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b69fe2be213c902ab40e85e881a1d2a5') in 0.027990 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Scifi_M/scifi-tree-crown-big.prefab
+  artifactKey: Guid(9e6fb7029b161e4429ce535a78199b92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Scifi_M/scifi-tree-crown-big.prefab using Guid(9e6fb7029b161e4429ce535a78199b92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89a95878b591587d4d96b499fae0af5d') in 0.030422 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/India_M/building-street2-india.prefab
+  artifactKey: Guid(9b40f93a8cb08c74f95ac3d6915c8250) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/India_M/building-street2-india.prefab using Guid(9b40f93a8cb08c74f95ac3d6915c8250) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc5bfda118a405c287910d0bfce6d934') in 0.039047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/India_T/building-street2-india.fbx
+  artifactKey: Guid(234ea9d57099cee459d275ea0da16da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/India_T/building-street2-india.fbx using Guid(234ea9d57099cee459d275ea0da16da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14c117d49b7f3d304f903eb28e65e232') in 0.024993 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Scifi_M/scifi-tree-crown-small.fbx
+  artifactKey: Guid(ffadbca69c88e454c893aa65550f2aa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Scifi_M/scifi-tree-crown-small.fbx using Guid(ffadbca69c88e454c893aa65550f2aa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e8d3b5c25d45bb9108b746707f4f025') in 0.022974 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/India_M/building-street-india.prefab
+  artifactKey: Guid(b8da7d60421ebeb45bd53629f2bb2c48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/India_M/building-street-india.prefab using Guid(b8da7d60421ebeb45bd53629f2bb2c48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c47db7dfdf644c2f5fce2a56f52fe9b') in 0.025285 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Scifi_T/scifi-tree-crown-medium.prefab
+  artifactKey: Guid(d4d22f9c35253814185bac2a61a39c01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Scifi_T/scifi-tree-crown-medium.prefab using Guid(d4d22f9c35253814185bac2a61a39c01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfcb1c6e3da8684517fd948a9a2fbf04') in 0.025901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Japan_T/japan-tree-tall.prefab
+  artifactKey: Guid(3b404359eebf07a4ea9435dae4cd112f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Japan_T/japan-tree-tall.prefab using Guid(3b404359eebf07a4ea9435dae4cd112f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2986ff97240fb31778f114681a466aa') in 0.019130 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Scifi_T/scifi-tree-crown-small.fbx
+  artifactKey: Guid(5f2888a69e58b1346a0102ab2e750245) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Scifi_T/scifi-tree-crown-small.fbx using Guid(5f2888a69e58b1346a0102ab2e750245) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6306782e3b02a406776ef6fbf48fde8') in 0.028464 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Scifi_T/scifi-tree-crown-big.fbx
+  artifactKey: Guid(6a6ed2b25f766534c90374c72ff7074c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Scifi_T/scifi-tree-crown-big.fbx using Guid(6a6ed2b25f766534c90374c72ff7074c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '702e43bac563d2824777fe72128979f9') in 0.035653 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/India_M/building-street2-india.fbx
+  artifactKey: Guid(eef68e08eb02e2d47918e94ab49b0363) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/India_M/building-street2-india.fbx using Guid(eef68e08eb02e2d47918e94ab49b0363) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07c46bd36f16047541ce7658dc0a4b9f') in 0.020438 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Scifi_T/scifi-tree-crown-medium.fbx
+  artifactKey: Guid(848e783345d66764c942a800e9367323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Scifi_T/scifi-tree-crown-medium.fbx using Guid(848e783345d66764c942a800e9367323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8309b6c3ca4fa5744d1ad8f415a3bf19') in 0.020233 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Scifi_T/scifi-tree-crown-small.prefab
+  artifactKey: Guid(3eb2d64a19eb6584ab0eec0637321e62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Scifi_T/scifi-tree-crown-small.prefab using Guid(3eb2d64a19eb6584ab0eec0637321e62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07eca6f5c019ee3256aa7cafc95262b9') in 0.019960 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Japan_T/japan-tree-tall.fbx
+  artifactKey: Guid(071795414e10d458f80f7482c1a21aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Japan_T/japan-tree-tall.fbx using Guid(071795414e10d458f80f7482c1a21aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6da15747e77e415755fc795b0f0b26b8') in 0.019226 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Japan_M/japan-tree-tall.fbx
+  artifactKey: Guid(f4a2d3657d80ddf42ac3b0af36a4470e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Japan_M/japan-tree-tall.fbx using Guid(f4a2d3657d80ddf42ac3b0af36a4470e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b4fa222d4eb966328de49594fd45211') in 0.023343 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Scifi_M/scifi-tree-crown-medium.fbx
+  artifactKey: Guid(78011fe98b059304eacb968ae224de33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Scifi_M/scifi-tree-crown-medium.fbx using Guid(78011fe98b059304eacb968ae224de33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fbbc14c704d29078102c7865409301c') in 0.028974 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Scifi_M/scifi-tree-crown-medium.fbx
+  artifactKey: Guid(c61412663018e1349bbb9a7ba4f57fbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Scifi_M/scifi-tree-crown-medium.fbx using Guid(c61412663018e1349bbb9a7ba4f57fbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb736fed92fdaa3f6f6d1541f0dfa498') in 0.022700 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/India_M/building-street2-india.prefab
+  artifactKey: Guid(046ec405946e349479fad99119f238cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/India_M/building-street2-india.prefab using Guid(046ec405946e349479fad99119f238cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f6ae7e8beca36b66228ff09d8e60090') in 0.027088 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Scifi_T/scifi-tree-crown-big.prefab
+  artifactKey: Guid(94e7ac3e614fbb041b43b32574ae4728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Scifi_T/scifi-tree-crown-big.prefab using Guid(94e7ac3e614fbb041b43b32574ae4728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26b115340a39835115baa7c34ed6e080') in 0.021980 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Scifi_M/scifi-tree-crown-big.fbx
+  artifactKey: Guid(a7c6e2a21bdc56542a96003acb378fab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Scifi_M/scifi-tree-crown-big.fbx using Guid(a7c6e2a21bdc56542a96003acb378fab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9787fe4026d5bc56d18fec963937793') in 0.025807 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/India_T/building-street-india.prefab
+  artifactKey: Guid(9557053367179604cb53e7afb9579637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/India_T/building-street-india.prefab using Guid(9557053367179604cb53e7afb9579637) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae61ca79fb16d10855de9e69ec765445') in 0.024720 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.889994 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Scifi_M/scifi-tree-mushroom-big.prefab
+  artifactKey: Guid(cfe9afa79adde144994d3e19561abfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Scifi_M/scifi-tree-mushroom-big.prefab using Guid(cfe9afa79adde144994d3e19561abfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f95b4dc2ec848dc680593b647a8ca037') in 0.036704 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Scifi_M/scifi-tree-mushroom-medium.prefab
+  artifactKey: Guid(eb8fc7e689f221e47b9f85c173e5ead5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Scifi_M/scifi-tree-mushroom-medium.prefab using Guid(eb8fc7e689f221e47b9f85c173e5ead5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '453d5971f24919ac3883a0df09840f8c') in 0.028204 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Scifi_T/scifi-tree-mushroom-big.fbx
+  artifactKey: Guid(9d8a1ced651425e4b8d89517d61786a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Scifi_T/scifi-tree-mushroom-big.fbx using Guid(9d8a1ced651425e4b8d89517d61786a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fd6ac62bac1adb70a474a1d598dcde1') in 0.022616 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Scifi_T/scifi-tree-mushroom-medium.fbx
+  artifactKey: Guid(001a3a6e33712b04ba67c8923057f0f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Scifi_T/scifi-tree-mushroom-medium.fbx using Guid(001a3a6e33712b04ba67c8923057f0f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '834301c9f9e4f6bf66a182f213c47ae3') in 0.020141 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Scifi_T/scifi-tree-mushroom-small.prefab
+  artifactKey: Guid(fc9e3d727ae9fe24999bc454751ed487) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Scifi_T/scifi-tree-mushroom-small.prefab using Guid(fc9e3d727ae9fe24999bc454751ed487) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3aa41b50da736694995202390967514') in 0.030152 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Scifi_T/scifi-tree-mushroom-small.fbx
+  artifactKey: Guid(9051435ad8114cf4599d949b6f1ef4d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Scifi_T/scifi-tree-mushroom-small.fbx using Guid(9051435ad8114cf4599d949b6f1ef4d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a784456b8cc7e36345a481586c1c882') in 0.025122 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Scifi_M/scifi-tree-mushroom-small.prefab
+  artifactKey: Guid(90bf081164b30a84bae41fe6e4886445) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Scifi_M/scifi-tree-mushroom-small.prefab using Guid(90bf081164b30a84bae41fe6e4886445) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba85fba24e6d43063f8d05dc41a5d3d0') in 0.022186 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Scifi_M/scifi-tree-mushroom-small.fbx
+  artifactKey: Guid(834f4b15b4aa87649a33f2a00c765614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Scifi_M/scifi-tree-mushroom-small.fbx using Guid(834f4b15b4aa87649a33f2a00c765614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44f8ab197e4ab2e60c4c2c5ca8c0e337') in 0.021941 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Scifi_M/scifi-tree-mushroom-medium.fbx
+  artifactKey: Guid(e597de051ba52164599abab765ddbb94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Scifi_M/scifi-tree-mushroom-medium.fbx using Guid(e597de051ba52164599abab765ddbb94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a13cea8374486c79a856b0641004fa54') in 0.019569 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.523813 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Scifi_T/scifi-tree-orb-big.fbx
+  artifactKey: Guid(1371dfe34166a874ea3874fd79a24e18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Scifi_T/scifi-tree-orb-big.fbx using Guid(1371dfe34166a874ea3874fd79a24e18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31d4f4bfb76c6362f082b15065c72d1c') in 0.027457 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Scifi_T/scifi-tree-orb-big.fbx
+  artifactKey: Guid(248c9c742f7cbeb43a9de5eacc421d79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Scifi_T/scifi-tree-orb-big.fbx using Guid(248c9c742f7cbeb43a9de5eacc421d79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee910d75b8f38579fb333e2f79a4c871') in 0.034902 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Scifi_T/scifi-tree-orb-medium.fbx
+  artifactKey: Guid(ecdf92a0d7d844948b4fc8d7f1efbeea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Scifi_T/scifi-tree-orb-medium.fbx using Guid(ecdf92a0d7d844948b4fc8d7f1efbeea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e26ef24f850a2dd8254a20e76a6401b7') in 0.029445 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Scifi_M/scifi-tree-orb-medium.prefab
+  artifactKey: Guid(db83b987fbd18514f9d616313e8ce5e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Scifi_M/scifi-tree-orb-medium.prefab using Guid(db83b987fbd18514f9d616313e8ce5e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db1f1c216c07478f12ad54a652a89bc9') in 0.028381 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Scifi_M/scifi-tree-orb-small.fbx
+  artifactKey: Guid(051b24f7a6bc35e44bd4f74f8ffca3b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Scifi_M/scifi-tree-orb-small.fbx using Guid(051b24f7a6bc35e44bd4f74f8ffca3b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9198253522edca4feade74222dbde37c') in 0.026448 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Scifi_M/scifi-tree-willow-big.prefab
+  artifactKey: Guid(863e57a3d0ea7894f9816e32a7258f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Scifi_M/scifi-tree-willow-big.prefab using Guid(863e57a3d0ea7894f9816e32a7258f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ac75278cc4967e066d8538fa3639210') in 0.041485 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Scifi_T/scifi-tree-orb-small.fbx
+  artifactKey: Guid(c4ff064c74b0bec489a76a73a392a078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Scifi_T/scifi-tree-orb-small.fbx using Guid(c4ff064c74b0bec489a76a73a392a078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eee4e543df0b2b98ad4294438b7d624') in 0.027458 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Scifi_M/scifi-tree-orb-small.prefab
+  artifactKey: Guid(6e2368fe9595ca24ea70d43fb04e97aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Scifi_M/scifi-tree-orb-small.prefab using Guid(6e2368fe9595ca24ea70d43fb04e97aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35452c1b38a0d69f0fb2e3571f71cac3') in 0.017797 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Scifi_T/scifi-tree-orb-medium.prefab
+  artifactKey: Guid(40e3089540e8dfb4cace5eb556f6c4b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Scifi_T/scifi-tree-orb-medium.prefab using Guid(40e3089540e8dfb4cace5eb556f6c4b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5f9b5740437988ef2a08a9c744326d5') in 0.018816 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Scifi_M/scifi-tree-willow-big.fbx
+  artifactKey: Guid(913f12d906ad75b4b9b74c5dbdd50500) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Scifi_M/scifi-tree-willow-big.fbx using Guid(913f12d906ad75b4b9b74c5dbdd50500) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '769107052d261ed8ce565ec2e5be2808') in 0.025280 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Scifi_T/scifi-tree-orb-small.fbx
+  artifactKey: Guid(28f523dbec1bef24a889da54b046e3f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Scifi_T/scifi-tree-orb-small.fbx using Guid(28f523dbec1bef24a889da54b046e3f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdf7ae6cc758002d6599c6ea1c35946d') in 0.020741 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Scifi_T/scifi-tree-willow-big.fbx
+  artifactKey: Guid(c0d7234f1f7c6694691db587ae69bf7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Scifi_T/scifi-tree-willow-big.fbx using Guid(c0d7234f1f7c6694691db587ae69bf7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac726966b4e38ade3db969cf733ee938') in 0.024336 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Scifi_T/scifi-tree-orb-big.prefab
+  artifactKey: Guid(bafe4fe7f48ae2f47b028dc12aebaac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Scifi_T/scifi-tree-orb-big.prefab using Guid(bafe4fe7f48ae2f47b028dc12aebaac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27194b5c05672c2b95fde5adc23e45ab') in 0.019666 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Scifi_M/scifi-tree-orb-big.fbx
+  artifactKey: Guid(bd5cd6104ece26342b8078d69fde45ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Scifi_M/scifi-tree-orb-big.fbx using Guid(bd5cd6104ece26342b8078d69fde45ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1601ef653785d8bc7dde56f2ca6c7f05') in 0.028470 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.734221 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Scifi_M/scifi-tree-willow-medium.fbx
+  artifactKey: Guid(192cbf24db55c4245bafc276ebc19dc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Scifi_M/scifi-tree-willow-medium.fbx using Guid(192cbf24db55c4245bafc276ebc19dc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58044caa8226a9507b883ce215f165f3') in 0.029227 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Scifi_M/scifi-tree-willow-small.prefab
+  artifactKey: Guid(9ad0d597618fb3a448a2217f09ab2dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Scifi_M/scifi-tree-willow-small.prefab using Guid(9ad0d597618fb3a448a2217f09ab2dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fdf825aaa6e06a466e9b8edb52b18f4') in 0.032320 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Scifi_M/scifi-tree-willow-small.prefab
+  artifactKey: Guid(bb97679e85754614daee783624d35372) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Scifi_M/scifi-tree-willow-small.prefab using Guid(bb97679e85754614daee783624d35372) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '528d5b3bd36219b9c543b082dd9a089a') in 0.016252 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Nature_M/Trees_M/tree.prefab
+  artifactKey: Guid(1ee5252a8f688ad42972b5b6e39f5c88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Nature_M/Trees_M/tree.prefab using Guid(1ee5252a8f688ad42972b5b6e39f5c88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e91e1f21a19bc1c42d99243260b5968c') in 0.038764 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Nature_M/Trees_M/tree.fbx
+  artifactKey: Guid(17be70f662abe42529b241215b8498c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Nature_M/Trees_M/tree.fbx using Guid(17be70f662abe42529b241215b8498c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '627bce42090eddfad78779d4538912b6') in 0.024006 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree.fbx
+  artifactKey: Guid(9bc2df04eb34a453fbdc3f08693fa930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree.fbx using Guid(9bc2df04eb34a453fbdc3f08693fa930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29addd2c29ec858526a7c218af317689') in 0.035775 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Scifi_T/scifi-tree-willow-small.fbx
+  artifactKey: Guid(6dcbc78a46d26564ca960b8c50d34a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Scifi_T/scifi-tree-willow-small.fbx using Guid(6dcbc78a46d26564ca960b8c50d34a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95359e007625854d7dbd24b788053724') in 0.028344 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Scifi_M/scifi-tree-willow-medium.prefab
+  artifactKey: Guid(bfe2da5c2c37ca443912d02920475e18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Scifi_M/scifi-tree-willow-medium.prefab using Guid(bfe2da5c2c37ca443912d02920475e18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '627cd990b5b4cebb37443de141964f34') in 0.021237 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Scifi_T/scifi-tree-willow-small.prefab
+  artifactKey: Guid(89b41e0daba4bc04e98b26d5a53635fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Scifi_T/scifi-tree-willow-small.prefab using Guid(89b41e0daba4bc04e98b26d5a53635fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a52855cb76665a4e46fb72551cebfa58') in 0.020230 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.456478 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree.fbx
+  artifactKey: Guid(577ba0f2a362e33478e41f1bec335302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree.fbx using Guid(577ba0f2a362e33478e41f1bec335302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6d65836c36c00230272d70e173ac4f5') in 0.019116 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-baobab.prefab
+  artifactKey: Guid(c9f0894afc926234a8c28e7c9383708f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-baobab.prefab using Guid(c9f0894afc926234a8c28e7c9383708f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad4f52a523b3fe2e4d8d601b6f97960c') in 0.033820 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-baobab.fbx
+  artifactKey: Guid(22198c7f086e9b645a0a4be1b759114b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-baobab.fbx using Guid(22198c7f086e9b645a0a4be1b759114b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44c95b499d0f383cf9f06ff06e6455a7') in 0.021142 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Nature_M/Trees_M/tree-baobab.fbx
+  artifactKey: Guid(afd700edd33134476b32c2af67400165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Nature_M/Trees_M/tree-baobab.fbx using Guid(afd700edd33134476b32c2af67400165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e377ae2ee2f63dda215b240f8f27a22') in 0.040821 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-baobab_orange.fbx
+  artifactKey: Guid(e8423362f46901d40948fdcb2fb1e1e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-baobab_orange.fbx using Guid(e8423362f46901d40948fdcb2fb1e1e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92797159242d7b3c73dc0a699dea5989') in 0.032604 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Nature_M/Trees_M/tree-baobab.prefab
+  artifactKey: Guid(0df5765acbf5842f38119a21a68f5eec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Nature_M/Trees_M/tree-baobab.prefab using Guid(0df5765acbf5842f38119a21a68f5eec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ff93dc3038901feb0455e611325bec8') in 0.025971 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Nature_M/Trees_M/tree-baobab.prefab
+  artifactKey: Guid(c0ed1f35dafab5149a01151d24a35118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Nature_M/Trees_M/tree-baobab.prefab using Guid(c0ed1f35dafab5149a01151d24a35118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a55696b8648937329bb3b332ef10c304') in 0.019549 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-baobab_white.prefab
+  artifactKey: Guid(708e127038135a24689c7d09021fc5d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-baobab_white.prefab using Guid(708e127038135a24689c7d09021fc5d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffa790fce9c4dfb1fdf247c633e139dc') in 0.020221 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.358328 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Nature_M/Trees_M/tree-bare.prefab
+  artifactKey: Guid(9a8f294c11e67ed448f5e3a25591800a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Nature_M/Trees_M/tree-bare.prefab using Guid(9a8f294c11e67ed448f5e3a25591800a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e326a16e51c73e4250f5c4afd870ea7f') in 0.029423 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-beech.fbx
+  artifactKey: Guid(98f7492fcbc7448fb825f8f83f0d9d26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-beech.fbx using Guid(98f7492fcbc7448fb825f8f83f0d9d26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a565435a18922b581e6ea295a45cd2c') in 0.033601 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Nature_M/Trees_M/tree-beech.fbx
+  artifactKey: Guid(3e3123c035b7e924aa600a32b42cfbcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Nature_M/Trees_M/tree-beech.fbx using Guid(3e3123c035b7e924aa600a32b42cfbcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b7270c7b948354f89a7a8b1566fbb83') in 0.039035 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-bare.prefab
+  artifactKey: Guid(38288f7afd10ee94eb292afb0ee2effb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-bare.prefab using Guid(38288f7afd10ee94eb292afb0ee2effb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59e0e2e918787e6d10b85310877e05b3') in 0.022867 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.348909 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Nature_M/Trees_M/tree-beech.prefab
+  artifactKey: Guid(35d4951e636d2ad429be57c270484724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Nature_M/Trees_M/tree-beech.prefab using Guid(35d4951e636d2ad429be57c270484724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '356103c1885ddf98aafd0fc8202f7ceb') in 0.024384 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-beech_white.fbx
+  artifactKey: Guid(2cc447ef5c22b4ae79ec76a29df08b11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-beech_white.fbx using Guid(2cc447ef5c22b4ae79ec76a29df08b11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '080b3ba0fc2938dab6b737379f166307') in 0.028193 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-birch.fbx
+  artifactKey: Guid(08c7aa7afdf5848f0be1543a55d5f6c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-birch.fbx using Guid(08c7aa7afdf5848f0be1543a55d5f6c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c13b7c3bc3af0b553ada6cd4e846aa07') in 0.032512 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-beech_white.prefab
+  artifactKey: Guid(9260b1e7eaeaef14eaa6378d2c4f9e40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-beech_white.prefab using Guid(9260b1e7eaeaef14eaa6378d2c4f9e40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e27b7e10692cfc51bbbb42aff8fe49c3') in 0.020952 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-birch-tall.prefab
+  artifactKey: Guid(d1b7f409b540e434db3c89458b445df5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-birch-tall.prefab using Guid(d1b7f409b540e434db3c89458b445df5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b766f8abae5e38dbcdf060949ded9cf') in 0.022683 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-birch.fbx
+  artifactKey: Guid(c357a079761c5ab48a2f8476074c4da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-birch.fbx using Guid(c357a079761c5ab48a2f8476074c4da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abd053cdd2d0fe892481d527a8348c03') in 0.020676 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Nature_M/Trees_M/tree-birch.fbx
+  artifactKey: Guid(eb3f40d7007ee442ca747c2f6490c828) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Nature_M/Trees_M/tree-birch.fbx using Guid(eb3f40d7007ee442ca747c2f6490c828) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba02fdc94705856db144430339d4add7') in 0.023019 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-beech_white.fbx
+  artifactKey: Guid(3dd66dfe0328a034b9453bef6a0421aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-beech_white.fbx using Guid(3dd66dfe0328a034b9453bef6a0421aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69f163b73e0f87ec503764745dbac35c') in 0.022978 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-beech_orange.prefab
+  artifactKey: Guid(956dd5ba9278bc74ca28eda32bb81ed5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-beech_orange.prefab using Guid(956dd5ba9278bc74ca28eda32bb81ed5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '048b31a8bf48380eafd7ea0fb7fc5eb6') in 0.018638 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 28.958464 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Nature_M/Trees_M/tree-birch-tall.fbx
+  artifactKey: Guid(447e59ea39e41c14abad439cd97b9f44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Nature_M/Trees_M/tree-birch-tall.fbx using Guid(447e59ea39e41c14abad439cd97b9f44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b7b39fd4dc159fc81004e4dc48f2454') in 0.023244 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Nature_M/Trees_M/tree-birch-tall.prefab
+  artifactKey: Guid(364b2560ed6bc4bc38dfe1a9e565fcae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Nature_M/Trees_M/tree-birch-tall.prefab using Guid(364b2560ed6bc4bc38dfe1a9e565fcae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d362291723cbf49f805db94d345de98') in 0.019921 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-birch-tall_orange.prefab
+  artifactKey: Guid(938d192c75724554d9728cf602d8ab48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-birch-tall_orange.prefab using Guid(938d192c75724554d9728cf602d8ab48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71ff6d3aee25028dad43749607f7747b') in 0.023030 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Nature_M/Trees_M/tree-birch-tall.prefab
+  artifactKey: Guid(55dc76d20ad15c247933f64fec8dcfd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Nature_M/Trees_M/tree-birch-tall.prefab using Guid(55dc76d20ad15c247933f64fec8dcfd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7359806ee64b77a21b2ff25a93896e9') in 0.018441 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-birch-tall_white.fbx
+  artifactKey: Guid(5c7fd71beeb49e34abd21a25f8f9152b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-birch-tall_white.fbx using Guid(5c7fd71beeb49e34abd21a25f8f9152b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3df6c778b82813c66f65ea328ab1c4b5') in 0.028541 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-birch_white.prefab
+  artifactKey: Guid(d2ff6b31ea39be94db875d654e0aff1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-birch_white.prefab using Guid(d2ff6b31ea39be94db875d654e0aff1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dff33328a740d3950d6c471e10d658fb') in 0.029530 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-birch_white.fbx
+  artifactKey: Guid(306cec77acda144558adc4fa0eed9198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-birch_white.fbx using Guid(306cec77acda144558adc4fa0eed9198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba0f0607c953639ae2dcdb71a264bd73') in 0.022299 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-birch-tall_white.fbx
+  artifactKey: Guid(ce5f0ad52627f4937b075d0087ed3cc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-birch-tall_white.fbx using Guid(ce5f0ad52627f4937b075d0087ed3cc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '050b92297d189d2a78e6274905616974') in 0.018253 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-birch_orange.prefab
+  artifactKey: Guid(269413eb8552ae74f9bec38d430b4e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-birch_orange.prefab using Guid(269413eb8552ae74f9bec38d430b4e5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06a63807e46e0c5f6aff261f1a62601a') in 0.017659 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.437341 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Japan_T/tree-bonsai.fbx
+  artifactKey: Guid(c30e5b3d8df158b4985faf926310c974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Japan_T/tree-bonsai.fbx using Guid(c30e5b3d8df158b4985faf926310c974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '970e17dd3383221016c81c3cc8a64961') in 0.052715 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-conifer.fbx
+  artifactKey: Guid(2265084a308c24bdb8431970f4252f22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-conifer.fbx using Guid(2265084a308c24bdb8431970f4252f22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c998ada25d6b93b60daed6b9135278b') in 0.028808 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-christmas.prefab
+  artifactKey: Guid(050ca06fe38acd14e8ad2be227bb8047) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-christmas.prefab using Guid(050ca06fe38acd14e8ad2be227bb8047) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2342b4f8a62e9317baa79c9a4222850e') in 0.029558 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-christmas.fbx
+  artifactKey: Guid(0099f44d6e170e84194fcfc5d0dacfa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-christmas.fbx using Guid(0099f44d6e170e84194fcfc5d0dacfa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27e67e3f44bb078491f05b6eef62f3d4') in 0.019273 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-christmas.fbx
+  artifactKey: Guid(b28f47e8d0a1d4781811af98b45c053a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-christmas.fbx using Guid(b28f47e8d0a1d4781811af98b45c053a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12754aece6842cad71443f62b3e2664e') in 0.016859 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Japan_M/tree-bonsai.fbx
+  artifactKey: Guid(738e5909fbff6445e85692553b0cc49d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Japan_M/tree-bonsai.fbx using Guid(738e5909fbff6445e85692553b0cc49d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b19c9f949fdb0e6e6939ca0b53ff5e0') in 0.021567 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Nature_M/Trees_M/tree-conifer.fbx
+  artifactKey: Guid(5c316c32e8b4247fa86e75d19887c97c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Nature_M/Trees_M/tree-conifer.fbx using Guid(5c316c32e8b4247fa86e75d19887c97c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd945e9b792b05dc4fb3a99fc36c79dfd') in 0.017195 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Nature_M/Trees_M/tree-christmas.prefab
+  artifactKey: Guid(49092433559294d7cb15e57104951e70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Nature_M/Trees_M/tree-christmas.prefab using Guid(49092433559294d7cb15e57104951e70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f4ddc76e748da07c129c285cd987a99') in 0.033880 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-conifer.prefab
+  artifactKey: Guid(18d455d37d103c54c84a57333484cc81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-conifer.prefab using Guid(18d455d37d103c54c84a57333484cc81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f34ea1ce90811312985e5ee2c52ed820') in 0.018168 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.106108 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-conifer.fbx
+  artifactKey: Guid(982061d85e031e242a45bc90b0814d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-conifer.fbx using Guid(982061d85e031e242a45bc90b0814d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90dbb60bd664b7919adfcffab4c3bd24') in 0.017927 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Nature_M/Trees_M/tree-conifer-snow.prefab
+  artifactKey: Guid(f8253946774cf14418e48edabd1925f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Nature_M/Trees_M/tree-conifer-snow.prefab using Guid(f8253946774cf14418e48edabd1925f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78f854178102d1a3269f4725e7ece08c') in 0.057422 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-conifer_snow.fbx
+  artifactKey: Guid(cc4b99c59544a364c9cb0af8e263cd63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-conifer_snow.fbx using Guid(cc4b99c59544a364c9cb0af8e263cd63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4208c88370783b0738d7c0f5903652d') in 0.028712 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Nature_M/Trees_M/tree-conifer-snow.fbx
+  artifactKey: Guid(cae8021d27b7a44228f3e37350475f9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Nature_M/Trees_M/tree-conifer-snow.fbx using Guid(cae8021d27b7a44228f3e37350475f9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1875d911d595b1bf103de3d34f1f9660') in 0.021085 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Nature_M/Trees_M/tree-conifer.prefab
+  artifactKey: Guid(d778f3e0d94ca8b4a8d490d35ccbb264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Prefabs_M/Nature_M/Trees_M/tree-conifer.prefab using Guid(d778f3e0d94ca8b4a8d490d35ccbb264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e14acbe122368aaaa3e74a2005c4912') in 0.017590 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-dead.fbx
+  artifactKey: Guid(cc20aa8ec91b145beb42457ca1e57da8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-dead.fbx using Guid(cc20aa8ec91b145beb42457ca1e57da8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bef1b7f014544681fdbdcfe55c31ed94') in 0.029692 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-conifer_snow.fbx
+  artifactKey: Guid(6715d5abbac60493e9bf4c35f5000944) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-conifer_snow.fbx using Guid(6715d5abbac60493e9bf4c35f5000944) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8372a09b3dc03aaf6696296a9c2a7213') in 0.017734 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-conifer_white.fbx
+  artifactKey: Guid(394e80557b9204eeeb95af4e285a2390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-conifer_white.fbx using Guid(394e80557b9204eeeb95af4e285a2390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c20f40e98c85f90725d43b1eab967ea7') in 0.017250 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-conifer-snow.prefab
+  artifactKey: Guid(5f6e26c2df256b64196840728c4f7d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-conifer-snow.prefab using Guid(5f6e26c2df256b64196840728c4f7d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '895e7ed5939c85a76a2ce845e20e44b3') in 0.017764 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-conifer_orange.fbx
+  artifactKey: Guid(3e4107246e4a6f74a823e47a1f4e17d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-conifer_orange.fbx using Guid(3e4107246e4a6f74a823e47a1f4e17d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4596032b88e87e38f45af855febbeae5') in 0.017303 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.913891 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-dead.fbx
+  artifactKey: Guid(3c317d5b4514c834b87b3311da2d4010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-dead.fbx using Guid(3c317d5b4514c834b87b3311da2d4010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '352216d2a416a70f4c23bcc291815e31') in 0.016919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Nature_M/Trees_M/tree-dead.fbx
+  artifactKey: Guid(ce55904466fe3432db28a7acc40dda13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Meshes_M/Nature_M/Trees_M/tree-dead.fbx using Guid(ce55904466fe3432db28a7acc40dda13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '380d8a9f55ed5427429689fe5236bfe8') in 0.017121 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-dead-snow.fbx
+  artifactKey: Guid(b879294e59bd54897b348632184ca454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-dead-snow.fbx using Guid(b879294e59bd54897b348632184ca454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1cdb1ed7c54f2612a6c11bab49079d1') in 0.018689 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-dead-snow.fbx
+  artifactKey: Guid(44b31f2fe5b038446a2d43b1778ab06c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-dead-snow.fbx using Guid(44b31f2fe5b038446a2d43b1778ab06c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f63d5185c2b20cd3b152e17a554f0870') in 0.017389 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Nature_M/Trees_M/tree-dry.prefab
+  artifactKey: Guid(2cb17491222d24b27951f88f6bc0a896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Nature_M/Trees_M/tree-dry.prefab using Guid(2cb17491222d24b27951f88f6bc0a896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd89da6dc096ad93abc045aa46f0838ec') in 0.020594 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-elipse.prefab
+  artifactKey: Guid(de355501f6ff44d47a80204838f213ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-elipse.prefab using Guid(de355501f6ff44d47a80204838f213ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9782f94af510c5172984948a19c3c47') in 0.027348 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Nature_M/Trees_M/tree-elipse.prefab
+  artifactKey: Guid(3be346d3e2145b046a53b836c10f1bae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Nature_M/Trees_M/tree-elipse.prefab using Guid(3be346d3e2145b046a53b836c10f1bae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '256631e1b53dd658978124ce9757f05e') in 0.016793 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-elipse_orange.fbx
+  artifactKey: Guid(26dd77feebdbe8a42b3bf5f724795b4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Meshes_T/Nature_T/tree-elipse_orange.fbx using Guid(26dd77feebdbe8a42b3bf5f724795b4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5c4e9eb11f970833d9a56e09f068ae6') in 0.028608 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-elipse_orange.prefab
+  artifactKey: Guid(33f4946d9bda86440a49cf6fbf538405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-elipse_orange.prefab using Guid(33f4946d9bda86440a49cf6fbf538405) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c42c5c7e607beee7ad83ef78abbd575') in 0.020658 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Nature_M/Trees_M/tree-dry.fbx
+  artifactKey: Guid(cb8d9aace58fb1e4480c8c3b4dc8d764) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Nature_M/Trees_M/tree-dry.fbx using Guid(cb8d9aace58fb1e4480c8c3b4dc8d764) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2db82dc9d085535707503b5e5690230') in 0.016977 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Nature_M/Trees_M/tree-dead-snow.fbx
+  artifactKey: Guid(aa5afd19fc8df394e9be62c06957367d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/M/- Meshes_M/Nature_M/Trees_M/tree-dead-snow.fbx using Guid(aa5afd19fc8df394e9be62c06957367d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a2fa40e212007e55860f4a81594e040') in 0.017224 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Nature_M/Trees_M/tree-dead-snow.prefab
+  artifactKey: Guid(4f9a091cbde2e4c129b9945d7bb4a612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/M/- Prefabs_M/Nature_M/Trees_M/tree-dead-snow.prefab using Guid(4f9a091cbde2e4c129b9945d7bb4a612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db8cc351bcbcfa886a7edc692aa690d8') in 0.016796 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-dead.prefab
+  artifactKey: Guid(fd6fd2b041e373248a9393206f14203a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/polyperfect/Low Poly Ultimate Pack/T/- Prefabs_T/Nature_T/Trees_T/tree-dead.prefab using Guid(fd6fd2b041e373248a9393206f14203a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a3b1af8c699da533e42341322f6ccfa') in 0.017040 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-elipse.fbx
+  artifactKey: Guid(4a3fafb45c62e44ff95b0e391d3cacfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Meshes_T/Nature_T/tree-elipse.fbx using Guid(4a3fafb45c62e44ff95b0e391d3cacfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc407793967d2aa1d079ecd4a85f6b23') in 0.016493 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 195.702337 seconds.
+  path: Assets/AssetDownloaded/QuarterView 3D Action BE5/Textures
+  artifactKey: Guid(86d3d6db9a1e9364482eee52eccbecf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/QuarterView 3D Action BE5/Textures using Guid(86d3d6db9a1e9364482eee52eccbecf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc55567d685f51ffffd6164e776ea372') in 0.011874 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.500018 seconds.
+  path: Assets/AssetDownloaded/MASH Virtual
+  artifactKey: Guid(bfd84aef7b58b94419923ce4132493da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/MASH Virtual using Guid(bfd84aef7b58b94419923ce4132493da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3d549ea10017e7d48f580df2c39e475') in 0.009209 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.617970 seconds.
+  path: Assets/AssetDownloaded/FROOD
+  artifactKey: Guid(fa61e59f89f257c459c736842e37240c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/FROOD using Guid(fa61e59f89f257c459c736842e37240c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3ae9143073323035cccbed2d4846f81') in 0.009115 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.803178 seconds.
+  path: Assets/AssetDownloaded/FROOD/Models
+  artifactKey: Guid(63bac40b474d3ce468783179a5001614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/FROOD/Models using Guid(63bac40b474d3ce468783179a5001614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f9d949a26510bafa7849f7d1fd62837') in 0.009608 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.053913 seconds.
+  path: Assets/AssetDownloaded/FROOD/Models/Apple.fbx
+  artifactKey: Guid(8565aa5abe7675f41b62cb1bf02db304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/FROOD/Models/Apple.fbx using Guid(8565aa5abe7675f41b62cb1bf02db304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57f1e5cd590eb7b6688515b2a38e8b49') in 0.009898 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/AssetDownloaded/FROOD/Models/Drink.fbx
+  artifactKey: Guid(d92f54d3b13a8a14c978af40bc432676) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/FROOD/Models/Drink.fbx using Guid(d92f54d3b13a8a14c978af40bc432676) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d0d1629a4fc0899ac7c01bfc3461a8b') in 0.010620 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/AssetDownloaded/FROOD/Models/Steack.fbx
+  artifactKey: Guid(67547ae68ce6a6242a5fda472d37ba85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/FROOD/Models/Steack.fbx using Guid(67547ae68ce6a6242a5fda472d37ba85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f18fd7620ce7f39fba70758d53d7f6a8') in 0.010480 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/AssetDownloaded/FROOD/Models/Cake.fbx
+  artifactKey: Guid(2c17dab776d77164a8816d179db1d20d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/FROOD/Models/Cake.fbx using Guid(2c17dab776d77164a8816d179db1d20d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cce53157cdf91500e3f34a6797a1409') in 0.010805 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/AssetDownloaded/FROOD/Models/Watermelon.fbx
+  artifactKey: Guid(dd5c23045caca5c448bbba7f8c9de23a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/FROOD/Models/Watermelon.fbx using Guid(dd5c23045caca5c448bbba7f8c9de23a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2564aab30f1568acf32329cd0e817f9f') in 0.010573 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.178099 seconds.
+  path: Assets/AssetDownloaded/Sets - Gems/Prefabs
+  artifactKey: Guid(d5c3f7699c53040eba2b0c2995db9a62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Sets - Gems/Prefabs using Guid(d5c3f7699c53040eba2b0c2995db9a62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff3853328a079f9753bd9b4a91630fe4') in 0.010725 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.724026 seconds.
+  path: Assets/AssetDownloaded/Sets - Gems/Prefabs/Gems - Cyan
+  artifactKey: Guid(7b9ef6ceb86f14048b34f83b64f53dc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Sets - Gems/Prefabs/Gems - Cyan using Guid(7b9ef6ceb86f14048b34f83b64f53dc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc8dcfb95af6995a4664ce54f776f889') in 0.011031 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.268749 seconds.
+  path: Assets/AssetDownloaded/Sets - Gems/Prefabs/Gems - Cyan/gem_05.prefab
+  artifactKey: Guid(6f7aede789f2f42a6bc6ffc287552cc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Sets - Gems/Prefabs/Gems - Cyan/gem_05.prefab using Guid(6f7aede789f2f42a6bc6ffc287552cc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77703e1b5de937d1de820cf2f0af260d') in 0.011329 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/AssetDownloaded/Sets - Gems/Prefabs/Gems - Cyan/gem_10.prefab
+  artifactKey: Guid(d90392d22be6e4537bb1911ed5f96cb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Sets - Gems/Prefabs/Gems - Cyan/gem_10.prefab using Guid(d90392d22be6e4537bb1911ed5f96cb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c9e8c39060718b4bab3d5be291ab1af') in 0.010355 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetDownloaded/Sets - Gems/Prefabs/Gems - Cyan/gem_08.prefab
+  artifactKey: Guid(67d1cb3a2224d44519297205ad070b27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Sets - Gems/Prefabs/Gems - Cyan/gem_08.prefab using Guid(67d1cb3a2224d44519297205ad070b27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7035a9b19423820c0f13f897d7ee250a') in 0.011034 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/AssetDownloaded/Sets - Gems/Prefabs/Gems - Cyan/gem_07.prefab
+  artifactKey: Guid(c70065fccb82a41918ec8afb6f4eec11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Sets - Gems/Prefabs/Gems - Cyan/gem_07.prefab using Guid(c70065fccb82a41918ec8afb6f4eec11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '577682cd4e9bdce0cfa7c55d285412b8') in 0.010974 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/AssetDownloaded/Sets - Gems/Prefabs/Gems - Cyan/gem_12.prefab
+  artifactKey: Guid(7a0c2201f996449b8a1c800fa0a509d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Sets - Gems/Prefabs/Gems - Cyan/gem_12.prefab using Guid(7a0c2201f996449b8a1c800fa0a509d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4864a6ff5e6489782612ecb07a46d442') in 0.009515 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/AssetDownloaded/Sets - Gems/Prefabs/Gems - Cyan/gem_17.prefab
+  artifactKey: Guid(542bf27e73bc84ec897be3ce9ab0eff7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Sets - Gems/Prefabs/Gems - Cyan/gem_17.prefab using Guid(542bf27e73bc84ec897be3ce9ab0eff7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ece149dc7d9b3374b89f90d0f43330e') in 0.011407 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/AssetDownloaded/Sets - Gems/Prefabs/Gems - Cyan/gem_13.prefab
+  artifactKey: Guid(fc27abcbc044f4afda811448e7e49dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Sets - Gems/Prefabs/Gems - Cyan/gem_13.prefab using Guid(fc27abcbc044f4afda811448e7e49dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30ada70e3626715d1993a8dd8113c538') in 0.011050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.099995 seconds.
+  path: Assets/AssetDownloaded/MASH Virtual/Table
+  artifactKey: Guid(939b062c349685943a09913307a0efbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/MASH Virtual/Table using Guid(939b062c349685943a09913307a0efbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd74dcf53724287bcf3285191e2d6c9e8') in 0.011264 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.554280 seconds.
+  path: Assets/AssetDownloaded/MASH Virtual/Table/Material
+  artifactKey: Guid(2384be8930896eb4ba08eeb7aa206bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/MASH Virtual/Table/Material using Guid(2384be8930896eb4ba08eeb7aa206bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '150dd17bcebf790d8e17d1486decfa63') in 0.009369 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.879979 seconds.
+  path: Assets/AssetDownloaded/Blink
+  artifactKey: Guid(e610a5653ae643a4eac47b3861275130) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink using Guid(e610a5653ae643a4eac47b3861275130) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71cab38233b548494e505b18ac5a7e8a') in 0.011653 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.466955 seconds.
+  path: Assets/AssetDownloaded/Blink/Art
+  artifactKey: Guid(112ba712ff84fe54baee7ad2f700c3ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art using Guid(112ba712ff84fe54baee7ad2f700c3ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11ca38b6e6729c0697cedf2b6a101fd3') in 0.010958 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.449122 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Animations
+  artifactKey: Guid(d33901fc9e53f6d41b5a232d05017d3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Animations using Guid(d33901fc9e53f6d41b5a232d05017d3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '317acf138a4bee1dc970abcc31ff6543') in 0.009384 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.451080 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Animations/Animations_Starter_Pack
+  artifactKey: Guid(2ad470861c2cd154997d20c3bca6d694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Animations/Animations_Starter_Pack using Guid(2ad470861c2cd154997d20c3bca6d694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca73240e35f596226d8922bf90acf57e') in 0.010918 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.430629 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Animations/Animations_Starter_Pack/Combat
+  artifactKey: Guid(35b149b905f5c4645896e69ce79c884a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Animations/Animations_Starter_Pack/Combat using Guid(35b149b905f5c4645896e69ce79c884a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4d8b6beaaf1bbf951ac68d416f3a11d') in 0.012698 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.029222 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Animations/Animations_Starter_Pack/Combat/BlockingLoop.fbx
+  artifactKey: Guid(a8bd4d740daa72c46bbff25e229c4ad2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Animations/Animations_Starter_Pack/Combat/BlockingLoop.fbx using Guid(a8bd4d740daa72c46bbff25e229c4ad2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd5fcfaea6048b7fb33f2396e5266fef') in 0.032700 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Animations/Animations_Starter_Pack/Combat/PunchLeft.fbx
+  artifactKey: Guid(d193a764e528253418a9c8161269688c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Animations/Animations_Starter_Pack/Combat/PunchLeft.fbx using Guid(d193a764e528253418a9c8161269688c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6fbff50ebfb2cc5c28247b66665f740') in 0.029929 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Animations/Animations_Starter_Pack/Combat/StunnedLoop.fbx
+  artifactKey: Guid(8f760fa0100eb634b937fa931744496e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Animations/Animations_Starter_Pack/Combat/StunnedLoop.fbx using Guid(8f760fa0100eb634b937fa931744496e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5282de83b9b0bc3eb92cf34bce4ca80') in 0.026749 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Animations/Animations_Starter_Pack/Combat/MeleeAttack_OneHanded.fbx
+  artifactKey: Guid(3d7c10dfb76b352458c6ee3cf1acd54f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Animations/Animations_Starter_Pack/Combat/MeleeAttack_OneHanded.fbx using Guid(3d7c10dfb76b352458c6ee3cf1acd54f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be503f6dd5c7a5e55dac47a8e4a854a7') in 0.029139 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Animations/Animations_Starter_Pack/Combat/PunchRight.fbx
+  artifactKey: Guid(b4ed12fcea5716a4b88a664cf716cfc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Animations/Animations_Starter_Pack/Combat/PunchRight.fbx using Guid(b4ed12fcea5716a4b88a664cf716cfc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '215e622319f826235774c879094ac654') in 0.026619 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Animations/Animations_Starter_Pack/Combat/CastingLoop.fbx
+  artifactKey: Guid(d6557ad5f7261ce4c8fe9f8f67c9d4cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Animations/Animations_Starter_Pack/Combat/CastingLoop.fbx using Guid(d6557ad5f7261ce4c8fe9f8f67c9d4cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c461faf304da04dbb4e377f96ac2739') in 0.029610 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Animations/Animations_Starter_Pack/Combat/MeleeAttack_TwoHanded.fbx
+  artifactKey: Guid(337a802e1a50ad746827a890f372c41e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Animations/Animations_Starter_Pack/Combat/MeleeAttack_TwoHanded.fbx using Guid(337a802e1a50ad746827a890f372c41e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15f5feee27f1daa9c7488e0b2c49445c') in 0.030172 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.096766 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Characters
+  artifactKey: Guid(69d2c17204004d246be067e9b9b7c0e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Characters using Guid(69d2c17204004d246be067e9b9b7c0e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20f0bfa0302ec5f7af05904fcdee61d5') in 0.011271 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.976555 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Characters/LowPoly
+  artifactKey: Guid(fddf9a28e70fe73469d81e2db2456b0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Characters/LowPoly using Guid(fddf9a28e70fe73469d81e2db2456b0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72b631f8d38a0e6815a7a66c273bd5cf') in 0.009464 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.449588 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Characters/LowPoly/Demo_FREE_LowPolyCharacter
+  artifactKey: Guid(b05b262776c2f0440a490f4e149c7d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Characters/LowPoly/Demo_FREE_LowPolyCharacter using Guid(b05b262776c2f0440a490f4e149c7d9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11c2436fb4f01dd91126ec8616c029ce') in 0.010381 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.079755 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Characters/LowPoly/Demo_FREE_LowPolyCharacter/PPProfile.asset
+  artifactKey: Guid(cf2649d8410aacf43860f9496d8804f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Characters/LowPoly/Demo_FREE_LowPolyCharacter/PPProfile.asset using Guid(cf2649d8410aacf43860f9496d8804f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1823cdb654b426538bf9448d68693bf7') in 0.014540 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.106367 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly
+  artifactKey: Guid(6ddda3cb637362b4ca4cbc1813528e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly using Guid(6ddda3cb637362b4ca4cbc1813528e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fac56354bbbda8b6216277380dfa8dc8') in 0.011515 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.268271 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Prefabs_Humans
+  artifactKey: Guid(13aec0c2edfc5ab45b6e2a4402590e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Prefabs_Humans using Guid(13aec0c2edfc5ab45b6e2a4402590e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b72491258f65435c678d4a11b373783d') in 0.009839 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.056440 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Prefabs_Humans/HumanMale_Character_FREE.prefab
+  artifactKey: Guid(60770bdb4dc667c45bea53db0339dc05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Characters/LowPoly/FREE_HumanLowPoly/Prefabs_Humans/HumanMale_Character_FREE.prefab using Guid(60770bdb4dc667c45bea53db0339dc05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e74edd05ff152b4f515b8dd564063cb') in 0.010027 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.754845 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Characters/LowPoly/Demo_FREE_LowPolyCharacter/DEMO_FREE_LowPolyHumans
+  artifactKey: Guid(7275b4352b97da145ae70b2c2dd28ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Characters/LowPoly/Demo_FREE_LowPolyCharacter/DEMO_FREE_LowPolyHumans using Guid(7275b4352b97da145ae70b2c2dd28ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8777f0ff3d454da834f6d637190998a1') in 0.010521 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.030821 seconds.
+  path: Assets/AssetDownloaded/Blink/Art/Characters/LowPoly/Demo_FREE_LowPolyCharacter/DEMO_FREE_LowPolyHumans/LightingData.asset
+  artifactKey: Guid(88d61e4b5bb195a4da585dd9c8d8ea4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/Blink/Art/Characters/LowPoly/Demo_FREE_LowPolyCharacter/DEMO_FREE_LowPolyHumans/LightingData.asset using Guid(88d61e4b5bb195a4da585dd9c8d8ea4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a071d6eed7b373cb5749a0d4e6350f8f') in 0.015152 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3879.234562 seconds.
+  path: Assets/ITEMprefabs/shrub-flowers (1).prefab
+  artifactKey: Guid(6cebe446dc1b1df46ad9c4f3e18595c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ITEMprefabs/shrub-flowers (1).prefab using Guid(6cebe446dc1b1df46ad9c4f3e18595c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f262216511ee783569b6330189ded695') in 0.033304 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.574347 seconds.
+  path: Assets/ITEMprefabs/palm-round (2).prefab
+  artifactKey: Guid(d03e13a1192c965408a3647e37ba58df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ITEMprefabs/palm-round (2).prefab using Guid(d03e13a1192c965408a3647e37ba58df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca5be21584efda720e91ffe1e5ebd7ab') in 0.026490 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.651845 seconds.
+  path: Assets/ITEMprefabs/palm-round (1).prefab
+  artifactKey: Guid(00c993541c4ffdf46b99e024386501dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ITEMprefabs/palm-round (1).prefab using Guid(00c993541c4ffdf46b99e024386501dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f0d35ee2c17929654c652832c8f7c27') in 0.105136 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.481386 seconds.
+  path: Assets/ITEMprefabs/palm-high (1).prefab
+  artifactKey: Guid(f2be1e868965e1c49be274cc7bff8cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ITEMprefabs/palm-high (1).prefab using Guid(f2be1e868965e1c49be274cc7bff8cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0dd66b9ec0dbcaef2af9d31fc0974f1') in 0.028106 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.384539 seconds.
+  path: Assets/ITEMprefabs/palm (1).prefab
+  artifactKey: Guid(8db1e1803b67cc1448f449d54fe9e058) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ITEMprefabs/palm (1).prefab using Guid(8db1e1803b67cc1448f449d54fe9e058) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61bbe3ba1ca82002b18f1be905a17694') in 0.026415 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.555532 seconds.
+  path: Assets/ITEMprefabs/palm-big (2).prefab
+  artifactKey: Guid(594a73fd4dcc99e49968b7b47338b651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ITEMprefabs/palm-big (2).prefab using Guid(594a73fd4dcc99e49968b7b47338b651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe66acba4dd77142964e52b06a2b3c0b') in 0.198692 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 85.351589 seconds.
+  path: Assets/TextMesh Pro
+  artifactKey: Guid(f54d1bd14bd3ca042bd867b519fee8cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro using Guid(f54d1bd14bd3ca042bd867b519fee8cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d457b26d2bc8024e58729449d46e968') in 0.011438 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 306.953111 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Sport_T/baseball-bat.prefab
+  artifactKey: Guid(d6473c87d16ccbc4cbfbc0e0ea75f3ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Sport_T/baseball-bat.prefab using Guid(d6473c87d16ccbc4cbfbc0e0ea75f3ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a89a0aabd5a98a977c84aa1abe43384e') in 0.064642 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Sport_T/golf-club-iron.prefab
+  artifactKey: Guid(aca77ca85fcacdc4ca42569b18135b0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Sport_T/golf-club-iron.prefab using Guid(aca77ca85fcacdc4ca42569b18135b0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f54fd680e5f94f91cdc3076c0a831e1c') in 0.027991 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Sport_T/ski.prefab
+  artifactKey: Guid(8001319e8c6348e4488412c90dfbb1cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Sport_T/ski.prefab using Guid(8001319e8c6348e4488412c90dfbb1cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10fd5fdc32403ff63f443d69f3885f59') in 0.030988 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Sport_T/snow-jump.prefab
+  artifactKey: Guid(099dab80ef8a518469e04e28f893813d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Sport_T/snow-jump.prefab using Guid(099dab80ef8a518469e04e28f893813d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f3342fbedd35e970a890b6c700868c8') in 0.029436 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Sport_T/ski-lift-stake.prefab
+  artifactKey: Guid(4ec5e04fc39ede74e9350923384ded96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Sport_T/ski-lift-stake.prefab using Guid(4ec5e04fc39ede74e9350923384ded96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3df6760ee825c0251179f625e8386dd') in 0.031940 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Sport_T/flag-golf_red.prefab
+  artifactKey: Guid(3f7b150152ab4eb4f8cfd6b92800faef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Sport_T/flag-golf_red.prefab using Guid(3f7b150152ab4eb4f8cfd6b92800faef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41fefd896a66e763dd5e8cac5c747983') in 0.030916 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Sport_T/soccer-ball.prefab
+  artifactKey: Guid(c92580421db14434b8b94d3eff0e6918) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Sport_T/soccer-ball.prefab using Guid(c92580421db14434b8b94d3eff0e6918) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '766203e1c1b437cf120396859929c086') in 0.030386 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Sport_T/basketball.prefab
+  artifactKey: Guid(ab9343e63f5f144e8951bb15d7e44211) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Sport_T/basketball.prefab using Guid(ab9343e63f5f144e8951bb15d7e44211) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e132af40940343087663d3cc83bc9098') in 0.029978 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Sport_T/ski-pole.prefab
+  artifactKey: Guid(1d80053a895abe841b7cfef257d65a00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Sport_T/ski-pole.prefab using Guid(1d80053a895abe841b7cfef257d65a00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fa24847c13f4352eb1000100bcf7245') in 0.034146 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 193.115704 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/WW2_T/ammo-crate-pak.prefab
+  artifactKey: Guid(46301ace07d5740e0a8b50aa759c365d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/WW2_T/ammo-crate-pak.prefab using Guid(46301ace07d5740e0a8b50aa759c365d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdaf5e68855491092732f91e931317e7') in 0.032160 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/WW2_T/bunker-medium.prefab
+  artifactKey: Guid(f8b50866d783f454991ebfd39305befe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/WW2_T/bunker-medium.prefab using Guid(f8b50866d783f454991ebfd39305befe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '588f607f9b912139af4e789f5a906e42') in 0.028124 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/WW2_T/jeep-willys.prefab
+  artifactKey: Guid(85c743a4e236049c091e5e508a8e258e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/WW2_T/jeep-willys.prefab using Guid(85c743a4e236049c091e5e508a8e258e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e627e0703b342442473dffc90fe34d7c') in 0.036976 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/WW2_T/tiger.prefab
+  artifactKey: Guid(524207e46815b4fda9482260e689460d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/WW2_T/tiger.prefab using Guid(524207e46815b4fda9482260e689460d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16a2b9dc779c0f231013e8b525bd2d3e') in 0.035684 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/WW2_T/log-post.prefab
+  artifactKey: Guid(7eddd9c4da3404771b01ebdc5d31d222) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/WW2_T/log-post.prefab using Guid(7eddd9c4da3404771b01ebdc5d31d222) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50c41fc3d1b6a27e9e908597fda46fa8') in 0.030217 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/WW2_T/trenches-wood.prefab
+  artifactKey: Guid(8a62d9bc4749e424691a3175352b2826) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/WW2_T/trenches-wood.prefab using Guid(8a62d9bc4749e424691a3175352b2826) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c831af09db79ef6fa13e9d1cc7daa0a') in 0.031619 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/WW2_T/sandbag.prefab
+  artifactKey: Guid(693bf2eacf31644d693a2daf8bc48dfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/WW2_T/sandbag.prefab using Guid(693bf2eacf31644d693a2daf8bc48dfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '591415cc2726fde469e5ca591f0c3b69') in 0.030499 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/WW2_T/helmet-ge.prefab
+  artifactKey: Guid(a30fc234532874ae5aa8ae41a53ec044) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/WW2_T/helmet-ge.prefab using Guid(a30fc234532874ae5aa8ae41a53ec044) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dec6b4ff2f6307e5e3ddc4ac298ba4ae') in 0.028660 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/WW2_T/sandbags-straight.prefab
+  artifactKey: Guid(53ea819ee69164b9da56fc263d1acb1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/WW2_T/sandbags-straight.prefab using Guid(53ea819ee69164b9da56fc263d1acb1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45a552f6e8cf7b2e7a00398cc0895219') in 0.033176 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 445.843492 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Terrains_T
+  artifactKey: Guid(a54c67939150d3a488d781b3eb2c5d0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Terrains_T using Guid(a54c67939150d3a488d781b3eb2c5d0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e758a8a7a09f89158df20b888e14ee8') in 0.010398 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 174.336773 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Roman_T/pillar-doric-big.prefab
+  artifactKey: Guid(1082af87c86884ec28e8d06850287b29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Roman_T/pillar-doric-big.prefab using Guid(1082af87c86884ec28e8d06850287b29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9296b6e05abbd9b1c81ec88f59a45062') in 0.066758 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 100.904446 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Racing_T
+  artifactKey: Guid(b2ba7dcb1d442f647b0b7649ba9ba6f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Racing_T using Guid(b2ba7dcb1d442f647b0b7649ba9ba6f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82a155d257977182881b1fd8b0fbcbac') in 0.010514 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.725267 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T
+  artifactKey: Guid(4c8949ed78c5ffe4bbd705adbc057108) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T using Guid(4c8949ed78c5ffe4bbd705adbc057108) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb54ebfbaf5e19509e5c350d49d7afdf') in 0.009637 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.801713 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/anchor.prefab
+  artifactKey: Guid(25595fb68aa0d4f81bd9363a1a314491) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/anchor.prefab using Guid(25595fb68aa0d4f81bd9363a1a314491) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61b8c0b7ba1b56cf7ede0b09c6ea0703') in 0.032822 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/cargo-shipping_orange.prefab
+  artifactKey: Guid(880105d612d39412b951fe6d75095e05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/cargo-shipping_orange.prefab using Guid(880105d612d39412b951fe6d75095e05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9e0855e00da2d912e7bf7efee9ba8b1') in 0.028445 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/cargo-shipping_red.prefab
+  artifactKey: Guid(5aa74c7b10e7849639b202685a4de45d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/cargo-shipping_red.prefab using Guid(5aa74c7b10e7849639b202685a4de45d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '561a5ac9e970b3e37efefc7144ab8efb') in 0.028907 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/guidepost.prefab
+  artifactKey: Guid(79a4162811bb74070b2bec2de470b56d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/guidepost.prefab using Guid(79a4162811bb74070b2bec2de470b56d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ded1973704279eaf35a08c327a94cb3') in 0.029020 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/mail-box.prefab
+  artifactKey: Guid(ac190142eb4ab4274a80ec7e374c7456) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/mail-box.prefab using Guid(ac190142eb4ab4274a80ec7e374c7456) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5359233856f13323477e28ee6051aee1') in 0.028726 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/palette.prefab
+  artifactKey: Guid(ff3b15dbf20634fb38deaf75f0b200e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/palette.prefab using Guid(ff3b15dbf20634fb38deaf75f0b200e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2493275d6eafa9eb49f34492d21a4d5') in 0.028877 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/sunscreen-tropic.prefab
+  artifactKey: Guid(96dfa1f8650d2624f9292174793a5552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/sunscreen-tropic.prefab using Guid(96dfa1f8650d2624f9292174793a5552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3408cd867d7d8e3b20996cde20bed440') in 0.028026 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/heart.prefab
+  artifactKey: Guid(235ba75a682d53844bd45ee75242cd06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/heart.prefab using Guid(235ba75a682d53844bd45ee75242cd06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '413d810dcc21269852cd1afc244d0f2d') in 0.031420 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/duct-tape.prefab
+  artifactKey: Guid(ac8f81c50408a3546b3d9da2861eb988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/duct-tape.prefab using Guid(ac8f81c50408a3546b3d9da2861eb988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc3adba692887d3496f02c7cd113d030') in 0.031061 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/package-box.prefab
+  artifactKey: Guid(d3fd5bfc18cad454e9be5bd79372cc9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/package-box.prefab using Guid(d3fd5bfc18cad454e9be5bd79372cc9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cce2ec263613378974b8eb76d06229b4') in 0.029564 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/package-box-open.prefab
+  artifactKey: Guid(db0ad5a13bd0f4a18ab8cd9bf02007a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/package-box-open.prefab using Guid(db0ad5a13bd0f4a18ab8cd9bf02007a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4798cd40660aa3efeba2e4571d1ab011') in 0.029839 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/crane-port.prefab
+  artifactKey: Guid(c6fe72a221ecc41aba30094958f212b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/crane-port.prefab using Guid(c6fe72a221ecc41aba30094958f212b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e62e11e6566ad0b6aea6d983efdde694') in 0.031711 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/hourglass.prefab
+  artifactKey: Guid(f547d9a25859ec748adde398903a9c17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/hourglass.prefab using Guid(f547d9a25859ec748adde398903a9c17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29484aa5a77eb5b8a530ff5f1a0c7dde') in 0.032527 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/fountain.prefab
+  artifactKey: Guid(edfb2b753d73072459183537c84ca94e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/fountain.prefab using Guid(edfb2b753d73072459183537c84ca94e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fabccd9a8a5f2166fb3d3ed8a96517c0') in 0.031698 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/package-box-crashed.prefab
+  artifactKey: Guid(6ffe9843578d06f46806c05494c83bf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/package-box-crashed.prefab using Guid(6ffe9843578d06f46806c05494c83bf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3d21e8e9f9618d371d050a76437d00b') in 0.030292 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/wall-concrete.prefab
+  artifactKey: Guid(65810125c0cde440aa04f86730ff9090) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetDownloaded/애셋 통합본/T/- Prefabs_T/Props_T/wall-concrete.prefab using Guid(65810125c0cde440aa04f86730ff9090) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94df0b12ab301dacdf9d8ef288dc5862') in 0.029121 seconds 
