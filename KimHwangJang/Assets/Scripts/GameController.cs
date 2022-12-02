@@ -60,10 +60,10 @@ public class GameController : MonoBehaviour
         playerController.SetTurn_speed(Player_Turn_speed);
         playerController.SetmaxSpeed(Player_maxSpeed);
 
-        cannonController = GameObject.FindGameObjectWithTag("Cannon").GetComponent<CannonController>();
+        //cannonController = GameObject.FindGameObjectWithTag("Cannon").GetComponent<CannonController>();
 
         raftController = GameObject.FindGameObjectWithTag("Raft").GetComponent<RaftController>();
-        raftController.setRaftSpeed(RaftSpeed);
+        //raftController.setRaftSpeed(RaftSpeed);
         Raft_tr = GameObject.FindGameObjectWithTag("Raft").transform;
     }
     void GetInput(){
@@ -71,7 +71,7 @@ public class GameController : MonoBehaviour
         {
             Horizontal = Input.GetAxis("Horizontal");
             Vertical = Input.GetAxis("Vertical");
-            moveVector = new Vector3(Horizontal, 0, Vertical).normalized;
+            moveVector = (Raft_tr.right * Horizontal + Raft_tr.forward * Vertical).normalized;
             Interaction_Key_Down = Input.GetButtonDown("Interaction");
             Mouse_Left_Down = Input.GetMouseButtonDown(0);
             Mouse_Right_Down = Input.GetMouseButtonDown(1);
@@ -103,6 +103,7 @@ public class GameController : MonoBehaviour
                 break;
             case "Steering_Wheel":
                 //뗏목 회전
+                raftController.SpeedControl();
                 Raft_tr.Rotate(0, Horizontal * Time.deltaTime * Raft_RotateSpeed, 0);
                 break;
             case "Cannon":

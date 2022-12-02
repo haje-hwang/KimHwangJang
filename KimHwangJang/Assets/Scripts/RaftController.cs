@@ -34,8 +34,8 @@ public class RaftController : MonoBehaviour
 
     void Update()
     {
+
         Move();
-        SpeedControl();
         Land();
     }
 
@@ -48,7 +48,7 @@ public class RaftController : MonoBehaviour
     }
 
     //배 속도 조절. 윗키 누르면 빨라지고 아래키 누르면 느려지다가 뒤로감.
-    void SpeedControl(){
+    public void SpeedControl(){
         if(Input.GetKeyDown(KeyCode.UpArrow) && SpeedLevel < 3){
             Debug.Log("Speed Up");
             SpeedLevel += 1;
@@ -89,14 +89,14 @@ public class RaftController : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other) {
+    private void OnTriggerStay(Collider other) {
         isLandable = false;
     }
 
     //플레이어 상륙.
     void Land(){
         if(isLandable && onPlayer){
-            if(Input.GetKeyDown(KeyCode.E)){
+            if(Input.GetKeyDown(KeyCode.R)){
                 SpeedLevel = 1;
                 player.transform.position = spawnPoint;
                 transform.rotation = landingRotate;                
