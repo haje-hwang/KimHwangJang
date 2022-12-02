@@ -983,6 +983,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fish-line
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014226675044, guid: 2db045ec6e9515d4c911a8a2914dac62, type: 3}
+      propertyPath: m_TagString
+      value: Fish_Rod
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010271163932, guid: 2db045ec6e9515d4c911a8a2914dac62, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1260,12 +1264,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1912178774737654476, guid: 03901962a24d94e4f8229d44061c300d, type: 3}
       propertyPath: m_TagString
-      value: Fish_Rod
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1912178774739586060, guid: 03901962a24d94e4f8229d44061c300d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 198d1c89fd9ebbf4fba73686c6562325, type: 2}
+    - target: {fileID: 7310407063091124304, guid: 03901962a24d94e4f8229d44061c300d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03901962a24d94e4f8229d44061c300d, type: 3}
 --- !u!1 &1690481208
