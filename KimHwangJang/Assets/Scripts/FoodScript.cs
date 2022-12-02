@@ -10,7 +10,7 @@ public class FoodScript : MonoBehaviour
 
     public enum Food
     {
-        Potato, Fish, Meat, Apple
+        Potato, Fish, Meat, Apple, AppleJuice
     };
 
     public Food food;
@@ -33,6 +33,7 @@ public class FoodScript : MonoBehaviour
         tr.SetParent(where);
         rb.isKinematic = true;
         tr.position = where.position;
+        tr.rotation = Quaternion.identity;
     }
     public void demount_on_head(){
         isCarring = false;
