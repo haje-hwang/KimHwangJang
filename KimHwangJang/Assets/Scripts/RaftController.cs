@@ -8,16 +8,10 @@ public class RaftController : MonoBehaviour
     private float RaftSpeed;
     private void Awake()
     {
-        try
-        {
-            gameController = GameObject.Find("GameController").GetComponent<GameController>();
-            this.RaftSpeed = gameController.RaftSpeed;
-        }
-        catch (System.Exception)
-        {
-            Debug.Log("Cannot Find gameController");
-            throw;
-        }
+
+    }
+    public void setRaftSpeed(float RaftSpeed){
+        this.RaftSpeed = RaftSpeed;
     }
     // Update is called once per frame
     void Update()

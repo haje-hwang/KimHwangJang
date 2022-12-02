@@ -4666,7 +4666,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 4, z: 2}
+  m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1.8, z: 0.2}
 --- !u!114 &7034192005126495286
 MonoBehaviour:
@@ -4683,6 +4683,7 @@ MonoBehaviour:
   controlling_Obj: {fileID: 0}
   moveForce: 80
   Turn_speed: 0
+  maxSpeed: 0
 --- !u!65 &7034192005126495287
 BoxCollider:
   m_ObjectHideFlags: 0

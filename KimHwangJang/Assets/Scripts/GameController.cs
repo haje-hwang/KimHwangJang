@@ -33,6 +33,7 @@ public class GameController : MonoBehaviour
     //Codes
     private PlayerController playerController;
     private CannonController cannonController;
+    private RaftController raftController;
 
     //Interaction
     public GameObject controlling_Obj;
@@ -45,20 +46,16 @@ public class GameController : MonoBehaviour
     private GameObject player;
     private void Awake()
     {
-        Raft_RotateSpeed = 10f;
-        try
-        {
-            player = GameObject.FindGameObjectWithTag("Player");
-            playerController = player.GetComponent<PlayerController>(); 
-            cannonController = GameObject.FindGameObjectWithTag("Cannon").GetComponent<CannonController>();
-        }
-        catch (System.Exception)
-        {
-            Debug.Log("Error while GetComponent in GameController.Awake()");
-            throw;
-        }
-            // Raft_tr = GameObject.FindGameObjectWithTag("Raft").transform;
-        
+        Raft_RotateSpeed = 10f; 
+    }
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerController = player.GetComponent<PlayerController>();
+        cannonController = GameObject.FindGameObjectWithTag("Cannon").GetComponent<CannonController>();
+        raftController = GameObject.FindGameObjectWithTag("Raft").GetComponent<RaftController>();
+        raftController.setRaftSpeed(RaftSpeed);
+        Raft_tr = GameObject.FindGameObjectWithTag("Raft").transform;
     }
     void GetInput(){
         try
