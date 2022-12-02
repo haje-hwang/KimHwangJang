@@ -77,7 +77,6 @@ public class PlayerController : MonoBehaviour
                         //음식 들기
                         controlling_Obj.GetComponent<FoodScript>().mount_on_head(PlaceHere);
                     }
-                    Debug.Log(gameController.controlling_Obj.name);
                 }
                 break;
             case "Food":
@@ -89,6 +88,10 @@ public class PlayerController : MonoBehaviour
                         Transform where = nearObj.transform.Find("PlaceHere");
                         //테이블에 음식 놓기
                         controlling_Obj.GetComponent<FoodScript>().mount_on_head(where);
+                        nearObj.GetComponent<KitchenScript>().Plate(controlling_Obj);
+                        //controlling_Obj 테이블로
+                        gameController.controlling_Obj = nearObj;
+                        this.controlling_Obj = nearObj;
                     }
                 }
                 else { //음식을 그냥 놓는 경우
@@ -102,7 +105,26 @@ public class PlayerController : MonoBehaviour
                 }
                 break;
             case "Table":
-
+                if(controlling_Obj.Equals(nearObj))
+                {
+                    GameObject CookedFood = controlling_Obj.GetComponent<KitchenScript>().Cooking();
+                    if(CookedFood != null){
+                        CookedFood.GetComponent<FoodScript>().mount_on_head(PlaceHere);
+                    }
+                }
+                else if(nearObj.CompareTag("Food"))
+                {
+                    gameController.controlling_Obj = this.gameObject;
+                    this.controlling_Obj = this.gameObject;
+                    Debug.Log(gameController.controlling_Obj.name);
+                }
+                else
+                {
+                    gameController.controlling_Obj = this.gameObject;
+                    this.controlling_Obj = this.gameObject;
+                    Debug.Log(gameController.controlling_Obj.name);
+                }
+                break;
             default:
                 //포커스를 플레이어로
                 gameController.controlling_Obj = this.gameObject;
@@ -146,24 +168,33 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        switch (other.tag)
+        if(nearObj != null)
         {
-            case "Steering_Wheel":
-            case "Cannon":
-            case "Food":
-            case "Table": 
-                if(nearObj != null)
-                {
-                    if (nearObj.Equals(other.gameObject))
-                    {
-                        nearObj = null;
-                        Debug.Log(other.tag.ToString() + " 상호작용 범위 이탈"); 
-                    }
-                }
-                break;
-            default:
-                break;
+            if (nearObj.Equals(other.gameObject))
+            {
+                nearObj = null;
+                Debug.Log(other.tag.ToString() + " 상호작용 범위 이탈"); 
+            }
         }
+        
+        // switch (other.tag)
+        // {
+        //     case "Steering_Wheel":
+        //     case "Cannon":
+        //     case "Food":
+        //     case "Table": 
+        //         if(nearObj != null)
+        //         {
+        //             if (nearObj.Equals(other.gameObject))
+        //             {
+        //                 nearObj = null;
+        //                 Debug.Log(other.tag.ToString() + " 상호작용 범위 이탈"); 
+        //             }
+        //         }
+        //         break;
+        //     default:
+        //         break;
+        // }
     }
     
     // private void OnCollisionStay(Collision other)
