@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private Transform tr;
     private Rigidbody rb;
     private GameObject player;
+    private Transform PlaceHere;
     private PlayerController playerController;
     private GameObject nearObj;
     [SerializeField]
@@ -17,43 +18,24 @@ public class PlayerController : MonoBehaviour
     // private UIController UIController;
     // [SerializeField]
     // Slider timer;
-    public float moveForce;
-    public float Turn_speed;
-    public float maxSpeed;
+    private float moveForce, Turn_speed, maxSpeed;
     bool hasFood;
 
-    private bool isGround;
+    // private bool isGround;
     private void Awake()
     {
         tr = this.transform;
         player = this.gameObject;   
         rb = this.transform.GetComponent<Rigidbody>();
         controlling_Obj = this.gameObject;
+        PlaceHere = transform.Find("PlaceHere");
     }
 
     private void Start()
     {
-         try
-        {
-            gameController = GameObject.Find("GameController").GetComponent<GameController>();
-            gameController.controlling_Obj = this.gameObject;
-            moveForce = gameController.Player_moveForce;
-            Turn_speed = gameController.Player_turnSpeed;
-            maxSpeed = gameController.Player_maxSpeed;
-            // UIController = GameObject.Find("UIController").GetComponent<UIController>();
-        }
-        catch (System.Exception)
-        {
-            Debug.Log("Error in PlayerController.Awake()");
-            throw;
-        }   
-        // BoxCollider boxCollider = tr.GetComponent<BoxCollider>();
-    }
-    void Update(){
-        if(controlling_Obj.tag == "Food"){
-            //음식 들기
-            controlling_Obj.transform.position = transform.position + Vector3.up * 6f;
-        }
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        gameController.controlling_Obj = this.gameObject;
+        // UIController = GameObject.Find("UIController").GetComponent<UIController>();
     }
     public void move(Vector3 moveVector){
         try
@@ -63,7 +45,7 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = rb.velocity.normalized * maxSpeed;
             }
             //이동 입력이 없으면 즉시 정지
-            if(moveVector == Vector3.zero){
+            if(moveVector.Equals(Vector3.zero)){
                 rb.velocity = Vector3.zero;
             }
             //addforce 물리로 player 움직이기
@@ -90,27 +72,37 @@ public class PlayerController : MonoBehaviour
                     //controlling_Obj에 인접 오브젝트를 넣음
                     gameController.controlling_Obj = nearObj;
                     this.controlling_Obj = nearObj;
+                    //만약 음식이랑 상호작용한다면
+                    if(controlling_Obj.CompareTag("Food")){
+                        //음식 들기
+                        controlling_Obj.GetComponent<FoodScript>().mount_on_head(PlaceHere);
+                    }
                     Debug.Log(gameController.controlling_Obj.name);
                 }
                 break;
             case "Food":
-                //음식 들고 상호작용 버튼을 눌렀다면
-                controlling_Obj.transform.position = transform.position + Vector3.up * 6f + transform.forward * 3f;
+            //음식 들고 상호작용 버튼을 눌렀다면
                 if(nearObj != null){
                     //상호작용 대상이 테이블이라면 
-                    if(nearObj.tag == "Table")
+                    if(nearObj.CompareTag("Table"))
                     {
+                        Transform where = nearObj.transform.Find("PlaceHere");
                         //테이블에 음식 놓기
+                        controlling_Obj.GetComponent<FoodScript>().mount_on_head(where);
                     }
                 }
                 else { //음식을 그냥 놓는 경우
+                    //음식 놓기
+                    controlling_Obj.GetComponent<FoodScript>().demount_on_head();
                     //포커스를 플레이어로
                     gameController.controlling_Obj = this.gameObject;
                     this.controlling_Obj = this.gameObject;
+                
                     Debug.Log(gameController.controlling_Obj.name);
                 }
                 break;
             case "Table":
+
             default:
                 //포커스를 플레이어로
                 gameController.controlling_Obj = this.gameObject;
@@ -118,6 +110,15 @@ public class PlayerController : MonoBehaviour
                 Debug.Log(gameController.controlling_Obj.name);
                 break;
         }
+    }
+    public void SetmoveForce(float moveForce){
+        this.moveForce = moveForce;
+    }
+    public void SetTurn_speed(float Turn_speed){
+        this.Turn_speed = Turn_speed;
+    }
+    public void SetmaxSpeed(float maxSpeed){
+        this.maxSpeed = maxSpeed;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -127,7 +128,7 @@ public class PlayerController : MonoBehaviour
             case "Cannon":
             case "Food":
                 //Food 들고 있는 상황에서 오류 생길까봐
-                if(controlling_Obj.tag == "Food") {
+                if(controlling_Obj.CompareTag("Food")) {
                    break;
                 }
                 else{
@@ -150,28 +151,31 @@ public class PlayerController : MonoBehaviour
             case "Steering_Wheel":
             case "Cannon":
             case "Food":
-            case "Table":
-                if (nearObj == other.gameObject)
+            case "Table": 
+                if(nearObj != null)
                 {
-                    nearObj = null;
-                    Debug.Log(other.tag.ToString() + " 상호작용 범위 이탈"); 
-                };
+                    if (nearObj.Equals(other.gameObject))
+                    {
+                        nearObj = null;
+                        Debug.Log(other.tag.ToString() + " 상호작용 범위 이탈"); 
+                    }
+                }
                 break;
             default:
                 break;
         }
     }
     
-    private void OnCollisionStay(Collision other)
-    {
-        if(other.transform.tag == "Raft"){
-            isGround = true;
-        }
-    }
-    private void OnCollisionExit(Collision other)
-    {
-        if(other.transform.tag == "Raft"){
-            isGround = false;
-        }
-    }
+    // private void OnCollisionStay(Collision other)
+    // {
+    //     if(other.transform.CompareTag("Raft")){
+    //         isGround = true;
+    //     }
+    // }
+    // private void OnCollisionExit(Collision other)
+    // {
+    //     if(other.transform.CompareTag("Raft")){
+    //         isGround = false;
+    //     }
+    // }
 }

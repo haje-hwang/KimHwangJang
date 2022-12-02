@@ -28,7 +28,8 @@ public class GameController : MonoBehaviour
 
     //move
     private Vector3 moveVector;
-    public float Player_moveForce, Player_turnSpeed, Player_maxSpeed;
+    [SerializeField]
+    private float Player_moveForce, Player_Turn_speed, Player_maxSpeed;
 
     //Codes
     private PlayerController playerController;
@@ -46,16 +47,24 @@ public class GameController : MonoBehaviour
     private GameObject player;
     private void Awake()
     {
-        Raft_RotateSpeed = 10f; 
+        // Raft_RotateSpeed = 10f; 
+        // Player_moveForce = 40f; 
+        // Player_turnSpeed = 25f; 
+        // Player_maxSpeed = 8f; 
     }
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerController = player.GetComponent<PlayerController>();
-        //cannonController = GameObject.FindGameObjectWithTag("Cannon").GetComponent<CannonController>();
-        raftController = GameObject.FindGameObjectWithTag("Raft").GetComponent<RaftController>();
-        raftController.setRaftSpeed(RaftSpeed);
-        Raft_tr = GameObject.FindGameObjectWithTag("Raft").transform;
+        playerController.SetmoveForce(Player_moveForce);
+        playerController.SetTurn_speed(Player_Turn_speed);
+        playerController.SetmaxSpeed(Player_maxSpeed);
+
+        // cannonController = GameObject.FindGameObjectWithTag("Cannon").GetComponent<CannonController>();
+
+        // raftController = GameObject.FindGameObjectWithTag("Raft").GetComponent<RaftController>();
+        // raftController.setRaftSpeed(RaftSpeed);
+        // Raft_tr = GameObject.FindGameObjectWithTag("Raft").transform;
     }
     void GetInput(){
         try
@@ -81,10 +90,6 @@ public class GameController : MonoBehaviour
         GetInput();
         if(Interaction_Key_Down){
             playerController.interact();
-        }
-        if(controlling_Obj.tag == "Food"){
-            //음식 들기
-            controlling_Obj.transform.position = player.transform.position + Vector3.up * 6f;
         }
     }
     private void FixedUpdate()
