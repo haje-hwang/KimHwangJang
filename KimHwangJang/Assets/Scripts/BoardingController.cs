@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class BoardingController : MonoBehaviour
 {
+    GameObject playerSpawn;
+
+    Vector3 pSpawnpoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,10 +17,21 @@ public class BoardingController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Boarding();
+        
     }
 
-    void Boarding(){
+    private void OnTriggerEnter(Collider other) {
+        if(other.gameObject.CompareTag("Player")){
+            if(Input.GetKeyDown(KeyCode.E)){
+                playerSpawn = other.transform.parent.Find("Spawnpoint").gameObject;
+                Debug.Log(playerSpawn);
 
+                pSpawnpoint = playerSpawn.transform.position;
+                Debug.Log(pSpawnpoint);
+
+                other.transform.position = pSpawnpoint;
+                Debug.Log(other.transform.position);
+            }
+        }
     }
 }
