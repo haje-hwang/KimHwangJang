@@ -13,6 +13,7 @@ TagManager:
   - Water
   - Cannon_Ball
   - Port
+  - Spawnpoint
   layers:
   - Default
   - TransparentFX

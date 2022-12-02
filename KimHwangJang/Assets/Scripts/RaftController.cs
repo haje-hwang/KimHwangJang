@@ -6,21 +6,39 @@ public class RaftController : MonoBehaviour
 {
     private float RaftSpeed;
 
-    bool isLandable = false;
+    bool isLandable;
+    bool onPlayer;
+
     Vector3 landPoint;
+
+    [SerializeField]
+    GameObject player;
+
+    GameObject spawn;
+
 
     int SpeedLevel = 1;
     // Update is called once per frame
+    
+    private void Start() {
+        player = GameObject.Find("Player");
+
+        isLandable = false;
+        onPlayer = true;
+    }
+
     void Update()
     {
         transform.Translate(Vector3.forward * RaftSpeed * Time.deltaTime, Space.Self);
         SpeedControl();
+        PlayerLand();
     }
 
     public void setRaftSpeed(float RaftSpeed){
         this.RaftSpeed = RaftSpeed;
     }
 
+    //배 속도 조절. 윗키 누르면 빨라지고 아래키 누르면 느려지다가 뒤로감.
     void SpeedControl(){
         if(Input.GetKeyDown(KeyCode.UpArrow) && SpeedLevel < 3){
             Debug.Log("Speed Up");
@@ -48,10 +66,28 @@ public class RaftController : MonoBehaviour
         }
     }
 
+    //섬 상륙을 위한 충돌 체크. 선착장 태그 Port 설정 및 스폰될 위치 오브젝트 이름 "Spawnpoint" 필요.
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.CompareTag("Port")){
             isLandable = true;
-            Debug.Log("arrive");
+            spawn = other.gameObject;
+            landPoint = spawn.transform.Find("Spawnpoint").transform.position;
         }
     }
+
+    private void OnCollisionExit(Collision other) {
+        isLandable = false;
+    }
+
+    //플레이어 상륙.
+    void PlayerLand(){
+        if(isLandable && onPlayer){
+            if(Input.GetKeyDown(KeyCode.E)){
+                player.transform.position = landPoint;
+                onPlayer = false;
+
+            }
+        }
+    }
+
 }
