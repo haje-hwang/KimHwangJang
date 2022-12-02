@@ -48,9 +48,9 @@ MonoBehaviour:
   hasFoods: 
   jewels: []
   jewels_Value: 0
-  Player_moveForce: 0
-  Player_turnSpeed: 0
-  Player_maxSpeed: 0
+  Player_moveForce: 25
+  Player_Turn_speed: 25
+  Player_maxSpeed: 8
   controlling_Obj: {fileID: 0}
   RaftSpeed: 0
   Raft_RotateSpeed: 10

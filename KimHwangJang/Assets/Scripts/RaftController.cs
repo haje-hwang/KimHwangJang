@@ -34,8 +34,8 @@ public class RaftController : MonoBehaviour
 
     void Update()
     {
+
         Move();
-        SpeedControl();
         Land();
     }
 
@@ -90,14 +90,14 @@ public class RaftController : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other) {
+    private void OnTriggerStay(Collider other) {
         isLandable = false;
     }
 
     //플레이어 상륙.
     void Land(){
         if(isLandable && onPlayer){
-            if(Input.GetKeyDown(KeyCode.E)){
+            if(Input.GetKeyDown(KeyCode.R)){
                 SpeedLevel = 1;
                 RaftSpeed = 0;
                 transform.rotation = landingRotate;                

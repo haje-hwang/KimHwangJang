@@ -16,31 +16,61 @@ public class UIController : MonoBehaviour
     }  
     [SerializeField]
     private Canvas MainCanvas;
-    private Canvas GameCanvas;
-    private Slider SailorGage;
-    private void Awake()
+    private Canvas FishingCanvas;
+    // private Slider SailorGage;
+    private Slider FishingSlider;
+    [SerializeField]
+    private float noteSpeed;
+    public float minPos;
+    public float maxPos;
+    public RectTransform pass;
+    private void Start()
     {
-        try
-        {
-            GameCanvas = MainCanvas.transform.Find("GameCanvas").GetComponent<Canvas>();
-            SailorGage = GameCanvas.transform.Find("SailorGage").GetComponent<Slider>();
-        }
-        catch (System.Exception)
-        {
-            
-            throw;
+        FishingCanvas = MainCanvas.transform.Find("FishingCanvas").GetComponent<Canvas>();
+        // SailorGage = GameCanvas.transform.Find("SailorGage").GetComponent<Slider>();
+        FishingSlider = FishingCanvas.transform.Find("FishingSlider").GetComponent<Slider>();
+    }
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space)){
+            StartFishing();
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public void StartFishing(){
+        FishingSlider.value = 0;
+        minPos = pass.anchoredPosition.x;
+        maxPos = pass.sizeDelta.x +minPos;
+        StartCoroutine(Fishing());
     }
-
-    // Update is called once per frame
-    void Update()
+    IEnumerator Fishing()
     {
-        
+        bool moveRight = true;
+        yield return null;
+        while(!(Input.GetKeyDown(KeyCode.Space)))
+        {
+            if(moveRight){
+                FishingSlider.value += Time.deltaTime * noteSpeed;
+                if(FishingSlider.value.Equals(FishingSlider.maxValue)){
+                    moveRight = false;
+                }
+                yield return null;
+            }
+            else{
+                FishingSlider.value -= Time.deltaTime * noteSpeed;
+                if(FishingSlider.value.Equals(FishingSlider.minValue)){
+                    moveRight = true;
+                }
+                yield return null;
+            }
+        }
+        if(FishingSlider.value >= minPos && FishingSlider.value <= maxPos)
+        {
+            Debug.Log("Fishing success /" + FishingSlider.value);
+        }
+        else
+        {
+            Debug.Log("Fishing failed / "+ FishingSlider.value);
+        }
     }
 }
