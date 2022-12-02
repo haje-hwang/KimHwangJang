@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81ac20a8d64153b4a9187866fa0c16e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food: 3
+  foodName: 3
   isCarring: 0
   fValue: 0
 --- !u!1001 &1016084716550183364

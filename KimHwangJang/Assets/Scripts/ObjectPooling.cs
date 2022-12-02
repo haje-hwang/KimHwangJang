@@ -44,7 +44,8 @@ public class ObjectPooling : MonoBehaviour
             using_Objects.Remove(Called_instance);
         }
         ready_Objects.Add(Called_instance);
-        Called_instance.transform.position = Vector3.zero;
+        Called_instance.transform.SetParent(PoolTransform);
+        Called_instance.transform.SetPositionAndRotation(Vector3.zero, Quaternion.identity);
         Called_instance.SetActive(false);
     }
 
