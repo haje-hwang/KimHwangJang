@@ -219,6 +219,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1226739112, guid: 2c21fdaf72c628c4f9525a20202b0a27, type: 3}
+      propertyPath: Pools
+      value: 
+      objectReference: {fileID: 411170067}
+    - target: {fileID: 1226739112, guid: 2c21fdaf72c628c4f9525a20202b0a27, type: 3}
+      propertyPath: ApplePool
+      value: 
+      objectReference: {fileID: 1420767236}
+    - target: {fileID: 1226739112, guid: 2c21fdaf72c628c4f9525a20202b0a27, type: 3}
+      propertyPath: AppleJuicePool
+      value: 
+      objectReference: {fileID: 752098631}
     - target: {fileID: 504920257474751320, guid: 2c21fdaf72c628c4f9525a20202b0a27, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -266,30 +278,6 @@ PrefabInstance:
     - target: {fileID: 504920257474751323, guid: 2c21fdaf72c628c4f9525a20202b0a27, type: 3}
       propertyPath: m_Name
       value: Table
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011326155296884954, guid: 2c21fdaf72c628c4f9525a20202b0a27, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 2686345323947316942, guid: 2c21fdaf72c628c4f9525a20202b0a27, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2686345323947316942, guid: 2c21fdaf72c628c4f9525a20202b0a27, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2686345323947316942, guid: 2c21fdaf72c628c4f9525a20202b0a27, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2686345323947316942, guid: 2c21fdaf72c628c4f9525a20202b0a27, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2686345323947316942, guid: 2c21fdaf72c628c4f9525a20202b0a27, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c21fdaf72c628c4f9525a20202b0a27, type: 3}
@@ -512,39 +500,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0154d2de8608be2499e552f96bff8d2a, type: 3}
---- !u!1 &1226739107 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 504920257474751323, guid: 2c21fdaf72c628c4f9525a20202b0a27, type: 3}
-  m_PrefabInstance: {fileID: 386536158}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1226739110
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1226739107}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1226739112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1226739107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a1c27e467b1e7b4397af2b83f61cbe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Pools: {fileID: 0}
-  ApplePool: {fileID: 0}
-  AppleJuicePool: {fileID: 0}
 --- !u!1 &1420767233
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,26 +703,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7034192005126495280, guid: ea533fa8505caf9489ee51c9f16095b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7034192005126495285, guid: ea533fa8505caf9489ee51c9f16095b5, type: 3}
-      propertyPath: m_Size.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7034192005126495285, guid: ea533fa8505caf9489ee51c9f16095b5, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7034192005126495285, guid: ea533fa8505caf9489ee51c9f16095b5, type: 3}
-      propertyPath: m_Size.z
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7034192005126495285, guid: ea533fa8505caf9489ee51c9f16095b5, type: 3}
-      propertyPath: m_Center.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7034192005126495285, guid: ea533fa8505caf9489ee51c9f16095b5, type: 3}
-      propertyPath: m_Center.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7034192005571636570, guid: ea533fa8505caf9489ee51c9f16095b5, type: 3}
