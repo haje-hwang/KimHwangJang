@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour
     public void move(Vector3 moveVector){
         try
         {
+            //addforce 물리로 player 움직이기
+            rb.AddForce(moveVector * moveForce * Time.fixedDeltaTime, ForceMode.Impulse);   
             //최대속도 제한
             if(Mathf.Abs(rb.velocity.sqrMagnitude) > Mathf.Pow(maxSpeed, 2)){
                 rb.velocity = rb.velocity.normalized * maxSpeed;
@@ -48,13 +50,12 @@ public class PlayerController : MonoBehaviour
             if(moveVector.Equals(Vector3.zero)){
                 rb.velocity = Vector3.zero;
             }
-            //addforce 물리로 player 움직이기
-            rb.AddForce(moveVector * moveForce * Time.fixedDeltaTime, ForceMode.Impulse);
-            if(moveVector != Vector3.zero){
+            else
+            {
                 //가는 곳 보기
                 tr.rotation = Quaternion.Slerp(tr.rotation, Quaternion.LookRotation(moveVector), Time.fixedDeltaTime * Turn_speed);
                 // tr.LookAt(tr.position + moveVector);
-            }
+            }  
         }
         catch (System.Exception)
         {
@@ -76,6 +77,10 @@ public class PlayerController : MonoBehaviour
                     if(controlling_Obj.CompareTag("Food")){
                         //음식 들기
                         controlling_Obj.GetComponent<FoodScript>().mount_on_head(PlaceHere);
+                    }
+                    if(controlling_Obj.CompareTag("Fish_Rod")){
+                        //음식 들기
+                        Camera.main.GetComponent<CameraController>().SetisFishing(true);
                     }
                 }
                 break;
@@ -125,6 +130,13 @@ public class PlayerController : MonoBehaviour
                     Debug.Log(gameController.controlling_Obj.name);
                 }
                 break;
+            case "Fish_Rod":
+                Camera.main.GetComponent<CameraController>().SetisFishing(false);
+                //포커스를 플레이어로
+                gameController.controlling_Obj = this.gameObject;
+                this.controlling_Obj = this.gameObject;
+                Debug.Log(gameController.controlling_Obj.name);
+                break;
             default:
                 //포커스를 플레이어로
                 gameController.controlling_Obj = this.gameObject;
@@ -162,7 +174,12 @@ public class PlayerController : MonoBehaviour
                 nearObj = other.gameObject;
                 Debug.Log(other.tag.ToString() + " 상호작용 준비");
                 break;
+            case "Fish_Rod":
+                nearObj = other.gameObject;
+                Debug.Log(other.tag.ToString() + " 상호작용 준비");
+                break;
             default:
+                // Debug.Log(other.name + "가 범위에 있음");
                 break;
         }
     }

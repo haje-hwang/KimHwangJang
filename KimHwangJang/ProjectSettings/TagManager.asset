@@ -14,6 +14,7 @@ TagManager:
   - Cannon_Ball
   - Port
   - Spawnpoint
+  - Fish_Rod
   layers:
   - Default
   - TransparentFX
