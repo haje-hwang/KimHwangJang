@@ -67,8 +67,9 @@ public class RaftController : MonoBehaviour
     }
 
     //섬 상륙을 위한 충돌 체크. 선착장 태그 Port 설정 및 스폰될 위치 오브젝트 이름 "Spawnpoint" 필요.
+    //플레이어 오브젝트 넣어둘 필요도 있음.
     private void OnCollisionEnter(Collision other) {
-        if(other.gameObject.CompareTag("Port")){
+        if(other.gameObject.CompareTag("Port") && onPlayer){
             isLandable = true;
             spawn = other.gameObject;
             landPoint = spawn.transform.Find("Spawnpoint").transform.position;
@@ -83,6 +84,7 @@ public class RaftController : MonoBehaviour
     void PlayerLand(){
         if(isLandable && onPlayer){
             if(Input.GetKeyDown(KeyCode.E)){
+                SpeedLevel = 1;
                 player.transform.position = landPoint;
                 onPlayer = false;
 
