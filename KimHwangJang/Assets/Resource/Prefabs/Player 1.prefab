@@ -4614,7 +4614,6 @@ GameObject:
   - component: {fileID: 7034192005126495284}
   - component: {fileID: 7034192005126495285}
   - component: {fileID: 7034192005126495286}
-  - component: {fileID: 7034192005126495287}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -4681,22 +4680,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controlling_Obj: {fileID: 0}
-  moveForce: 80
-  Turn_speed: 0
-  maxSpeed: 0
---- !u!65 &7034192005126495287
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7034192005571636570}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 4, z: 2}
-  m_Center: {x: 0, y: 1.8, z: 2.2}
 --- !u!1 &7054182062319499605
 GameObject:
   m_ObjectHideFlags: 0
