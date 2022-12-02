@@ -6,6 +6,9 @@ public class RaftController : MonoBehaviour
 {
     private float RaftSpeed;
 
+    bool isLandable = false;
+    Vector3 landPoint;
+
     int SpeedLevel = 1;
     // Update is called once per frame
     void Update()
@@ -42,6 +45,13 @@ public class RaftController : MonoBehaviour
             case 3:
                 RaftSpeed = 6.0f;               
                 break;
+        }
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.CompareTag("Port")){
+            isLandable = true;
+            Debug.Log("arrive");
         }
     }
 }
