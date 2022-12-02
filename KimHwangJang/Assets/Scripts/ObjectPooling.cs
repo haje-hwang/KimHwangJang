@@ -13,30 +13,39 @@ public class ObjectPooling : MonoBehaviour
     private void Awake()
     {
         PoolTransform = this.transform;
+    }
+    private void Start()
+    {
+        // Transform[] Pool = PoolTransform.GetComponentsInChildren<Transform>(true);
         foreach(Transform child in PoolTransform) {
-            ready_Objects.Add(child.gameObject);
+            if(child.gameObject.activeSelf){
+                using_Objects.Add(child.gameObject);
+            }
+            else{
+                ready_Objects.Add(child.gameObject);
+            }
         }
     }
     public GameObject GetObject(){
-        GameObject Bullet_instance;
+        GameObject Called_instance;
         if(ready_Objects.Count < 1){
             AddObject();
         }
 
-        Bullet_instance = ready_Objects[ready_Objects.Count - 1];
-        ready_Objects.Remove(Bullet_instance);
-        using_Objects.Add(Bullet_instance);
-        Bullet_instance.SetActive(true);
+        Called_instance = ready_Objects[ready_Objects.Count - 1];
+        ready_Objects.Remove(Called_instance);
+        using_Objects.Add(Called_instance);
+        Called_instance.SetActive(true);
         
-        return Bullet_instance;
+        return Called_instance;
     }
-    public void ReturnObject(GameObject cannonball){
-        if(using_Objects.Contains(cannonball)){
-            using_Objects.Remove(cannonball);
+    public void ReturnObject(GameObject Called_instance){
+        if(using_Objects.Contains(Called_instance)){
+            using_Objects.Remove(Called_instance);
         }
-        ready_Objects.Add(cannonball);
-        cannonball.transform.position = Vector3.zero;
-        cannonball.SetActive(false);
+        ready_Objects.Add(Called_instance);
+        Called_instance.transform.position = Vector3.zero;
+        Called_instance.SetActive(false);
     }
 
     private void AddObject(){
