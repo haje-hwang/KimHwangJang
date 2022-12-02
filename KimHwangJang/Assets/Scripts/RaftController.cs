@@ -9,19 +9,23 @@ public class RaftController : MonoBehaviour
     bool isLandable;
     bool onPlayer;
 
-    Vector3 landPoint;
+    Vector3 spawnPoint;
+    Vector3 landingPoint;
+
+    Quaternion landingRotate;
 
     [SerializeField]
     GameObject player;
 
     GameObject spawn;
-
+    GameObject landing;
+    
 
     int SpeedLevel = 1;
     // Update is called once per frame
     
     private void Start() {
-        player = GameObject.Find("Player");
+        player = GameObject.FindWithTag("Player");
 
         isLandable = false;
         onPlayer = true;
@@ -29,13 +33,17 @@ public class RaftController : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.forward * RaftSpeed * Time.deltaTime, Space.Self);
+        Move();
         SpeedControl();
-        PlayerLand();
+        Land();
     }
 
     public void setRaftSpeed(float RaftSpeed){
         this.RaftSpeed = RaftSpeed;
+    }
+
+    void Move(){
+        transform.Translate(Vector3.forward * RaftSpeed * Time.deltaTime, Space.Self);
     }
 
     //배 속도 조절. 윗키 누르면 빨라지고 아래키 누르면 느려지다가 뒤로감.
@@ -72,7 +80,11 @@ public class RaftController : MonoBehaviour
         if(other.gameObject.CompareTag("Port") && onPlayer){
             isLandable = true;
             spawn = other.gameObject;
-            landPoint = spawn.transform.Find("Spawnpoint").transform.position;
+            spawnPoint = spawn.transform.Find("Spawnpoint").transform.position;
+            landing = other.gameObject;
+            landingPoint = landing.transform.Find("Landingpoint").transform.position;
+            landingRotate = landing.transform.Find("Landingpoint").transform.rotation;
+            Debug.Log(landingRotate);
         }
     }
 
@@ -81,13 +93,15 @@ public class RaftController : MonoBehaviour
     }
 
     //플레이어 상륙.
-    void PlayerLand(){
+    void Land(){
         if(isLandable && onPlayer){
             if(Input.GetKeyDown(KeyCode.E)){
                 SpeedLevel = 1;
-                player.transform.position = landPoint;
+                player.transform.position = spawnPoint;
+                transform.rotation = landingRotate;                
+                transform.position = landingPoint;
                 onPlayer = false;
-
+                Debug.Log("랜딩" + transform.rotation);
             }
         }
     }

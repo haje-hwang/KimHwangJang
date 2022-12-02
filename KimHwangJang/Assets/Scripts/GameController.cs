@@ -92,32 +92,32 @@ public class GameController : MonoBehaviour
             playerController.interact();
         }
     }
-    private void FixedUpdate()
-    {
-        switch (controlling_Obj.tag)
-        {
-            case "Player":
-            case "Food":
-                playerController.move(moveVector);
-                break;
-            case "Steering_Wheel":
-                //뗏목 회전
-                Raft_tr.Rotate(0, Horizontal * Time.deltaTime * Raft_RotateSpeed, 0);
-                break;
-            case "Cannon":
-                cannonController.Aim();
-                if(Mouse_Left_Down){
-                    cannonController.Reload();
-                }
-                if(Jump_Key_Down){
-                    cannonController.Shoot();
-                }
-                if(Mouse_Right_Down){
-                    cannonController.Cleanup();
-                }
-                break;
-            default:
-                break;
-        }
-    }
+    // private void FixedUpdate()
+    // {
+    //     switch (controlling_Obj.tag)
+    //     {
+    //         case "Player":
+    //         case "Food":
+    //             playerController.move(moveVector);
+    //             break;
+    //         case "Steering_Wheel":
+    //             //뗏목 회전
+    //             Raft_tr.Rotate(0, Horizontal * Time.deltaTime * Raft_RotateSpeed, 0);
+    //             break;
+    //         case "Cannon":
+    //             cannonController.Aim();
+    //             if(Mouse_Left_Down){
+    //                 cannonController.Reload();
+    //             }
+    //             if(Jump_Key_Down){
+    //                 cannonController.Shoot();
+    //             }
+    //             if(Mouse_Right_Down){
+    //                 cannonController.Cleanup();
+    //             }
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    // }
 }
