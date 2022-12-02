@@ -52,7 +52,7 @@ public class GameController : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerController = player.GetComponent<PlayerController>();
-        cannonController = GameObject.FindGameObjectWithTag("Cannon").GetComponent<CannonController>();
+        //cannonController = GameObject.FindGameObjectWithTag("Cannon").GetComponent<CannonController>();
         raftController = GameObject.FindGameObjectWithTag("Raft").GetComponent<RaftController>();
         raftController.setRaftSpeed(RaftSpeed);
         Raft_tr = GameObject.FindGameObjectWithTag("Raft").transform;
