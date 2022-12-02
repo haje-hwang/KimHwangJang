@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour
 
     //move
     private Vector3 moveVector;
-    public float Player_moveForce, Player_turnSpeed;
+    public float Player_moveForce, Player_turnSpeed, Player_maxSpeed;
 
     //Codes
     private PlayerController playerController;

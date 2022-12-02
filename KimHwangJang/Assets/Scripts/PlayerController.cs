@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     // Slider timer;
     public float moveForce;
     public float Turn_speed;
+    public float maxSpeed;
     bool hasFood;
 
     private bool isGround;
@@ -28,12 +29,17 @@ public class PlayerController : MonoBehaviour
         player = this.gameObject;   
         rb = this.transform.GetComponent<Rigidbody>();
         controlling_Obj = this.gameObject;
-        try
+    }
+
+    private void Start()
+    {
+         try
         {
             gameController = GameObject.Find("GameController").GetComponent<GameController>();
             gameController.controlling_Obj = this.gameObject;
             moveForce = gameController.Player_moveForce;
             Turn_speed = gameController.Player_turnSpeed;
+            maxSpeed = gameController.Player_maxSpeed;
             // UIController = GameObject.Find("UIController").GetComponent<UIController>();
         }
         catch (System.Exception)
@@ -52,12 +58,16 @@ public class PlayerController : MonoBehaviour
     public void move(Vector3 moveVector){
         try
         {
-            //빠르면 속도 감쇠, 움직임 입력이 없으면 속도 감쇠
-            if(Mathf.Abs(rb.velocity.sqrMagnitude) > 400f || moveVector == Vector3.zero){
-                rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z) * 0.9f;
+            //최대속도 제한
+            if(Mathf.Abs(rb.velocity.sqrMagnitude) > Mathf.Pow(maxSpeed, 2)){
+                rb.velocity = rb.velocity.normalized * maxSpeed;
+            }
+            //이동 입력이 없으면 즉시 정지
+            if(moveVector == Vector3.zero){
+                rb.velocity = Vector3.zero;
             }
             //addforce 물리로 player 움직이기
-            rb.AddForce(moveVector * moveForce * Time.fixedDeltaTime, ForceMode.VelocityChange);
+            rb.AddForce(moveVector * moveForce * Time.fixedDeltaTime, ForceMode.Impulse);
             if(moveVector != Vector3.zero){
                 //가는 곳 보기
                 tr.rotation = Quaternion.Slerp(tr.rotation, Quaternion.LookRotation(moveVector), Time.fixedDeltaTime * Turn_speed);
