@@ -43,12 +43,12 @@ public class RaftController : MonoBehaviour
         this.RaftSpeed = RaftSpeed;
     }
 
-    void Move(){
+    public void Move(){
         transform.Translate(Vector3.forward * RaftSpeed * Time.deltaTime, Space.Self);
     }
 
     //배 속도 조절. 윗키 누르면 빨라지고 아래키 누르면 느려지다가 뒤로감.
-    void SpeedControl(){
+    public void SpeedControl(){
         if(onPlayer){
             if(Input.GetKeyDown(KeyCode.UpArrow) && SpeedLevel < 3){
                 Debug.Log("Speed Up");
