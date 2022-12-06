@@ -43,7 +43,7 @@ public class RaftController : MonoBehaviour
         this.RaftSpeed = RaftSpeed;
     }
 
-    void Move(){
+    public void Move(){
         transform.Translate(Vector3.forward * RaftSpeed * Time.deltaTime, Space.Self);
     }
 

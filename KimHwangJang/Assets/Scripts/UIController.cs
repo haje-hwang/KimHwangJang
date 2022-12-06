@@ -24,6 +24,7 @@ public class UIController : MonoBehaviour
     public float minPos;
     public float maxPos;
     public RectTransform pass;
+    private bool isFishing;
     private void Start()
     {
         FishingCanvas = MainCanvas.transform.Find("FishingCanvas").GetComponent<Canvas>();
@@ -32,19 +33,22 @@ public class UIController : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if(Input.GetKeyDown(KeyCode.Y)){
             StartFishing();
         }
     }
 
-    public void StartFishing(){
-        FishingSlider.value = 0;
-        minPos = pass.anchoredPosition.x;
-        maxPos = pass.sizeDelta.x +minPos;
-        StartCoroutine(Fishing());
+    public void StartFishing(){  
+        if(!isFishing){
+            FishingSlider.value = 0;
+            minPos = pass.anchoredPosition.x * 2;
+            maxPos = pass.sizeDelta.x +minPos;  
+            StartCoroutine(Fishing());
+        }      
     }
     IEnumerator Fishing()
     {
+        isFishing = true;
         bool moveRight = true;
         yield return null;
         while(!(Input.GetKeyDown(KeyCode.Space)))
@@ -66,10 +70,12 @@ public class UIController : MonoBehaviour
         }
         if(FishingSlider.value >= minPos && FishingSlider.value <= maxPos)
         {
+            isFishing = false; 
             Debug.Log("Fishing success /" + FishingSlider.value);
         }
         else
         {
+            isFishing = false;
             Debug.Log("Fishing failed / "+ FishingSlider.value);
         }
     }

@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     private Transform PlaceHere;
     private PlayerController playerController;
     private GameObject nearObj;
-    [SerializeField]
     private GameObject controlling_Obj;
     private GameController gameController;
     // private UIController UIController;
@@ -20,6 +19,8 @@ public class PlayerController : MonoBehaviour
     // Slider timer;
     private float moveForce, Turn_speed, maxSpeed;
     bool hasFood;
+
+    Animator animator;
 
     // private bool isGround;
     private void Awake()
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
         rb = this.transform.GetComponent<Rigidbody>();
         controlling_Obj = this.gameObject;
         PlaceHere = transform.Find("PlaceHere");
+        
     }
 
     private void Start()
@@ -36,14 +38,17 @@ public class PlayerController : MonoBehaviour
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
         gameController.controlling_Obj = this.gameObject;
         // UIController = GameObject.Find("UIController").GetComponent<UIController>();
+        animator = GetComponentInChildren<Animator>();
+        
     }
     public void move(Vector3 moveVector){
         try
         {
             //addforce 물리로 player 움직이기
-            rb.AddForce(moveVector * moveForce * Time.fixedDeltaTime, ForceMode.Impulse);   
+            rb.AddForce(moveVector * moveForce * Time.fixedDeltaTime, ForceMode.Impulse);
+            animator.SetBool("isRun", moveVector != Vector3.zero);
             //최대속도 제한
-            if(Mathf.Abs(rb.velocity.sqrMagnitude) > Mathf.Pow(maxSpeed, 2)){
+            if (Mathf.Abs(rb.velocity.sqrMagnitude) > Mathf.Pow(maxSpeed, 2)){
                 rb.velocity = rb.velocity.normalized * maxSpeed;
             }
             //이동 입력이 없으면 즉시 정지

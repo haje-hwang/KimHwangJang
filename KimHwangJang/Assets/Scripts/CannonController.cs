@@ -16,7 +16,7 @@ public class CannonController : MonoBehaviour
     private float shootspeed;
 
     [SerializeField]
-    GameObject bullet;
+    GameObject CannonPool;
 
     [SerializeField]
     Transform shootpoint;
@@ -27,16 +27,6 @@ public class CannonController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        try
-        {
-            CannonBallPool = GameObject.Find("GameObjects/CannonBallPool").transform;
-            objectPool = CannonBallPool.GetComponent<CannonBallObjectPool>();
-        }
-        catch (System.Exception)
-        {
-            Debug.Log("Error in Awake(), CannonController.cs");
-            throw;
-        }
         isReloaded = true;
         isDirty = false;
 
@@ -44,8 +34,13 @@ public class CannonController : MonoBehaviour
         rotateSpeed = 35.0f;
         //bullet = GetComponent<GameObject>();
     }
+    private void Start()
+    {
+        CannonBallPool = GameObject.Find("ObjectPooling/CannonBallPool").transform;
+        objectPool = CannonBallPool.GetComponent<CannonBallObjectPool>();
+    }
     public void Reload(){
-        if(!isDirty && !isReloaded){
+        if(!isReloaded){
             isReloaded = true;
             Debug.Log("재장전");
         }
@@ -57,7 +52,8 @@ public class CannonController : MonoBehaviour
     }
     
     public void Shoot(){
-        if(isReloaded && !isDirty){
+        // if(isReloaded && !isDirty){
+        if(isReloaded){
             GameObject Bullet_instance;
             Rigidbody Bullet_rb;
             try
@@ -75,24 +71,21 @@ public class CannonController : MonoBehaviour
             }
 
             isReloaded = false;
-            isDirty = true;
-            Dirty = 2;
-
+            // isDirty = true;
+            // Dirty = 2;
             Debug.Log("발사");
         }
     }
-
-    public void Cleanup(){
-        if(isDirty){
-            if(Dirty <= 1){
-                isDirty = false;
-                Debug.Log("청소완료");
-            }
-            else{
-                Dirty--;
-                Debug.Log("청소중");
-            }
-        }
-    }
-
+    // public void Cleanup(){
+    //     if(isDirty){
+    //         if(Dirty <= 1){
+    //             isDirty = false;
+    //             Debug.Log("청소완료");
+    //         }
+    //         else{
+    //             Dirty--;
+    //             Debug.Log("청소중");
+    //         }
+    //     }
+    // }
 }
