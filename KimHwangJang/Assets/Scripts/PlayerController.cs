@@ -69,6 +69,10 @@ public class PlayerController : MonoBehaviour
         }
         
     }
+    public void AddOn(Transform where){
+        tr.SetPositionAndRotation(where.position - (where.forward * 2f) + (where.up * 0.4f),
+        where.rotation);
+    }
     public void interact(){
         switch (gameController.controlling_Obj.tag)
         {
@@ -84,8 +88,11 @@ public class PlayerController : MonoBehaviour
                         controlling_Obj.GetComponent<FoodScript>().mount_on_head(PlaceHere);
                     }
                     if(controlling_Obj.CompareTag("Fish_Rod")){
-                        //음식 들기
                         Camera.main.GetComponent<CameraController>().SetisFishing(true);
+                    }
+                    if(controlling_Obj.CompareTag("Cannon")){
+                        animator.SetBool("isRun", false);
+                        rb.isKinematic = true;
                     }
                 }
                 break;
@@ -107,11 +114,7 @@ public class PlayerController : MonoBehaviour
                 else { //음식을 그냥 놓는 경우
                     //음식 놓기
                     controlling_Obj.GetComponent<FoodScript>().demount_on_head();
-                    //포커스를 플레이어로
-                    gameController.controlling_Obj = this.gameObject;
-                    this.controlling_Obj = this.gameObject;
-                
-                    Debug.Log(gameController.controlling_Obj.name);
+                    focusToPlayer();
                 }
                 break;
             case "Table":
@@ -124,31 +127,32 @@ public class PlayerController : MonoBehaviour
                 }
                 else if(nearObj.CompareTag("Food"))
                 {
-                    gameController.controlling_Obj = this.gameObject;
-                    this.controlling_Obj = this.gameObject;
-                    Debug.Log(gameController.controlling_Obj.name);
+                    focusToPlayer();
                 }
                 else
                 {
-                    gameController.controlling_Obj = this.gameObject;
-                    this.controlling_Obj = this.gameObject;
-                    Debug.Log(gameController.controlling_Obj.name);
+                    focusToPlayer();
                 }
                 break;
             case "Fish_Rod":
                 Camera.main.GetComponent<CameraController>().SetisFishing(false);
-                //포커스를 플레이어로
-                gameController.controlling_Obj = this.gameObject;
-                this.controlling_Obj = this.gameObject;
-                Debug.Log(gameController.controlling_Obj.name);
+                focusToPlayer();
+                break;
+            case "Cannon":
+                rb.isKinematic = false;
+                focusToPlayer();
                 break;
             default:
-                //포커스를 플레이어로
-                gameController.controlling_Obj = this.gameObject;
-                this.controlling_Obj = this.gameObject;
-                Debug.Log(gameController.controlling_Obj.name);
+                focusToPlayer();
                 break;
         }
+    }
+    private void focusToPlayer(){
+        //포커스를 플레이어로
+        gameController.controlling_Obj = this.gameObject;
+        this.controlling_Obj = this.gameObject;
+
+        Debug.Log(gameController.controlling_Obj.name);
     }
     public void SetmoveForce(float moveForce){
         this.moveForce = moveForce;
