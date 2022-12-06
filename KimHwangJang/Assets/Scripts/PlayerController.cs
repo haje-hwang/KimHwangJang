@@ -247,7 +247,7 @@ public class PlayerController : MonoBehaviour
     // }
 
     void Downfall(){
-        if(transform.position.y <= -5){
+        if(transform.position.y <= -1){
             transform.position = spawnpoint.transform.position;
         } 
     }
