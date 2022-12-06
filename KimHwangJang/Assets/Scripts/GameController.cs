@@ -33,7 +33,6 @@ public class GameController : MonoBehaviour
 
     //Codes
     private PlayerController playerController;
-    [SerializeField]
     private CannonController cannonController;
     private RaftController raftController;
 
@@ -111,6 +110,7 @@ public class GameController : MonoBehaviour
                 break;
             case "Cannon":
                 cannonController.Aim();
+                playerController.AddOn(controlling_Obj.transform);
                 if(Mouse_Left_Down){
                     cannonController.Shoot();
                 }
