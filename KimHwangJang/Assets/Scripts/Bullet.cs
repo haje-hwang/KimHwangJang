@@ -7,19 +7,13 @@ public class Bullet : MonoBehaviour
     bool isPickup;
     private Rigidbody rb;
     private CannonBallObjectPool objectPool;
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        rb = transform.GetComponent<Rigidbody>();
+    }
     void Start()
     {
-        try
-        {
-            rb = transform.GetComponent<Rigidbody>();
-            objectPool = GameObject.Find("/GameObjects/CannonBallPool").GetComponent<CannonBallObjectPool>();
-        }
-        catch (System.Exception)
-        {
-            Debug.Log("Error in Bullet.Awake()");
-            throw;
-        }
+        objectPool = GameObject.Find("CannonBallPool").GetComponent<CannonBallObjectPool>();
         isPickup = false;   
     }
     void SetPickup(bool input){

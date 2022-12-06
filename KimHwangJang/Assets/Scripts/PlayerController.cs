@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     private Transform PlaceHere;
     private PlayerController playerController;
     private GameObject nearObj;
-    [SerializeField]
     private GameObject controlling_Obj;
     private GameController gameController;
     // private UIController UIController;

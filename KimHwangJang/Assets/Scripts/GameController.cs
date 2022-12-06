@@ -33,6 +33,7 @@ public class GameController : MonoBehaviour
 
     //Codes
     private PlayerController playerController;
+    [SerializeField]
     private CannonController cannonController;
     private RaftController raftController;
 
@@ -60,7 +61,7 @@ public class GameController : MonoBehaviour
         playerController.SetTurn_speed(Player_Turn_speed);
         playerController.SetmaxSpeed(Player_maxSpeed);
 
-        //cannonController = GameObject.FindGameObjectWithTag("Cannon").GetComponent<CannonController>();
+        cannonController = GameObject.FindGameObjectWithTag("Cannon").GetComponent<CannonController>();
 
         raftController = GameObject.FindGameObjectWithTag("Raft").GetComponent<RaftController>();
         //raftController.setRaftSpeed(RaftSpeed);
@@ -109,14 +110,14 @@ public class GameController : MonoBehaviour
             case "Cannon":
                 cannonController.Aim();
                 if(Mouse_Left_Down){
-                    cannonController.Reload();
-                }
-                if(Jump_Key_Down){
                     cannonController.Shoot();
                 }
-                if(Mouse_Right_Down){
-                    cannonController.Cleanup();
+                if(Jump_Key_Down){
+                    cannonController.Reload();
                 }
+                // if(Mouse_Right_Down){
+                //     cannonController.Cleanup();
+                // }
                 break;
             default:
                 break;
