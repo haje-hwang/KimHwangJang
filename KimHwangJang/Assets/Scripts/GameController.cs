@@ -5,9 +5,9 @@ public class GameController : MonoBehaviour
 
     public GameObject[] foods;
     public bool[] hasFoods;
-    public GameObject[] jewels;
 
-    public int jewels_Value;
+    public int score;
+
 
     //Singleton 적용
     private static GameController instance;  
@@ -66,6 +66,8 @@ public class GameController : MonoBehaviour
         raftController = GameObject.FindGameObjectWithTag("Raft").GetComponent<RaftController>();
         //raftController.setRaftSpeed(RaftSpeed);
         Raft_tr = GameObject.FindGameObjectWithTag("Raft").transform;
+
+        score = 0;
     }
     void GetInput(){
         try

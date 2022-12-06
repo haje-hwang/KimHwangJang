@@ -15,6 +15,7 @@ TagManager:
   - Port
   - Spawnpoint
   - Fish_Rod
+  - Jewel
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,11 @@ public class PlayerController : MonoBehaviour
     private GameObject nearObj;
     private GameObject controlling_Obj;
     private GameController gameController;
+
+    [SerializeField]
+    private GameObject spawnpoint;
+
+
     // private UIController UIController;
     // [SerializeField]
     // Slider timer;
@@ -41,6 +46,11 @@ public class PlayerController : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         
     }
+
+    private void Update() {
+        Downfall();
+    }
+
     public void move(Vector3 moveVector){
         try
         {
@@ -231,4 +241,10 @@ public class PlayerController : MonoBehaviour
     //         isGround = false;
     //     }
     // }
-}
+
+    void Downfall(){
+        if(transform.position.y <= -5){
+            transform.position = spawnpoint.transform.position;
+        } 
+    }
+} 
