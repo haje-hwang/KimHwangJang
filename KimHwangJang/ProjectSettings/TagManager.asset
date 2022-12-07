@@ -16,6 +16,7 @@ TagManager:
   - Spawnpoint
   - Fish_Rod
   - Jewel
+  - Cannon_Ball_Pile
   layers:
   - Default
   - TransparentFX
