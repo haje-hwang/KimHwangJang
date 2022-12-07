@@ -20,7 +20,13 @@ public class RaftController : MonoBehaviour
 
     GameObject spawn;
     GameObject landing;
-    
+
+    [SerializeField]
+    ParticleSystem ps;
+
+    [SerializeField]
+    private GameObject spawnpoint;
+
 
     int SpeedLevel = 1;
     // Update is called once per frame
@@ -65,10 +71,12 @@ public class RaftController : MonoBehaviour
                     RaftSpeed = -3.0f;
                     break;
                 case 1:
-                    RaftSpeed = 0f;   
+                    RaftSpeed = 0f;
+                    ps.Stop();//파티클 스탑
                     break;
                 case 2:
-                    RaftSpeed = 3.0f;             
+                    RaftSpeed = 3.0f;
+                    ps.Play();//파티클 플레이
                     break;
                 case 3:
                     RaftSpeed = 6.0f;               
@@ -87,6 +95,9 @@ public class RaftController : MonoBehaviour
             landing = other.gameObject;
             landingPoint = landing.transform.Find("Landingpoint").transform.position;
             landingRotate = landing.transform.Find("Landingpoint").transform.rotation;
+        }
+        if (other.gameObject.CompareTag("Wall")) {
+            transform.position = spawnpoint.transform.position;
         }
     }
 
@@ -109,4 +120,5 @@ public class RaftController : MonoBehaviour
             }
         }
     }
+
 }

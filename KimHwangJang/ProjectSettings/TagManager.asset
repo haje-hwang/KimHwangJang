@@ -17,6 +17,8 @@ TagManager:
   - Fish_Rod
   - Jewel
   - Cannon_Ball_Pile
+  - Island
+  - Wall
   layers:
   - Default
   - TransparentFX
