@@ -45,6 +45,7 @@ public class GameController : MonoBehaviour
     public float Raft_RotateSpeed;
 
     private GameObject player;
+    private Transform CamTr;
     private void Awake()
     {
         // Raft_RotateSpeed = 10f; 
@@ -60,6 +61,8 @@ public class GameController : MonoBehaviour
         playerController.SetTurn_speed(Player_Turn_speed);
         playerController.SetmaxSpeed(Player_maxSpeed);
 
+        CamTr = Camera.main.transform;
+
         cannonController = GameObject.FindGameObjectWithTag("Cannon").GetComponent<CannonController>();
 
         raftController = GameObject.FindGameObjectWithTag("Raft").GetComponent<RaftController>();
@@ -73,7 +76,7 @@ public class GameController : MonoBehaviour
         {
             Horizontal = Input.GetAxis("Horizontal");
             Vertical = Input.GetAxis("Vertical");
-            moveVector = (Raft_tr.right * Horizontal + Raft_tr.forward * Vertical).normalized;
+            moveVector = (CamTr.right * Horizontal + new Vector3(CamTr.forward.x, 0, CamTr.forward.z)  * Vertical).normalized;
             Interaction_Key_Down = Input.GetButtonDown("Interaction");
             Mouse_Left_Down = Input.GetMouseButtonDown(0);
             Mouse_Right_Down = Input.GetMouseButtonDown(1);

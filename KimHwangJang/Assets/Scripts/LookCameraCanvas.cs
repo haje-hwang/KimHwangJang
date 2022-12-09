@@ -9,15 +9,15 @@ public class LookCameraCanvas : MonoBehaviour
     private void Start()
     {
         cam = Camera.main.gameObject;
-
     }
 
     private void LateUpdate()
     {
         if(cam != null)
         {
+            Debug.Log("작동중이에요!");
             transform.LookAt(cam.transform);
-            transform.Rotate(0, 180, 0);
+            transform.Rotate(0, 90, 0);
         }
     }
 }
