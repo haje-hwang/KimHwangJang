@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6643320607603904838}
   - component: {fileID: 6635310591826804568}
   - component: {fileID: 6676500809588873470}
+  - component: {fileID: 436709070745084608}
   m_Layer: 0
   m_Name: cannonballs
-  m_TagString: Untagged
+  m_TagString: Cannon_Ball_Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6649389140582798256}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.35, y: 1.94, z: 5.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -98,3 +99,16 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 469a5f1f3814c4f7d86182ee4e79e65a, type: 3}
+--- !u!135 &436709070745084608
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6649389140582798256}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6
+  m_Center: {x: 0.03753203, y: 0.3814858, z: -0.028686583}

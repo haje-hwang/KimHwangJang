@@ -6,6 +6,15 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    //Singleton 적용
+    private static PlayerController instance;  
+    private PlayerController() { }  
+    public static PlayerController getPlayerInstance() {  
+        if (instance == null) {  
+            instance = new PlayerController();  
+        }  
+        return instance;  
+    }  
     private Transform tr;
     private Rigidbody rb;
     private GameObject player;
@@ -14,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private GameObject nearObj;
     private GameObject controlling_Obj;
     private GameController gameController;
+    private ObjectPooling CannonPool;
 
     [SerializeField]
     private GameObject spawnpoint;
@@ -44,7 +54,8 @@ public class PlayerController : MonoBehaviour
         gameController.controlling_Obj = this.gameObject;
         // UIController = GameObject.Find("UIController").GetComponent<UIController>();
         animator = GetComponentInChildren<Animator>();
-        
+
+        CannonPool = GameObject.Find("ObjectPooling/CannonBallPool").GetComponent<ObjectPooling>();
     }
 
     private void Update() {
@@ -89,20 +100,38 @@ public class PlayerController : MonoBehaviour
             case "Player":
              //조작하고 있는 오브젝트가 플레이어일때, 그리고 상호작용 가능한 오브젝트와 인접할 때
                 if( nearObj != null){
-                    //controlling_Obj에 인접 오브젝트를 넣음
-                    gameController.controlling_Obj = nearObj;
-                    this.controlling_Obj = nearObj;
                     //만약 음식이랑 상호작용한다면
-                    if(controlling_Obj.CompareTag("Food")){
+                    if(nearObj.CompareTag("Food")){
                         //음식 들기
-                        controlling_Obj.GetComponent<FoodScript>().mount_on_head(PlaceHere);
+                        nearObj.GetComponent<FoodScript>().mount_on_head(PlaceHere);
+                        //controlling_Obj에 인접 오브젝트를 넣음
+                        gameController.controlling_Obj = nearObj;
+                        this.controlling_Obj = nearObj;
                     }
-                    if(controlling_Obj.CompareTag("Fish_Rod")){
+                    if(nearObj.CompareTag("Fish_Rod")){
                         Camera.main.GetComponent<CameraController>().SetisFishing(true);
+                        //controlling_Obj에 인접 오브젝트를 넣음
+                        gameController.controlling_Obj = nearObj;
+                        this.controlling_Obj = nearObj;
                     }
-                    if(controlling_Obj.CompareTag("Cannon")){
+                    if(nearObj.CompareTag("Cannon")){
                         animator.SetBool("isRun", false);
                         rb.isKinematic = true;
+                        //controlling_Obj에 인접 오브젝트를 넣음
+                        gameController.controlling_Obj = nearObj;
+                        this.controlling_Obj = nearObj;
+                    }
+                    if(nearObj.CompareTag("Cannon_Ball")){
+                       nearObj.GetComponent<Bullet>().mount_on_head(PlaceHere);
+                       //controlling_Obj에 인접 오브젝트를 넣음
+                       gameController.controlling_Obj = nearObj;
+                        this.controlling_Obj = nearObj;
+                    }
+                    if(nearObj.CompareTag("Cannon_Ball_Pile")){
+                        GameObject var =  CannonPool.GetObject();
+                        var.GetComponent<Bullet>().mount_on_head(PlaceHere);
+                        gameController.controlling_Obj = var;
+                        this.controlling_Obj = var;
                     }
                 }
                 break;
@@ -124,6 +153,29 @@ public class PlayerController : MonoBehaviour
                 else { //음식을 그냥 놓는 경우
                     //음식 놓기
                     controlling_Obj.GetComponent<FoodScript>().demount_on_head();
+                    focusToPlayer();
+                }
+                break;
+            case "Cannon_Ball":
+                if(nearObj != null){
+                    //상호작용 대상이 대포라면 
+                    if(nearObj.CompareTag("Cannon"))
+                    {
+                        controlling_Obj.GetComponent<Rigidbody>().isKinematic = false;
+                        // 대포 재장전
+                        nearObj.GetComponent<CannonController>().Reload();
+                        CannonPool.ReturnObject(controlling_Obj);
+                        focusToPlayer();
+                    }
+                    else {
+                        //내려 놓기
+                        controlling_Obj.GetComponent<Bullet>().demount_on_head();
+                        focusToPlayer();
+                    }
+                }
+                else {
+                    //내려 놓기
+                    controlling_Obj.GetComponent<Bullet>().demount_on_head();
                     focusToPlayer();
                 }
                 break;
@@ -173,12 +225,10 @@ public class PlayerController : MonoBehaviour
     public void SetmaxSpeed(float maxSpeed){
         this.maxSpeed = maxSpeed;
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         switch (other.tag)
         {
-            case "Steering_Wheel":
-            case "Cannon":
             case "Food":
                 //Food 들고 있는 상황에서 오류 생길까봐
                 if(controlling_Obj.CompareTag("Food")) {
@@ -189,13 +239,14 @@ public class PlayerController : MonoBehaviour
                     Debug.Log(other.tag.ToString() + " 상호작용 준비");
                     break;
                 }
+            case "Steering_Wheel":
+            case "Cannon":
+            case "Cannon_Ball":
             case "Table":
-                nearObj = other.gameObject;
-                Debug.Log(other.tag.ToString() + " 상호작용 준비");
-                break;
             case "Fish_Rod":
+            case "Cannon_Ball_Pile":
                 nearObj = other.gameObject;
-                Debug.Log(other.tag.ToString() + " 상호작용 준비");
+                // Debug.Log(other.tag.ToString() + " 상호작용 준비");
                 break;
             default:
                 // Debug.Log(other.name + "가 범위에 있음");

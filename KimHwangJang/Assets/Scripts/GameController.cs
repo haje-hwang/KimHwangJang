@@ -104,6 +104,7 @@ public class GameController : MonoBehaviour
             case "Player":
             case "Food":
             case "Table":
+            case "Cannon_Ball":
                 playerController.move(moveVector);
                 break;
             case "Steering_Wheel":

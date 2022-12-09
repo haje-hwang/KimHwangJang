@@ -20,9 +20,11 @@ public class CannonController : MonoBehaviour
 
     [SerializeField]
     Transform shootpoint;
+    [SerializeField]
+    GameObject ReloadNeedUI;
 
     private Transform CannonBallPool;
-    private CannonBallObjectPool objectPool;
+    private ObjectPooling objectPool;
 
     // Start is called before the first frame update
     void Awake()
@@ -37,10 +39,11 @@ public class CannonController : MonoBehaviour
     private void Start()
     {
         CannonBallPool = GameObject.Find("ObjectPooling/CannonBallPool").transform;
-        objectPool = CannonBallPool.GetComponent<CannonBallObjectPool>();
+        objectPool = CannonBallPool.GetComponent<ObjectPooling>();
     }
     public void Reload(){
         if(!isReloaded){
+            ReloadNeedUI.SetActive(false);
             isReloaded = true;
             Debug.Log("재장전");
         }
@@ -56,20 +59,14 @@ public class CannonController : MonoBehaviour
         if(isReloaded){
             GameObject Bullet_instance;
             Rigidbody Bullet_rb;
-            try
-            {
-                //object pooling 관리
-                Bullet_instance = objectPool.GetObject();
-                Bullet_instance.transform.position = shootpoint.position;
-                Bullet_rb = Bullet_instance.GetComponent<Rigidbody>();
-                Bullet_rb.AddForce(shootpoint.transform.forward * shootspeed, ForceMode.Impulse);
-            }
-            catch (System.Exception)
-            {
-                Debug.Log("Error in CannonController.Shoot()");
-                throw;
-            }
 
+            //object pooling 관리
+            Bullet_instance = objectPool.GetObject();
+            Bullet_instance.transform.position = shootpoint.position;
+            Bullet_rb = Bullet_instance.GetComponent<Rigidbody>();
+            Bullet_rb.AddForce(shootpoint.transform.forward * shootspeed, ForceMode.Impulse);
+
+            ReloadNeedUI.SetActive(true);
             isReloaded = false;
             // isDirty = true;
             // Dirty = 2;

@@ -5,16 +5,21 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     bool isPickup;
+    private Transform tr;
     private Rigidbody rb;
-    private CannonBallObjectPool objectPool;
+    private Transform OriginalParent;
+    private ObjectPooling objectPool;
     private void Awake()
     {
-        rb = transform.GetComponent<Rigidbody>();
+        tr = transform;
+        rb = GetComponent<Rigidbody>();
     }
-    void Start()
+    private void start()
     {
-        objectPool = GameObject.Find("CannonBallPool").GetComponent<CannonBallObjectPool>();
+        objectPool = GameObject.Find("ObjectPooling/CannonBallPool").GetComponent<ObjectPooling>();
+        // GameObject.Find("CannonBallPool").GetComponent<CannonBallObjectPool>();
         isPickup = false;   
+        OriginalParent =  GameObject.Find("ObjectPooling/CannonBallPool").transform;
     }
     void SetPickup(bool input){
         isPickup = input;
@@ -32,9 +37,28 @@ public class Bullet : MonoBehaviour
             // Destroy(this.gameObject);
         }
     }
-    private void resetCannon(){
+    public void resetCannon(){
         rb.velocity = Vector3.zero;
+        if(objectPool == null){
+            objectPool = GameObject.Find("ObjectPooling/CannonBallPool").GetComponent<ObjectPooling>();
+        } 
         objectPool.ReturnObject(this.gameObject);
+    }
+
+    public void mount_on_head(Transform where){
+        rb.velocity = Vector3.zero;
+        rb.isKinematic = true;
+        tr.SetParent(where);
+        tr.SetPositionAndRotation(where.position, Quaternion.identity);
+    }
+    public void demount_on_head(){
+        if(OriginalParent != null){
+            tr.SetParent(OriginalParent);
+        }
+        else{
+            tr.SetParent(null);
+        }
+        rb.isKinematic = false;
     }
 }
 
