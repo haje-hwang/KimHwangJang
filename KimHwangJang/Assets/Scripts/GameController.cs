@@ -108,9 +108,10 @@ public class GameController : MonoBehaviour
                 playerController.move(moveVector);
                 break;
             case "Steering_Wheel":
+                playerController.RunStop();
                 //뗏목 회전
                 raftController.SpeedControl();
-                Raft_tr.Rotate(0, Horizontal * Time.deltaTime * Raft_RotateSpeed, 0);
+                raftController.TurnControl(Horizontal * Raft_RotateSpeed * Time.fixedDeltaTime);
                 break;
             case "Cannon":
                 cannonController.Aim();

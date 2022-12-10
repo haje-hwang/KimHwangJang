@@ -62,6 +62,10 @@ public class PlayerController : MonoBehaviour
         Downfall();
     }
 
+    public void RunStop(){
+        animator.SetBool("isRun", false);
+    }
+
     public void move(Vector3 moveVector){
         try
         {
@@ -100,38 +104,45 @@ public class PlayerController : MonoBehaviour
             case "Player":
              //조작하고 있는 오브젝트가 플레이어일때, 그리고 상호작용 가능한 오브젝트와 인접할 때
                 if( nearObj != null){
-                    //만약 음식이랑 상호작용한다면
-                    if(nearObj.CompareTag("Food")){
-                        //음식 들기
-                        nearObj.GetComponent<FoodScript>().mount_on_head(PlaceHere);
-                        //controlling_Obj에 인접 오브젝트를 넣음
-                        gameController.controlling_Obj = nearObj;
-                        this.controlling_Obj = nearObj;
-                    }
-                    if(nearObj.CompareTag("Fish_Rod")){
-                        Camera.main.GetComponent<CameraController>().SetisFishing(true);
-                        //controlling_Obj에 인접 오브젝트를 넣음
-                        gameController.controlling_Obj = nearObj;
-                        this.controlling_Obj = nearObj;
-                    }
-                    if(nearObj.CompareTag("Cannon")){
-                        animator.SetBool("isRun", false);
-                        rb.isKinematic = true;
-                        //controlling_Obj에 인접 오브젝트를 넣음
-                        gameController.controlling_Obj = nearObj;
-                        this.controlling_Obj = nearObj;
-                    }
-                    if(nearObj.CompareTag("Cannon_Ball")){
-                       nearObj.GetComponent<Bullet>().mount_on_head(PlaceHere);
-                       //controlling_Obj에 인접 오브젝트를 넣음
-                       gameController.controlling_Obj = nearObj;
-                        this.controlling_Obj = nearObj;
-                    }
-                    if(nearObj.CompareTag("Cannon_Ball_Pile")){
-                        GameObject var =  CannonPool.GetObject();
-                        var.GetComponent<Bullet>().mount_on_head(PlaceHere);
-                        gameController.controlling_Obj = var;
-                        this.controlling_Obj = var;
+                    switch (nearObj.tag)
+                    {
+                        case "Food":
+                            //음식 들기
+                            nearObj.GetComponent<FoodScript>().mount_on_head(PlaceHere);
+                             //controlling_Obj에 인접 오브젝트를 넣음
+                            gameController.controlling_Obj = nearObj;
+                            this.controlling_Obj = nearObj;
+                            break;
+                        case "Fish_Rod":
+                            Camera.main.GetComponent<CameraController>().SetisFishing(true);
+                            //controlling_Obj에 인접 오브젝트를 넣음
+                            gameController.controlling_Obj = nearObj;
+                            this.controlling_Obj = nearObj;
+                            break;
+                        case "Cannon":
+                            animator.SetBool("isRun", false);
+                            rb.isKinematic = true;
+                            //controlling_Obj에 인접 오브젝트를 넣음
+                            gameController.controlling_Obj = nearObj;
+                            this.controlling_Obj = nearObj;
+                            break;
+                        case "Cannon_Ball":
+                            nearObj.GetComponent<Bullet>().mount_on_head(PlaceHere);
+                            //controlling_Obj에 인접 오브젝트를 넣음
+                            gameController.controlling_Obj = nearObj;
+                            this.controlling_Obj = nearObj;
+                            break;
+                        case "Cannon_Ball_Pile":
+                            GameObject var =  CannonPool.GetObject();
+                            var.GetComponent<Bullet>().mount_on_head(PlaceHere);
+                            gameController.controlling_Obj = var;
+                            this.controlling_Obj = var;
+                            break;
+                        default:
+                             //controlling_Obj에 인접 오브젝트를 넣음
+                            gameController.controlling_Obj = nearObj;
+                            this.controlling_Obj = nearObj;
+                            break;
                     }
                 }
                 break;

@@ -42,7 +42,7 @@ public class RaftController : MonoBehaviour
     private void Start() {
         player = GameObject.FindWithTag("Player");
 
-        this.audioSource = GetComponent<AudioSource>();
+        audioSource = Camera.main.GetComponent<AudioSource>();
 
         isLandable = false;
         onPlayer = true;
@@ -95,7 +95,33 @@ public class RaftController : MonoBehaviour
                     audioSource.clip = Engine2;
                     break;
             }
-            audioSource.Play();
+             /*
+                SpeedLevel이 1로 초기화되는데 SpeedLevel이 1일때는
+                audioSource.clip을 설정하지 않아서 실행할 audioSource가 없어서 게임이 멈춤
+                그래서 audioSource가 null일 때 실행이 안되게 if문으로 감쌌다.
+
+                라고 수정하니까 사실 Raft에 있는 AudioSource를 참조하는데 AudioSource가 없다고 오류가 난다.
+                AudioSource는 MainCamera에 있으니까 MainCamera의 AudioSource를 참조하게 바꾸었다.
+                45번째 줄
+                this.audioSource = GetComponent<AudioSource>();
+                ====>>
+                audioSource = Camera.main.GetComponent<AudioSource>();
+
+                라고 수정하니까 원래 사운드 클립이 그런건지는 몰?루겠는데 자꾸 소리가 끊기는?
+                재생중인데 다시 처음부터 재생하는 느낌이 든다.
+                그래서 이미 재생중일때는 재생하지 않도록 if(!audioSource.isPlaying)로 감쌌다
+            */
+            if(audioSource.clip != null){
+                if(!audioSource.isPlaying){
+                    audioSource.Play();
+                }     
+            }
+        }
+    }
+
+    public void TurnControl(float turn){
+        if(onPlayer){
+            transform.Rotate(new Vector3(0, turn, 0), Space.World);
         }
     }
 
