@@ -21,8 +21,11 @@ public class CameraMove : MonoBehaviour
     private void Awake()
     {
         MainCamera = Camera.main;
-        move_offset = Vector3.zero;
-        offset = Vector3.zero;
+    }
+    private void Start()
+    {
+        move_offset = lookAtMe.position;
+        offset = transform.position;
     }
     void LateUpdate()
     {
