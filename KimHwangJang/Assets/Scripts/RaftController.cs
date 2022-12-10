@@ -27,12 +27,22 @@ public class RaftController : MonoBehaviour
     [SerializeField]
     private GameObject spawnpoint;
 
+    public AudioClip audioCannon;
+    public AudioClip Engine1;
+    public AudioClip Engine2;
+    public AudioClip Backword;
+
+    AudioSource audioSource;
+
+
 
     int SpeedLevel = 1;
     // Update is called once per frame
     
     private void Start() {
         player = GameObject.FindWithTag("Player");
+
+        this.audioSource = GetComponent<AudioSource>();
 
         isLandable = false;
         onPlayer = true;
@@ -56,12 +66,12 @@ public class RaftController : MonoBehaviour
     //배 속도 조절. 윗키 누르면 빨라지고 아래키 누르면 느려지다가 뒤로감.
     public void SpeedControl(){
         if(onPlayer){
-            if(Input.GetKeyDown(KeyCode.UpArrow) && SpeedLevel < 3){
+            if(Input.GetKeyDown(KeyCode.W) && SpeedLevel < 3){
                 Debug.Log("Speed Up");
                 SpeedLevel += 1;
                 Debug.Log("Spd =" + SpeedLevel);
             }
-            else if(Input.GetKeyDown(KeyCode.DownArrow) && SpeedLevel > 0){
+            else if(Input.GetKeyDown(KeyCode.S) && SpeedLevel > 0){
                 Debug.Log("Speed Down");
                 SpeedLevel -= 1;
                 Debug.Log("Spd =" + SpeedLevel);
@@ -69,6 +79,7 @@ public class RaftController : MonoBehaviour
             switch(SpeedLevel){
                 case 0:
                     RaftSpeed = -3.0f;
+                    audioSource.clip = Backword;
                     break;
                 case 1:
                     RaftSpeed = 0f;
@@ -76,12 +87,15 @@ public class RaftController : MonoBehaviour
                     break;
                 case 2:
                     RaftSpeed = 3.0f;
+                    audioSource.clip = Engine1;
                     ps.Play();//파티클 플레이
                     break;
                 case 3:
-                    RaftSpeed = 6.0f;               
+                    RaftSpeed = 6.0f;
+                    audioSource.clip = Engine2;
                     break;
             }
+            audioSource.Play();
         }
     }
 
