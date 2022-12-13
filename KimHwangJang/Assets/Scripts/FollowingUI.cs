@@ -5,7 +5,9 @@ using UnityEngine;
 public class FollowingUI : MonoBehaviour
 {
     [SerializeField]
-    private Transform Player;
+    private Transform target;
+    [SerializeField]
+    private float floating_hight;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,6 @@ public class FollowingUI : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = Camera.main.WorldToScreenPoint(Player.position + new Vector3(0, 2f, 0));
+        transform.position = Camera.main.WorldToScreenPoint(target.position + new Vector3(0, floating_hight, 0));
     }
 }
