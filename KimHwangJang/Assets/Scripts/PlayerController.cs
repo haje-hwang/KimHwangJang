@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private GameObject spawnpoint;
+     [SerializeField]
+    private InteractionUI interactionUI;
 
 
     // private UIController UIController;
@@ -99,6 +101,7 @@ public class PlayerController : MonoBehaviour
         where.rotation);
     }
     public void interact(){
+                    interactionUI.HideMsg();
         switch (gameController.controlling_Obj.tag)
         {
             case "Player":
@@ -236,7 +239,7 @@ public class PlayerController : MonoBehaviour
     public void SetmaxSpeed(float maxSpeed){
         this.maxSpeed = maxSpeed;
     }
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         switch (other.tag)
         {
@@ -247,7 +250,8 @@ public class PlayerController : MonoBehaviour
                 }
                 else{
                     nearObj = other.gameObject;
-                    Debug.Log(other.tag.ToString() + " 상호작용 준비");
+                    interactionUI.ShowMsg("Press [E] to interact with " + other.tag.ToString());
+                    // Debug.Log(other.tag.ToString() + " 상호작용 준비");
                     break;
                 }
             case "Steering_Wheel":
@@ -257,6 +261,7 @@ public class PlayerController : MonoBehaviour
             case "Fish_Rod":
             case "Cannon_Ball_Pile":
                 nearObj = other.gameObject;
+                interactionUI.ShowMsg("Press [E] to interact with " + other.tag.ToString());
                 // Debug.Log(other.tag.ToString() + " 상호작용 준비");
                 break;
             default:
@@ -271,7 +276,8 @@ public class PlayerController : MonoBehaviour
             if (nearObj.Equals(other.gameObject))
             {
                 nearObj = null;
-                Debug.Log(other.tag.ToString() + " 상호작용 범위 이탈"); 
+                interactionUI.HideMsg();
+                // Debug.Log(other.tag.ToString() + " 상호작용 범위 이탈"); 
             }
         }
         
