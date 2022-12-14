@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
     public bool[] hasFoods;
 
     public int score;
+    ScoreUIController scoreUIController;
 
 
     //Singleton 적용
@@ -129,5 +130,10 @@ public class GameController : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public void GetScore(int point){
+        score += point;
+        scoreUIController.GetScore(score);
     }
 }

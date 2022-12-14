@@ -19,10 +19,10 @@ public class JewelController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other) {
+    private void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Player")){
             Destroy(gameObject);
-            gameController.score += jewels_Value;
+            gameController.GetScore(jewels_Value);
         }
     }
 }
