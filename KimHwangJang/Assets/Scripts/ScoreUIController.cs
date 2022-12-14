@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ScoreUIController : MonoBehaviour
 {
-    public Text text;
+    public TextMeshProUGUI text;
+    // public Text text;
 
     int score = 0;
 
