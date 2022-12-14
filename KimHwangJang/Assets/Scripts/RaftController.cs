@@ -83,6 +83,7 @@ public class RaftController : MonoBehaviour
                     break;
                 case 1:
                     RaftSpeed = 0f;
+                    audioSource.clip = null;
                     ps.Stop();//파티클 스탑
                     break;
                 case 2:
@@ -115,6 +116,9 @@ public class RaftController : MonoBehaviour
                 if(!audioSource.isPlaying){
                     audioSource.Play();
                 }     
+            }
+            else{
+                audioSource.Stop();
             }
         }
     }
