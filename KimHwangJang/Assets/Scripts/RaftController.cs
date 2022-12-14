@@ -42,7 +42,7 @@ public class RaftController : MonoBehaviour
     private void Start() {
         player = GameObject.FindWithTag("Player");
 
-        audioSource = Camera.main.GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
 
         isLandable = false;
         onPlayer = true;

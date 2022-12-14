@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     // private UIController UIController;
     // [SerializeField]
     // Slider timer;
-    private float moveForce, Turn_speed, maxSpeed;
+    private float moveForce, Turn_speed, maxSpeed, jumpForce;
     bool hasFood;
 
     Animator animator;
@@ -68,11 +68,20 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isRun", false);
     }
 
+    public void Jump(){
+        if(rb.velocity.y < 0.8f){
+            animator.SetTrigger("isJump");
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+        }
+        else{
+            animator.SetBool("isFalling", true);
+        }
+    }
     public void move(Vector3 moveVector){
         try
         {
             //addforce 물리로 player 움직이기
-            rb.AddForce(moveVector * moveForce * Time.fixedDeltaTime, ForceMode.Impulse);
+            rb.AddForce(moveVector * moveForce * Time.fixedDeltaTime, ForceMode.VelocityChange);
             animator.SetBool("isRun", moveVector != Vector3.zero);
             //최대속도 제한
             if (Mathf.Abs(rb.velocity.sqrMagnitude) > Mathf.Pow(maxSpeed, 2)){
@@ -101,7 +110,7 @@ public class PlayerController : MonoBehaviour
         where.rotation);
     }
     public void interact(){
-                    interactionUI.HideMsg();
+        interactionUI.HideMsg();
         switch (gameController.controlling_Obj.tag)
         {
             case "Player":
@@ -228,7 +237,7 @@ public class PlayerController : MonoBehaviour
         gameController.controlling_Obj = this.gameObject;
         this.controlling_Obj = this.gameObject;
 
-        Debug.Log(gameController.controlling_Obj.name);
+        // Debug.Log(gameController.controlling_Obj.name);
     }
     public void SetmoveForce(float moveForce){
         this.moveForce = moveForce;
@@ -239,8 +248,12 @@ public class PlayerController : MonoBehaviour
     public void SetmaxSpeed(float maxSpeed){
         this.maxSpeed = maxSpeed;
     }
+     public void SetjumpForce(float jumpForce){
+        this.jumpForce = jumpForce;
+    }
     private void OnTriggerEnter(Collider other)
     {
+        animator.SetBool("isFalling", false);
         switch (other.tag)
         {
             case "Food":

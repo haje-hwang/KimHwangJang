@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
     //move
     private Vector3 moveVector;
     [SerializeField]
-    private float Player_moveForce, Player_Turn_speed, Player_maxSpeed;
+    private float Player_moveForce, Player_Turn_speed, Player_maxSpeed, Player_jumpForce;
 
     //Codes
     private PlayerController playerController;
@@ -61,6 +61,7 @@ public class GameController : MonoBehaviour
         playerController.SetmoveForce(Player_moveForce);
         playerController.SetTurn_speed(Player_Turn_speed);
         playerController.SetmaxSpeed(Player_maxSpeed);
+        playerController.SetjumpForce(Player_jumpForce);
 
         CamTr = Camera.main.transform;
 
@@ -107,6 +108,10 @@ public class GameController : MonoBehaviour
             case "Table":
             case "Cannon_Ball":
                 playerController.move(moveVector);
+                if(Jump_Key_Down){
+                    playerController.Jump();
+                }
+                // playerController.jumpAnim();
                 break;
             case "Steering_Wheel":
                 playerController.RunStop();

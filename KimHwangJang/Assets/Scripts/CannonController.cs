@@ -25,6 +25,8 @@ public class CannonController : MonoBehaviour
 
     private Transform CannonBallPool;
     private ObjectPooling objectPool;
+    [SerializeField]
+    private ParticleSystem ps;
 
     // Start is called before the first frame update
     void Awake()
@@ -70,7 +72,8 @@ public class CannonController : MonoBehaviour
             isReloaded = false;
             // isDirty = true;
             // Dirty = 2;
-            Debug.Log("발사");
+            // Debug.Log("발사");
+            ps.Play();
         }
     }
     // public void Cleanup(){
