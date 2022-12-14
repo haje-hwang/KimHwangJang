@@ -33,9 +33,9 @@ public class UIController : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Y)){
-            StartFishing();
-        }
+        // if(Input.GetKeyDown(KeyCode.Y)){
+        //     StartFishing();
+        // }
     }
 
     public void StartFishing(){  

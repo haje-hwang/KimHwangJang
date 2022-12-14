@@ -73,6 +73,9 @@ public class CameraMove : MonoBehaviour
             else if(gap >= max_CameraFar)      //카메라 너무 멀리가기 방지
             {
                 transform.position = offset;
+                if(scroollWheel > 0){
+                    offset -= cameraDirection * Time.smoothDeltaTime * scroollWheel * scrollSpeed * 2f;
+                }
             }
             else{
                 offset = transform.position;
