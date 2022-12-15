@@ -4962,7 +4962,7 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &-1754186480823560102
+--- !u!114 &337374800587357666
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4975,8 +4975,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jewels: []
-  jewels_Value: 0
-  gameController: {fileID: 0}
+  jewels_Value: 100
+  score: 0
+  scoreUIController: {fileID: 0}
 --- !u!4 &1786760504212425204 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000013429264488, guid: 22ef19773d7d17643a901cd24ed33b5c, type: 3}

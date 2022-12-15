@@ -5,8 +5,9 @@ public class GameController : MonoBehaviour
 
     public GameObject[] foods;
     public bool[] hasFoods;
+    public int score = 0;
 
-    
+
 
 
     //Singleton 적용
