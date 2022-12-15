@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JewelController : MonoBehaviour
 {
-    public GameObject[] jewels;
+    public GameObject[] jewels,Pirate;
 
     public int jewels_Value;
     public int score = 0;

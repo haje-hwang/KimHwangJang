@@ -28,6 +28,10 @@ public class CannonController : MonoBehaviour
     [SerializeField]
     private ParticleSystem ps;
 
+    AudioSource audioSource;
+
+    public AudioClip cannon_fire;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -37,6 +41,7 @@ public class CannonController : MonoBehaviour
         Dirty = 0;    
         rotateSpeed = 35.0f;
         //bullet = GetComponent<GameObject>();
+        audioSource = GetComponent<AudioSource>();
     }
     private void Start()
     {
@@ -68,12 +73,26 @@ public class CannonController : MonoBehaviour
             Bullet_rb = Bullet_instance.GetComponent<Rigidbody>();
             Bullet_rb.AddForce(shootpoint.transform.forward * shootspeed, ForceMode.Impulse);
 
+            
+
             ReloadNeedUI.SetActive(true);
             isReloaded = false;
             // isDirty = true;
             // Dirty = 2;
             // Debug.Log("발사");
             ps.Play();
+            audioSource.clip = cannon_fire;
+        }
+        if (audioSource.clip != null)
+        {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+        }
+        else
+        {
+            audioSource.Stop();
         }
     }
     // public void Cleanup(){

@@ -19,6 +19,7 @@ TagManager:
   - Cannon_Ball_Pile
   - Island
   - Wall
+  - Pirate
   layers:
   - Default
   - TransparentFX
