@@ -4874,6 +4874,32 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1000013768157686, guid: 22ef19773d7d17643a901cd24ed33b5c, type: 3}
   m_PrefabInstance: {fileID: 1785093188035008924}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &1456554281498599830
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785221273469595754}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!65 &7882829065294444584
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785221273469595754}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 0.6, z: 0.6}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!108 &4795490108842539999
 Light:
   m_ObjectHideFlags: 0
@@ -4936,19 +4962,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!65 &7882829065294444584
-BoxCollider:
+--- !u!114 &-1754186480823560102
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785221273469595754}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92117e89bc880af4cb1ea91c4cca6381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jewels: []
+  jewels_Value: 0
+  gameController: {fileID: 0}
 --- !u!4 &1786760504212425204 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000013429264488, guid: 22ef19773d7d17643a901cd24ed33b5c, type: 3}

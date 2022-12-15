@@ -313,7 +313,10 @@ public class PlayerController : MonoBehaviour
         //         break;
         // }
     }
-    
+    private void OnCollisionEnter(Collision collision)
+    {
+        animator.SetBool("isFalling", false);
+    }
     // private void OnCollisionStay(Collision other)
     // {
     //     if(other.transform.CompareTag("Raft")){

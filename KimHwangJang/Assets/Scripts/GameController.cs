@@ -6,8 +6,7 @@ public class GameController : MonoBehaviour
     public GameObject[] foods;
     public bool[] hasFoods;
 
-    public int score;
-    ScoreUIController scoreUIController;
+    
 
 
     //Singleton 적용
@@ -70,8 +69,6 @@ public class GameController : MonoBehaviour
         raftController = GameObject.FindGameObjectWithTag("Raft").GetComponent<RaftController>();
         //raftController.setRaftSpeed(RaftSpeed);
         Raft_tr = GameObject.FindGameObjectWithTag("Raft").transform;
-
-        score = 0;
     }
     void GetInput(){
         try
@@ -137,8 +134,5 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void GetScore(int point){
-        score += point;
-        scoreUIController.GetScore(score);
-    }
+    
 }

@@ -8,21 +8,26 @@ public class JewelController : MonoBehaviour
 
     public int jewels_Value;
 
+    public int score = 0;
+
     [SerializeField]
-    GameController gameController;
+    ScoreUIController scoreUIController;
     
     void Start()
     {
-        gameController = GetComponent<GameController>();
-        if(jewels_Value == 0){
-            jewels_Value = 100;
-        }
+        //scoreUIController = GetComponent<ScoreUIController>();
     }
 
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Player")){
+            GetScore(jewels_Value);
             Destroy(gameObject);
-            gameController.GetScore(jewels_Value);
         }
+    }
+
+    public void GetScore(int point)
+    {
+        score += point;
+        scoreUIController.GetScore(score);
     }
 }
